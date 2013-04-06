@@ -34,6 +34,23 @@
     width: 250px;
     padding: 0 20px;
 }
+
+div.Summary ol li.step {
+    font-size: 35px;
+    color: #000;
+    line-height: 30px;
+}
+/* Put numerotation on summary */
+div.Summary li{
+    padding-left: 10px;
+}
+div.Summary ol li {
+    list-style-type: upper-roman;
+}
+div.SummaryOngoing ol li {
+    list-style-type: none;
+}
+/* trick to highlight each item of the list without moving */
 div.Summary p.past, div.Summary p {
     font-size: 40px;
     text-align: center;
@@ -42,18 +59,13 @@ div.Summary p.past, div.Summary p {
     opacity: 1;
     background-color: #EEE;
 }
-div.Summary ol.step {
-    font-size: 35px;
-    color: #000;
-    line-height: 30px;
-}
-div.SummaryOngoing ol.step.future{visibility: hidden;}
-div.Summary ol.step.Objectives  {margin: -200px 0 0;}
-div.Summary ol.step.Introduction{margin: -140px 0 0;}
-div.Summary ol.step.Methods     {margin: -80px 0 0;}
-div.Summary ol.step.Megha       {width:1200px;margin: -10px 0 0 150px;}
-div.Summary ol.step.Microwat    {width:1200px;margin: 80px 0 0 150px;}
-div.Summary ol.step.Conclusion  {margin:155px 0 0;}
+div.SummaryOngoing ol li.step.future{visibility: hidden;}
+div.Summary ol li.step.Objectives  {margin: -200px 0 0;}
+div.Summary ol li.step.Introduction{margin: -140px 0 0;}
+div.Summary ol li.step.Methods     {margin: -80px 0 0;}
+div.Summary ol li.step.Megha       {width:1200px;margin: -10px 0 0 150px;}
+div.Summary ol li.step.Microwat    {width:1200px;margin: 80px 0 0 150px;}
+div.Summary ol li.step.Conclusion  {margin:155px 0 0;}
 
 .highlight {
     font-weight: bold;
