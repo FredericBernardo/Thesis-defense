@@ -1,23 +1,59 @@
-#summary p {
+#title {
+    font-size:36px;
+    text-align: right;
+}
+#title h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    margin: 40px 0px;
+
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+#title div#name {
+    float: left;
+    font-size: larger;
+}
+#title p.details{
+    margin:0;
+    padding:0 5px 0;
+}
+#title div#logo {
+    text-align: center;
+    background-color:#FFF;
+}
+#title div#logo img {
+    vertical-align: middle;
+    width: 250px;
+    padding: 0 20px;
+}
+div.Summary p.past, div.Summary p {
     font-size: 40px;
     text-align: center;
     color: #000;
     width: 1080px;
     opacity: 1;
-    background-color: transparent;
+    background-color: #EEE;
 }
-#summary ol.step {
+div.Summary ol.step {
     font-size: 35px;
     color: #000;
     line-height: 30px;
 }
-
-ol.step#Objectives  {margin: -200px 0 0;}
-ol.step#Introduction{margin: -140px 0 0;}
-ol.step#Methods     {margin: -80px 0 0;}
-ol.step#Megha       {width:1200px;margin: -10px 0 0 150px;}
-ol.step#Microwat    {width:1200px;margin: 80px 0 0 150px;}
-ol.step#Conclusion  {margin:155px 0 0;}
+div.SummaryOngoing ol.step.future{visibility: hidden;}
+div.Summary ol.step.Objectives  {margin: -200px 0 0;}
+div.Summary ol.step.Introduction{margin: -140px 0 0;}
+div.Summary ol.step.Methods     {margin: -80px 0 0;}
+div.Summary ol.step.Megha       {width:1200px;margin: -10px 0 0 150px;}
+div.Summary ol.step.Microwat    {width:1200px;margin: 80px 0 0 150px;}
+div.Summary ol.step.Conclusion  {margin:155px 0 0;}
 
 .highlight {
     font-weight: bold;
@@ -35,13 +71,3 @@ ol.step#Conclusion  {margin:155px 0 0;}
     transition:         0.5s;
 }
 
-#title h1 {
-    font-size: 50px;
-    text-align: center;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
-}

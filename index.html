@@ -85,27 +85,38 @@
 <div id="impress">
 
     <div id="title" class="step" data-x="0" data-y="0">
-        <p>Frédéric Bernardo</p>
+        <div id="name">Frédéric Bernardo</div>
+        <p id="date">07 Juin 2013</p>
         <h1>Télédétection satellite micro-onde <br>de variables atmosphériques et de surface</h1>
-        <p>Thèse encadrée par Filipe Aires et Catherine Prigent</p>
-        <p>École doctorale des Sciences de l'Environnement</p>
-        <div>LOGOS</div>
+        <p class="details">Thèse encadrée par Filipe Aires et Catherine Prigent</p>
+        <p class="details">École doctorale des Sciences de l'Environnement</p>
+        <div id="logo">
+            <img src="images/logo_upmc.png">
+            <img src="images/logo_lerma.png">
+            <img src="images/logo_estellus.png">
+        </div>
     </div>
 
-    <div id="summary">
-        <p class="step slide" data-x="3500" data-y="0">Sommaire
+    <div class="Summary">
+        <p class="step slide" data-x="1400" data-y="0">Sommaire
         <ul>
-            <ol id="Objectives" class="step"   data-x="3500" data-y="0">Objectifs de la thèse</ol>
-            <ol id="Introduction" class="step" data-x="3500" data-y="0">Introduction à la problématique</ol>
-            <ol id="Methods" class="step"      data-x="3500" data-y="0">Méthodologie</ol>
-            <ol id="Megha" class="step"        data-x="3500" data-y="0">La restitution de données atmosphériques et de surface<br>dans le projet Megha-Tropiques</ol>
-            <ol id="Microwat" class="step"     data-x="3500" data-y="0">La restitution de données de surface océanique<br>dans le projet Microwat</ol>
-            <ol id="Conclusion" class="step"   data-x="3500" data-y="0">Conclusion et perspectives</ol>
+            <ol class="step Objectives" data-x="1400" data-y="0">Objectifs de la thèse</ol>
+            <ol class="step Introduction" data-x="1400" data-y="0">Introduction à la problématique</ol>
+            <ol class="step Methods" data-x="1400" data-y="0">Méthodologie</ol>
+            <ol class="step Megha" data-x="1400" data-y="0">La restitution de données atmosphériques et de surface<br>dans le projet Megha-Tropiques</ol>
+            <ol class="step Microwat" data-x="1400" data-y="0">La restitution de données de surface océanique<br>dans le projet Microwat</ol>
+            <ol class="step Conclusion" data-x="1400" data-y="0">Conclusion et perspectives</ol>
         </ul>
         </p>
     </div>
 
-    <div id="stateofart" class="step slide" data-x="2500" data-y="-500" data-z="-3000" data-rotate="300" data-scale=".05">
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Objectives" data-x="1400" data-y="0">Objectifs de la thèse</ol>
+        </ul>
+    </div>
+
+    <div id="stateofart" class="step slide Objectives" data-x="320" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
         <h1>État de l’art</h1>
         <ul>
             <li>Télédétection satellite très utilisée pour l’acquisition d’information <br>
@@ -120,15 +131,51 @@
         </ul>
     </div>
 
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Introduction" data-x="1400" data-y="0">Introduction à la problématique</ol>
+        </ul>
+    </div>
+
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Introduction" data-x="1400" data-y="0">Introduction à la problématique</ol>
+        </ul>
+    </div>
+
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Methods" data-x="1400" data-y="0">Méthodologie</ol>
+        </ul>
+    </div>
+
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Megha" data-x="1400" data-y="0">La restitution de données atmosphériques et de surface<br>dans le projet Megha-Tropiques</ol>
+        </ul>
+    </div>
+
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Microwat" data-x="1400" data-y="0">La restitution de données de surface océanique<br>dans le projet Microwat</ol>
+        </ul>
+    </div>
+
+    <div class="Summary SummaryOngoing">
+        <ul>
+            <ol class="step Conclusion" data-x="1400" data-y="0">Conclusion et perspectives</ol>
+        </ul>
+    </div>
+
     <!--
-        
-        And now it gets really exciting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
+
+         And now it gets really exciting! We move into third dimension!
+
+         Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+         `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+         positioned far away from us (by 3000px).
+
+     -->
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <p>and <b>tiny</b> ideas</p>
     </div>
@@ -153,10 +200,10 @@
         Only one current step has the `present` class.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
         <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
     </div>
-
+-->
     <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
         <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
     </div>
