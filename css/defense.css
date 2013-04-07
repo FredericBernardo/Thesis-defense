@@ -28,6 +28,7 @@
 #title div#logo {
     text-align: center;
     background-color:#FFF;
+    padding: 10px 0;
 }
 #title div#logo img {
     vertical-align: middle;
