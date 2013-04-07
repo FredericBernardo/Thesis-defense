@@ -118,15 +118,68 @@
     <div id="stateofart" class="step slide Objectives" data-x="320" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
         <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
         <h1>État de l’art</h1>
-        <ul>
-            <li>Télédétection satellite très utilisée pour l’acquisition d’information <br>
-                dans le domaine de la météorologie et du climat</li>
-            <li>Plusieurs domaines spectraux :
-                Visible
-                Couverture nuageuse, albedo, …
-                Seulement de jour
-                Pas d’information en dessous des nuages
-                Bonne résolution spatiale
+        <p>Télédétection satellite</p>
+        <p class="imply">Acquisition d’information pour la météorologie et du climat</p>
+
+        <ul id="visible" class="bullet3">
+            <li>Couverture nuageuse, albedo, …</li>
+            <li>Seulement de jour</li>
+            <li>Pas d’information en dessous des nuages</li>
+            <li>Bonne résolution spatiale</li>
+        </ul>
+
+        <ul id="infrared" class="bullet3">
+            <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
+            <li>Nuages opaques donc utilisable uniquement en ciel clair</li>
+            <li>Bonne résolution spatiale (<1km)</li>
+        </ul>
+
+        <ul id="microwave" class="bullet3">
+            <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
+            <li>Sensibilité aux nuages réduite, utilisable en ciel clair ou nuageux</li>
+            <li>Résolution spatiale limitée (>5km)</li>
+        </ul>
+
+        <div id="spectrum"><img src="spectrum.gif" alt="Spectrum" width="700"></div>
+    </div>
+
+    <div id="MWtoday" class="step slide Objectives" data-x="250" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
+        <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
+        <h1>La télédétection MW aujourd’hui</h1>
+        <ul class="bullet1">
+            <li><b>Atmosphère</b> : profils de température, de vapeur d’eau, et des précipitations</li>
+            <li><b>Surface océanique</b> : température, vent, glace de mer, salinité</li>
+            <li><b>Surface continentale</b> : humidité des sols, caractérisation de la neige</li>
+            <li>En situation claire et nuageuse</li>
+        </ul>
+        <p class="imply">Rôle majeur dans la prédiction numérique du temps</p>
+        <ul class="bullet1">
+            <li>Restitution au dessus des continents difficile en basse altitude à cause de la contribution de la surface</li>
+            <li>Évaluation des performances des restitutions limitée par les mesures <em>in situ</em></li>
+        </ul>
+    </div>
+
+    <div id="Apports" class="step slide Objectives" data-x="180" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
+        <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
+        <h1>Apports du travail présenté</h1>
+        <ul class="bullet1">
+            <li>Méthodes innovantes de restitution
+                <ul class="bullet2">
+                    <li>Techniques avancées d’inversion</li>
+                    <li>Profils vapeur d’eau sur terre comme sur océan</li>
+                    <li>Variables de surfaces continentales (température, émissivités)</li>
+                </ul>
+            </li>
+            <li>Chaîne de traitement transposable facilement à d’autres plateformes existantes
+                <ul class="bullet2">
+                    <li>Pour Megha-Tropiques, évaluation de l’algorithme en conditions réelles sur des instruments similaires déjà en vol</li>
+                </ul>
+            </li>
+            <li>Évaluation rigoureuse des résultats
+                <ul class="bullet2">
+                    <li>Par comparaison avec des mesures in situ dans l’espace des données géophysiques</li>
+                    <li>Directement dans l’espace des observations satellites</li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -135,6 +188,11 @@
         <ol>
             <li class="step Introduction" data-x="1400" data-y="0">Introduction à la problématique</li>
         </ol>
+    </div>
+
+    <div id="Atmospheric" class="step slide Objectives" data-x="320" data-y="-350" data-z="-3000" data-rotate="180" data-scale=".05">
+        <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
+        <h1>Le rayonnement atmosphérique</h1>
     </div>
 
     <div class="Summary SummaryOngoing">
