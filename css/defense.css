@@ -32,8 +32,14 @@ ol.header li{
     /*background:;*/
 }
 /* Bullet point level 1 */
-ul.bullet1 li {
-    list-style-type: square;
+ul.bullet1 li:before {
+    content: "\2022";
+}
+
+.bullet3 li:before {
+    content: "\2022";
+    padding-right: 10px;
+    font-size: 15px;
 }
 /*
   Particular slide settings
@@ -92,47 +98,41 @@ div.Summary ol li {
 div.SummaryOngoing ol li {
     list-style-type: none;
 }
-/* trick to highlight each item of the list without moving */
-div.Summary p.past, div.Summary p {
-    font-size: 40px;
-    text-align: center;
-    color: #000;
-    width: 1080px;
-    opacity: 1;
-    background-color: #EEE;
-}
-div.SummaryOngoing ol li.step.future{visibility: hidden;}
-div.Summary ol li.step.Objectives  {margin: -200px 0 0;}
-div.Summary ol li.step.Introduction{margin: -140px 0 0;}
-div.Summary ol li.step.Methods     {margin: -80px 0 0;}
-div.Summary ol li.step.Megha       {width:1200px;margin: -10px 0 0 150px;}
-div.Summary ol li.step.Microwat    {width:1200px;margin: 80px 0 0 150px;}
-div.Summary ol li.step.Conclusion  {margin:155px 0 0;}
 
 /* State of art */
-#stateofart {
-    opacity: 1;
+#stateofart h3{
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
 }
 #spectrum {
     text-align: center;
-    margin: 340px 0 0;
 }
 #spectrum img {
     width: 700px;
 }
 #visible, #infrared, #microwave {
-    position: ;
-    font-size:smaller;
-    line-height:27px;
-    width: 320px;
+    position: absolute;
+    font-size:20px;
+    line-height:normal;
+    width: 400px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
 }
+#visible ul, #infrared ul, #microwave ul {
+}
+#visible li, #infrared li, #microwave ul li {
+    margin-left: 10px;
+}
+
 #visible {
-    margin: 20px 0 0 500px;
+    margin: 190px 0 0 420px;
 }
 #infrared {
-    margin:200px 0 0 200px;
-
+    margin:10px;
 }
 #microwave {
-;
+    margin:200px 10px;
 }
+
+

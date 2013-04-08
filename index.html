@@ -115,26 +115,36 @@
         <p>Télédétection satellite</p>
         <p class="imply">Acquisition d’information pour la météorologie et du climat</p>
 
-        <ul id="visible" class="bullet3">
-            <li>Couverture nuageuse, albedo, …</li>
-            <li>Seulement de jour</li>
-            <li>Pas d’information en dessous des nuages</li>
-            <li>Bonne résolution spatiale</li>
-        </ul>
-
-        <ul id="infrared" class="bullet3">
-            <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
-            <li>Nuages opaques donc utilisable uniquement en ciel clair</li>
-            <li>Bonne résolution spatiale (<1km)</li>
-        </ul>
-
-        <ul id="microwave" class="bullet3">
-            <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
-            <li>Sensibilité aux nuages réduite, utilisable en ciel clair ou nuageux</li>
-            <li>Résolution spatiale limitée (>5km)</li>
-        </ul>
-
         <div id="spectrum"><img src="spectrum.gif" alt="Spectrum" width="700"></div>
+
+        <div id="visible" class="innerStep">
+            <h3 class="heading">Visible</h3>
+            <ul class="bullet3">
+                <li>Couverture nuageuse, albedo, …</li>
+                <li>Seulement de jour</li>
+                <li>Pas d’information en dessous des nuages</li>
+                <li>Bonne résolution spatiale</li>
+            </ul>
+        </div>
+
+        <div id="infrared" class="innerStep">
+            <h3 class="heading">Infrarouge</h3>
+            <ul class="bullet3">
+                <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
+                <li>Nuages opaques donc utilisable uniquement en ciel clair</li>
+                <li>Bonne résolution spatiale (<1km)</li>
+            </ul>
+        </div>
+
+        <div id="microwave" class="innerStep">
+            <h3 class="heading">Micro-ondes</h3>
+            <ul class="bullet3">
+                <li>Profil de température et de vapeur d’eau, paramètres de surface</li>
+                <li>Sensibilité aux nuages réduite, utilisable en ciel clair ou nuageux</li>
+                <li>Résolution spatiale limitée (>5km)</li>
+            </ul>
+        </div>
+
     </div>
 
     <div id="MWtoday" class="step slide Objectives" data-x="250" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
