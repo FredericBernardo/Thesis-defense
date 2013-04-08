@@ -199,6 +199,31 @@ a:focus {
 
 .impress-enabled .step.active { opacity: 1 }
 
+.impress-enabled .innerStep {
+    visibility: hidden;
+}
+.impress-enabled .innerStep.stepped {
+    visibility: visible;
+}
+.impress-enabled .innerStep.stepped.pop {
+    -webkit-transform: scale(.9);
+    -moz-transform:    scale(.9);
+    -ms-transform:     scale(.9);
+    -o-transform:      scale(.9);
+    transform:         scale(.9);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
 /*
     These 'slide' step styles were heavily inspired by HTML5 Slides:
     http://html5slides.googlecode.com/svn/trunk/styles.css
