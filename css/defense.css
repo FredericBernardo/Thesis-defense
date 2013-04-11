@@ -111,28 +111,37 @@ div.SummaryOngoing ol li {
 #spectrum img {
     width: 700px;
 }
-#visible, #infrared, #microwave {
+.spectrum {
     position: absolute;
     font-size:20px;
     line-height:normal;
-    width: 400px;
+    width: 270px;
     border: 1px solid #f0f0f0;
     border-radius: 10px;
+    float: right;
 }
-#visible ul, #infrared ul, #microwave ul {
-}
-#visible li, #infrared li, #microwave ul li {
+.spectrum ul li{
     margin-left: 10px;
+    padding: 3px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.spectrum ul li.icon {
+    list-style-type: none;
+    text-align: center;
+}
+.spectrum ul li.icon img {
+    vertical-align: middle;
+    margin: 2px 14px;
 }
 
 #visible {
-    margin: 190px 0 0 420px;
+    margin: 0 0 0 550px;
 }
 #infrared {
-    margin:10px;
+    margin:0 0 0 270px;
 }
 #microwave {
-    margin:200px 10px;
+    margin:0 0 0 -10px;
 }
-
 
