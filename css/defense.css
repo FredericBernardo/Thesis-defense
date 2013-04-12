@@ -5,7 +5,7 @@
 h1 {
     font-size: larger;
     text-align: center;
-    margin: 25px 0 15px;
+    margin: 25px 0;
 }
 /* Slide header */
 .header {
@@ -28,13 +28,33 @@ ol.header li{
 }
 /* Imply sign */
 .imply {
-    padding-left: 50px;
-    /*background:;*/
+    padding-left: 60px;
+    background: url('css/rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
 }
 /* Bullet point level 1 */
+ul.bullet1{
+    margin: 10px 0;
+}
+ul.bullet1 li{
+    margin: 3px 0;
+}
 ul.bullet1 li:before {
     content: "\2022";
+    padding-right: 12px;
 }
+/* Bullet point level 2 */
+ul.bullet2{
+    margin-bottom: 10px;
+    font-size: smaller;
+}
+ul.bullet2 li{
+    margin-left: 20px;
+}
+ul.bullet2 li:before {
+    content: "\2022";
+    padding-right: 10px;
+}
+
 
 .bullet3 li:before {
     content: "\2022";
@@ -144,4 +164,12 @@ div.SummaryOngoing ol li {
 #microwave {
     margin:0 0 0 -10px;
 }
+
+#MWtoday .imply {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
 
