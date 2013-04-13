@@ -29,7 +29,7 @@ ol.header li{
 /* Imply sign */
 .imply {
     padding-left: 60px;
-    background: url('css/rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
+    background: url('rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
 }
 /* Bullet point level 1 */
 ul.bullet1{
@@ -103,20 +103,23 @@ ul.bullet2 li:before {
     padding: 0 20px;
 }
 /* Summary */
-div.Summary ol li.step {
-    font-size: 35px;
+#Summary ol {
+    margin: 10px 0 0 20px;
+    font-size: 1.05em;
+}
+#Summary ol li {
     color: #000;
     line-height: 30px;
-}
-/* Put numerotation on summary */
-div.Summary li{
     padding-left: 10px;
-}
-div.Summary ol li {
+    margin: 14px 0;
     list-style-type: upper-roman;
 }
-div.SummaryOngoing ol li {
-    list-style-type: none;
+#Summary ol li.innerStep{
+    visibility: visible;
+    opacity: 0.5;
+}
+#Summary li.innerStep.stepped{
+    opacity: 1;
 }
 
 /* State of art */
@@ -171,5 +174,4 @@ div.SummaryOngoing ol li {
     border-radius: 10px;
     border: 1px solid #ddd;
 }
-
 
