@@ -189,7 +189,7 @@
         </ul>
     </div>
 
-    <div id="Atmospheric" class="step slide" data-x="180" data-y="-600" data-z="-3000" data-rotate="180" data-scale=".05">
+    <div id="Atmospheric" class="step slide" data-x="180" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">
         <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
         <h1>Le rayonnement atmosphérique</h1>
         <p><img src="images/rt.jpg" alt="Atmospheric contributions"></p>
@@ -201,7 +201,7 @@
         </p>
     </div>
 
-    <div id="ETR" class="step slide" data-x="110" data-y="-600" data-z="-3000" data-rotate="180" data-scale=".05">
+    <div id="ETR" class="step slide" data-x="110" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">
         <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
         <h1>Le transfert radiatif</h1>
         <p><img src="images/etr.png" alt="Radiative transfer">
@@ -213,23 +213,49 @@
         </p>
     </div>
 
-    <div id="MW_spectrum" class="step slide" data-x="40" data-y="-600" data-z="-3000" data-rotate="180" data-scale=".05">
+    <div id="MW_spectrum" class="step slide" data-x="40" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">
         <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
         <h1>Le spectre électromagnétique de l'atmosphère</h1>
         <ul class="bullet1">
-            <li>Plusieurs bandes d’absorption, utilisées pour le sondage</li>
-            <ul class="bullet2">
-                <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
-                <li>Raies à 183.31GHz pour la vapeur d'eau</li>
-                <li>...</li>
-            </ul>
-            <li>Des canaux fenêtres <img src="images/mw_spect_abs_regions.jpg" alt="MW Spectrum"></li>
-            <ul class="bullet2">
-                <li>Propriétés de la surface</li>
-                <li>Nuages</li>
-                <li>Pluies</li>
-                <li>Fréquences &uarr; = Opacité &uarr;</li>
-            </ul>
+            <li>Plusieurs bandes d’absorption, utilisées pour le sondage
+                <ul class="bullet2">
+                    <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
+                    <li>Raies à 183.31GHz pour la vapeur d'eau</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>Des canaux fenêtres <img src="images/mw_spect_abs_regions.jpg" alt="MW Spectrum">
+                <ul class="bullet2">
+                    <li>Propriétés de la surface</li>
+                    <li>Nuages</li>
+                    <li>Pluies</li>
+                    <li>Fréquences &uarr; = Opacité &uarr;</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="Methodology" class="step slide" data-x="40" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
+        <ol class="header" start="3"><li>Méthodologie</li></ol>
+        <h1>Méthode génerale d’inversion de données satellites</h1>
+        <ul class="bullet1">
+            <li>Problème direct
+                <ul class="bullet2">
+                    <li>Transfert radiatif (RTTOV)</li>
+                    <li class="thus">Équation physique</li>
+                </ul>
+            </li>
+            <li>Problème inverse <img src="images/methodology.png" alt="Methodology">
+                <ul class="bullet2">
+                    <li class="thus">Méthode statistique
+                        <ul class="bullet3">
+                            <li>1D-VAR</li>
+                            <li>Réseaux de neurones</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 
