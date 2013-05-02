@@ -22,9 +22,11 @@ h1 {
     width:858px;
 }
 ol.header li{
-    text-align: right;
-    list-style-type: upper-roman;
-    list-style-position: inside;
+    text-align: right !important;
+    list-style-type: upper-roman !important;
+    list-style-position: inside !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 /* Imply sign */
 .imply {
@@ -174,4 +176,21 @@ ul.bullet2 li:before {
     border-radius: 10px;
     border: 1px solid #ddd;
 }
-
+#ETR p {
+    text-align: center;
+}
+#ETR p img {
+    width:700px;
+    margin: 50px 0;
+}
+#ETR ol {
+    list-style: decimal;
+}
+#ETR ol li {
+    margin: 10px 0px 20px 35px;
+}
+#MW_spectrum img {
+    float:right;
+    margin-top: -70px;
+    width:450px;
+}
