@@ -74,6 +74,13 @@ li.thus:before {
     content: "\00BB" !important;
 }
 
+ul li p.img {
+    margin-left: -20px;
+    text-align: center;
+}
+ul li p.img img {
+    max-width:800px;
+}
 /*
   Particular slide settings
 */
@@ -215,4 +222,12 @@ li.thus:before {
 }
 #Methodology ul.bullet1 ul li {
     margin-top: 0;
+}
+#DB p.details {
+    font-size:smaller;
+    margin-left: 20px;
+    text-align: left;
+}
+#DB .img img {
+    width: 700px;
 }
