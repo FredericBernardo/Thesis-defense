@@ -74,11 +74,13 @@ li.thus:before {
     content: "\00BB" !important;
 }
 
-ul li p.img {
-    margin-left: -20px;
+p.img img {
     text-align: center;
 }
-ul li p.img img {
+ul li p.img {
+    margin-left: -20px;
+}
+p.img img {
     max-width:800px;
 }
 /*
@@ -230,4 +232,7 @@ ul li p.img img {
 }
 #DB .img img {
     width: 700px;
+}
+#Validation .img img {
+    width: 750px;
 }
