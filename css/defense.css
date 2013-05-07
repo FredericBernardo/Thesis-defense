@@ -3,9 +3,11 @@
 */
 
 h1 {
-    font-size: larger;
+    font-size: 1.8em;
     text-align: center;
-    margin: 25px 0;
+    margin: 5px 0 20px;
+    font-variant:small-caps;
+    line-height: 40px;
 }
 /* Slide header */
 .header {
@@ -235,4 +237,26 @@ p.img img {
 }
 #Validation .img img {
     width: 750px;
+}
+#Applications {
+    color: #E50;
+}
+#Applications .details {
+    border: 1px solid #e50;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 10px 35px;
+    font-size: 0.9em;
+    margin: 20px 220px 0 35px;
+
+}
+#Applications li {
+    margin: 50px 30px 50px 0;
+}
+#Applications li.meghatropiques {
+    background: url("images/logomt.jpeg") right top no-repeat;
+}
+#Applications li.microwat {
+    background: url("images/microwat.png") right top no-repeat;
+    background-size:200px;
 }
