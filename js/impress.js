@@ -425,7 +425,6 @@
             steps = $$(".step", root);
             steps.forEach( initStep );
             
-            alert(JSON.stringify(stepsData));
             // set a default initial state of the canvas
             currentState = {
                 translate: { x: 0, y: 0, z: 0 },
