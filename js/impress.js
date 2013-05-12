@@ -85,6 +85,22 @@
         return isNaN(numeric) ? (fallback || 0) : Number(numeric);
     };
     
+	// `toNumberRelative` returns the value or adds it to the base if
+	// it contains a +=/-= sign
+    var toNumberRelative = function (numeric, base, fallback) {
+		var n;
+		if (numeric == undefined) {
+			n = fallback || 0;
+		} else if (numeric.substring(0,2) == '+=') {
+			n = base + toNumber(numeric.substring(2,numeric.length));
+		} else if (numeric.substring(0,2) == '-=') {
+			n = base - toNumber(numeric.substring(2,numeric.length));
+		} else {
+			n = toNumber(numeric, base);
+		}
+		return n;
+    };
+    
     // `byId` returns element with given `id` - you probably have guessed that ;)
     var byId = function ( id ) {
         return document.getElementById(id);
@@ -227,7 +243,10 @@
                 init: empty,
                 goto: empty,
                 prev: empty,
-                next: empty
+                next: empty,
+                blackout: empty,
+                whiteout: empty,
+				fullscreen: empty
             };
         }
         
@@ -259,6 +278,9 @@
         // root presentation elements
         var root = byId( rootId );
         var canvas = document.createElement("div");
+		
+		// element for remembering the fullscreen state
+		var inFullscreen = false;
         
         var initialized = false;
         
@@ -292,6 +314,18 @@
                 lastEntered = null;
             }
         };
+		
+        // `onStartTransition` is called whenever a transition to a step element starts
+        var onStartTransition = function (currentStep, target){
+            triggerEvent(target, "impress:starttransition", { current: currentStep, next: target });
+		};
+		
+		// `prev_step` first point to start is 0,0,0
+		var prev_step = {
+			translate: { x: 0, y: 0, z: 0 },
+			rotate:    { x: 0, y: 0, z: 0 },
+			scale:     1
+		};
         
         // `initStep` initializes given step element by reading data from its
         // data attributes and setting correct styles.
@@ -299,18 +333,19 @@
             var data = el.dataset,
                 step = {
                     translate: {
-                        x: toNumber(data.x),
-                        y: toNumber(data.y),
-                        z: toNumber(data.z)
+                        x: toNumberRelative(data.x, prev_step.translate.x),
+                        y: toNumberRelative(data.y, prev_step.translate.y),
+                        z: toNumberRelative(data.z, prev_step.translate.z)
                     },
                     rotate: {
-                        x: toNumber(data.rotateX),
-                        y: toNumber(data.rotateY),
-                        z: toNumber(data.rotateZ || data.rotate)
+                        x: toNumberRelative(data.rotateX, prev_step.rotate.x),
+                        y: toNumberRelative(data.rotateY, prev_step.rotate.y),
+                        z: toNumberRelative(data.rotateZ || data.rotate, prev_step.rotate.z)
                     },
-                    scale: toNumber(data.scale, 1),
+                    scale: toNumberRelative(data.scale, prev_step.scale,1),
                     el: el
                 };
+			prev_step = step;
             
             if ( !el.id ) {
                 el.id = "step-" + (idx + 1);
@@ -390,6 +425,7 @@
             steps = $$(".step", root);
             steps.forEach( initStep );
             
+            alert(JSON.stringify(stepsData));
             // set a default initial state of the canvas
             currentState = {
                 translate: { x: 0, y: 0, z: 0 },
@@ -399,7 +435,7 @@
             
             initialized = true;
             
-            triggerEvent(root, "impress:init", { api: roots[ "impress-root-" + rootId ] });
+            triggerEvent(root, "impress:init", { api: roots[ "impress-root-" + rootId ], steps: steps });
         };
         
         // `getStep` is a helper function that returns a step element defined by parameter.
@@ -485,6 +521,9 @@
             if (activeStep && activeStep !== el) {
                 onStepLeave(activeStep);
             }
+			
+			// trigger that a new transition starts
+            onStartTransition(activeStep, el);
             
             // Now we alter transforms of `root` and `canvas` to trigger transitions.
             //
@@ -581,6 +620,60 @@
                 return goto(next);
             }
         };
+		
+        // `whiteout` API function to whiteout screen
+        var whiteout = function () {
+			overlay('#FFF');
+        };
+        // `blackout` API function goes to blackout screen
+        var blackout = function () {
+			overlay('#000');			
+        };
+		
+        // function show overlay over the whole screen
+        var overlay = function (color) {
+			var overlay = document.getElementById("impress-bwout-overlay");
+			if(overlay == null){
+				overlay = document.createElement('div');
+				overlay.id = 'impress-bwout-overlay';
+				document.body.appendChild(overlay);
+			}
+			if(overlay.classList.contains("impress-bwout-transition")){
+				overlay.classList.remove("impress-bwout-transition");
+			}else{
+				css(overlay, {
+					background:color,
+				});
+				window.setTimeout(function(){overlay.classList.add("impress-bwout-transition");}, 25);
+			}
+			
+        };
+		
+		var fullscreen = function (){
+			if(!inFullscreen){
+				var elem = document.body;
+				
+				if (elem.requestFullScreen){
+					elem.requestFullScreen();
+				}
+				else if (elem.mozRequestFullScreen) {
+					elem.mozRequestFullScreen();
+				}
+				else if (elem.webkitRequestFullScreen) {
+					elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+				}
+			}else{
+				if (document.cancelFullScreen) {
+					document.cancelFullScreen();
+				} else if (document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+				} else if (document.webkitCancelFullScreen) {
+					document.webkitCancelFullScreen();
+				}
+			}
+			
+			inFullscreen = !inFullscreen;
+		}
         
         // Adding some useful classes to step elements.
         //
@@ -653,7 +746,10 @@
             init: init,
             goto: goto,
             next: next,
-            prev: prev
+            prev: prev,
+            blackout: blackout,
+            whiteout: whiteout,
+			fullscreen: fullscreen
         });
 
     };
@@ -699,7 +795,7 @@
         
         // Prevent default keydown action when one of supported key is pressed.
         document.addEventListener("keydown", function ( event ) {
-            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) || event.keyCode == 66 || event.keyCode == 87 || event.keyCode == 70) {
                 event.preventDefault();
             }
         }, false);
@@ -720,7 +816,7 @@
         //   as another way to moving to next step... And yes, I know that for the sake of
         //   consistency I should add [shift+tab] as opposite action...
         document.addEventListener("keyup", function ( event ) {
-            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40)  || event.keyCode == 66 || event.keyCode == 87 || event.keyCode == 70) {
                 switch( event.keyCode ) {
                     case 33: // pg up
                     case 37: // left
@@ -733,6 +829,15 @@
                     case 39: // right
                     case 40: // down
                              api.next();
+                             break;
+                    case 66: // b
+                             api.blackout();
+                             break;
+                    case 70: // b
+                             api.fullscreen();
+                             break;
+                    case 87: // w
+                             api.whiteout();
                              break;
                 }
                 
