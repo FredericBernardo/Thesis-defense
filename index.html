@@ -157,26 +157,54 @@
             <li class="ok">Profils T&deg;, RH</li>
             <li class="ok">Surface</li>
             <li class="nok">Résolution spatiale</li>
-            <li class="ok">Nuages tranparents</li>
+            <li class="ok">Nuages transparents</li>
         </ul>
     </div>
 
-    <div id="MWtoday" class="step" data-x="+=165" data-y="+=1000">
-        <h1>La télédétection MW aujourd’hui</h1>
-        <ul class="bullet1">
-            <li><b>Atmosphère</b> : profils de température, de vapeur d’eau, et des précipitations</li>
-            <li><b>Surface océanique</b> : température, vent, glace de mer, salinité</li>
-            <li><b>Surface continentale</b> : humidité des sols, caractérisation de la neige</li>
-            <li>En situation claire et nuageuse</li>
+    <div id="MWtoday">
+        <h1 class="step" data-x="+=165" data-y="+=580" data-scale="2">Aujourd’hui, la télédétection MW</h1>
+
+        <ul>
+            <li id="MWtoday1" class="step" data-x="-=800" data-y="+=0">
+                <img src="images/profil_rh.png" alt="RH Profile"><span>Atmosphère</span>
+                <ul class="bullet2">
+                    <li>Température</li>
+                    <li>Vapeur d’eau</li>
+                    <li>Précipitations</li>
+                </ul>
+            </li>
+            <li id="MWtoday2" class="step" data-x="+=700" data-y="+=0">
+                <img src="images/sst-ghrsst-01-22-2007b.png" alt="SST"><span>Surface océanique</span>
+                <ul class="bullet2">
+                    <li>Température</li>
+                    <li>Vent</li>
+                    <li>Glace de mer</li>
+                    <li>Salinité</li>
+                </ul>
+            </li>
+            <li id="MWtoday3" class="step" data-x="+=700" data-y="+=0">
+                <img src="images/oocrop_forecast_soil_H.png" alt="Soil moisture"><span>Surface continentale</span>
+                <ul class="bullet2">
+                    <li>humidité des sols</li>
+                    <li>caractérisation <br>de la neige</li>
+                </ul>
+            </li>
         </ul>
-        <p class="imply">Rôle majeur dans la prédiction numérique du temps</p>
-        <ul class="bullet1 innerStep">
+    </div>
+
+    <div id="MWtodayrole" class="step" data-x="-=600" data-y="+=300" data-scale="1.2">
+        En situation claire et nuageuse
+        <h2>Rôle majeur dans la prédiction numérique du temps</h2>
+    </div>
+
+    <div id="drawbacks" class="step" data-x="-=0" data-y="+=450" data-z="-200" data-rotate-x="-60">
+        <ul>
             <li>Restitution au dessus des continents difficile en basse altitude à cause de la contribution de la surface</li>
             <li>Évaluation des performances des restitutions limitée par les mesures <em>in situ</em></li>
         </ul>
     </div>
 
-    <div id="Apports" class="step slide" data-x="180" data-y="-550" data-z="-3000" data-rotate="180" data-scale=".05">
+    <div id="Apports" class="step slide" data-x="+=1000" data-y="+=0" data-z="+=0" data-rotate-x="-60" >
         <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
         <h1>Apports du travail présenté</h1>
         <ul class="bullet1">
@@ -370,11 +398,6 @@
         <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
     </div>
 
-		<div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-			<p>want to know more?</p>
-			<q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-		</div>
-
 		<div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
 			<p>one more thing...</p>
 		</div>
@@ -411,8 +434,6 @@
 			CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
 
 		-->
-		<div id="overview" class="step" data-x="1500" data-y="2000" data-scale="2">
-		</div>
 
 	</div>
 </div>

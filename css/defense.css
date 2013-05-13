@@ -27,11 +27,6 @@ ol.header li{
     margin: 0 !important;
     width: 1200px;
 }
-/* Imply sign */
-.imply {
-    padding-left: 60px;
-    background: url('rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
-}
 
 /* Bullet point */
 ul.bullet1{
@@ -138,9 +133,19 @@ p.img img {
 #Summary ol li.innerStep{
     visibility: visible;
     opacity: 0.5;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
 }
 #Summary li.innerStep.stepped{
     opacity: 1;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
 }
 
 /* State of art */
@@ -223,12 +228,77 @@ div#spectrum.past
     vertical-align: middle;
     margin: 2px 14px;
 }
-#MWtoday .imply {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+#MWtoday h1 {
+    font-size: 55px;
+    padding-bottom: 300px;
 }
+#MWtoday {
+    font-size: 32px;
+}
+#MWtoday ul li {
+    width: 700px;
+}
+#MWtoday ul li ul{
+    height: 300px;
+}
+#MWtoday ul img {
+    margin: 5px 0 0 320px;
+    width: 350px;
+    z-index: -1;
+    position: absolute;
+}
+#MWtoday ul li#MWtoday3 img{
+    margin: 5px 0 0 400px;
+}
+/* Force image in future step to be displayed */
+#MWtoday .future {
+    opacity: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+#MWtoday .future ul,#MWtoday .future span {
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+#MWtoday .active ul,#MWtoday .active span {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+/* END - Force image in future step to be displayed */
+#MWtodayrole {
+    margin:0;
+    padding: 0;
+    text-align:center;
+    width: 900px;
+}
+#MWtodayrole h2 {
+    padding: 0 0 0 60px;
+    background: url('rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
+    width: 900px;
+    font-size: 36px;
+    margin: 70px 0 0;
+    border: 1px solid #000;
+
+}
+#drawbacks li {
+    font-size: 40px;
+    margin: 40px 0;
+    padding-left: 40px;
+    background: url('../icons/square-black-16.png') left 26px no-repeat;
+}
+
 #ETR p {
     text-align: center;
 }
@@ -285,9 +355,9 @@ div#spectrum.past
     margin: 50px 30px 50px 0;
 }
 #Applications li.meghatropiques {
-    background: url("images/logomt.jpeg") right top no-repeat;
+    background: url("../images/logomt.jpeg") right top no-repeat;
 }
 #Applications li.microwat {
-    background: url("images/microwat.png") right top no-repeat;
+    background: url("../images/microwat.png") right top no-repeat;
     background-size:200px;
 }
