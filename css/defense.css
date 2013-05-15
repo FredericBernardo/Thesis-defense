@@ -56,6 +56,10 @@ ol.header2 li{
 }
 
 /* Bullet point */
+ul li.bullet0  {
+    padding-left: 40px;
+    background: url('../icons/square-black-16.png') left 26px no-repeat;
+}
 ul.bullet1{
     margin: 10px 0;
 }
@@ -384,10 +388,26 @@ div#spectrum.past
     font-size: 25px;
     margin: 10px 0px 20px 20px;
 }
-#MW_spectrum img {
-    float:right;
-    margin-top: -70px;
-    width:450px;
+#MW_spectrum1 p {
+    text-align: center;
+}
+#MW_spectrum1.past {
+    opacity: 1;
+}
+#MW_spectrum1 h6 {
+    font-size: 40px;
+    text-align: center;
+}
+#MW_spectrum2 li.imply {
+    background: url('rightwards_double_arrow_u21D2_icon_64x64.png') center left no-repeat;
+    padding-left: 55px;
+    font-size: 33px;
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+#MW_spectrum2 {
+    margin-left: 500px;
+    font-size: 35px;
 }
 #Methodology img {
     float:right;

@@ -229,7 +229,7 @@
         </ul>
     </div>
 
-    <div id="Atmospheric" class="step" data-x="+=1700" data-y="+=300" data-z="0">
+    <div id="Atmospheric" class="step" data-x="+=1700" data-y="0" data-z="0">
         <ol class="header1" start="2"><li>Introduction à la problématique</li></ol>
         <h1>Le rayonnement atmosphérique</h1>
         <p class="specify">dans le domaine MW</p>
@@ -242,7 +242,7 @@
 
     <div id="ETR" class="step" data-x="+=0" data-y="+=450" data-z="+=0">
         <p><img src="images/etr.svg" alt="Radiative transfer">
-        <h1>Équation du transfert radiatif</h1>
+        <h1>Équation du Transfert Radiatif</h1>
             <ol>
                 <li>L’émission de la surface vers le haut de l’atmosphère</li>
                 <li>L’émission des composants de l’atmosphère vers le haut</li>
@@ -251,30 +251,35 @@
         </p>
     </div>
 
-
-    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="10">
+    <div id="MW_spectrum1" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
+        <h6>Le spectre électromagnétique <br>de l'atmosphère dans le domaine MW</h6>
+        <p><img src="images/MWspectrum.gif" alt="MW Spectrum"></p>
     </div>
 
-    <div id="MW_spectrum" class="step slide" data-x="40" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">
-        <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
-        <h1>Le spectre électromagnétique de l'atmosphère</h1>
-        <ul class="bullet1">
-            <li>Plusieurs bandes d’absorption, utilisées pour le sondage
-                <ul class="bullet2">
-                    <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
-                    <li>Raies à 183.31GHz pour la vapeur d'eau</li>
-                    <li>...</li>
-                </ul>
-            </li>
-            <li>Des canaux fenêtres <img src="images/mw_spect_abs_regions.jpg" alt="MW Spectrum">
-                <ul class="bullet2">
-                    <li>Propriétés de la surface</li>
-                    <li>Nuages</li>
-                    <li>Pluies</li>
-                    <li>Fréquences &uarr; = Opacité &uarr;</li>
-                </ul>
-            </li>
-        </ul>
+    <ul id="MW_spectrum2" class="step" data-x="+=300" data-y="-=20" data-z="+=0">
+        <li class="bullet0">Bandes d’absorption
+            <ul class="bullet2">
+                <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
+                <li>Raies à 183.31GHz pour la vapeur d'eau</li>
+                <li>...</li>
+            </ul>
+        </li>
+        <li class="imply">Profils atmosphériques</li>
+        <li class="bullet0 innerStep">Des canaux fenêtres
+            <ul class="bullet2">
+                <li>Propriétés de la surface</li>
+                <li>Nuages</li>
+                <li>Pluies</li>
+                <li>Fréquences &uarr; = Opacité &uarr;</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div id="Intro_final">
+        <ol class="header2" start="2"><li>Introduction à la problématique</li></ol>
+    </div>
+
+    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="10">
     </div>
 
     <div id="Methodology" class="step slide" data-x="40" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
@@ -395,7 +400,7 @@
     <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
         <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
     </div>
--->
+
     <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
         <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
     </div>
@@ -404,8 +409,7 @@
 			<p>one more thing...</p>
 		</div>
 
-		<!--
-
+<!--
 			And the last one shows full power and flexibility of impress.js.
 
 			You can not only position element in 3D, but also rotate it around any axis.
