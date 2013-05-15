@@ -115,7 +115,7 @@
     </div>
 
     <div id="stateofart" class="step" data-x="+=1700" data-y="+=0">
-        <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
+        <ol class="header1" start="1"><li>Objectifs de la thèse</li></ol>
         <h1>État de l’art</h1>
         <blockquote><img src="images/amsu.png" alt="Amsu scan"> Télédétection [teledet&#949;ksj&#596;&#771;] (nom féminin)
             <em>Technique d'acquisition à distance d'informations sur la surface terrestre, principalement fondée sur l'analyse d'images obtenues dans différentes gammes de longueurs d'onde à partir d'aéronefs ou de satellites.</em>
@@ -197,60 +197,62 @@
         <h2>Rôle majeur dans la prédiction numérique du temps</h2>
     </div>
 
-    <div id="drawbacks" class="step" data-x="-=0" data-y="+=450" data-z="-200" data-rotate-x="-60">
+    <div id="drawbacks" class="step" data-x="-=0" data-y="+=450" data-z="-=400" data-rotate-x="-60">
         <ul>
             <li>Restitution au dessus des continents difficile en basse altitude à cause de la contribution de la surface</li>
             <li>Évaluation des performances des restitutions limitée par les mesures <em>in situ</em></li>
         </ul>
     </div>
 
-    <div id="Apports" class="step slide" data-x="+=1000" data-y="+=0" data-z="+=0" data-rotate-x="-60" >
-        <ol class="header" start="1"><li>Objectifs de la thèse</li></ol>
+    <div id="apports" class="step slide" data-x="+=1400" data-y="+=0" data-z="+=0" data-rotate-x="-60">
+        <ol class="header2" start="1"><li>Objectifs de la thèse</li></ol>
         <h1>Apports du travail présenté</h1>
-        <ul class="bullet1">
-            <li>Méthodes innovantes de restitution
+        <ul class="bullet1" data-x="+=0" data-y="+=100" data-z="+=0" data-rotate-x="-60">
+            <li class="innerStep">Méthodes innovantes de restitution
                 <ul class="bullet2">
                     <li>Techniques avancées d’inversion</li>
                     <li>Profils vapeur d’eau sur terre comme sur océan</li>
                     <li>Variables de surfaces continentales (température, émissivités)</li>
                 </ul>
             </li>
-            <li>Chaîne de traitement transposable facilement à d’autres plateformes existantes
-                <ul class="bullet2">
-                    <li>Pour Megha-Tropiques, évaluation de l’algorithme en conditions réelles sur des instruments similaires déjà en vol</li>
-                </ul>
-            </li>
-            <li>Évaluation rigoureuse des résultats
+            <li class="innerStep">Évaluation rigoureuse des résultats
                 <ul class="bullet2">
                     <li>Par comparaison avec des mesures in situ dans l’espace des données géophysiques</li>
                     <li>Directement dans l’espace des observations satellites</li>
                 </ul>
             </li>
+            <li class="innerStep">Chaîne de traitement transposable facilement à d’autres plateformes existantes
+                <ul class="bullet2">
+                    <li>Pour Megha-Tropiques, évaluation de l’algorithme en conditions réelles sur des instruments similaires déjà en vol</li>
+                </ul>
+            </li>
         </ul>
     </div>
 
-    <div id="Atmospheric" class="step slide" data-x="+=1200" data-y="+=300" data-z="0" data-rotate="+=30" data-rotate-x="+=0">
-        <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
+    <div id="Atmospheric" class="step" data-x="+=1700" data-y="+=300" data-z="0">
+        <ol class="header1" start="2"><li>Introduction à la problématique</li></ol>
         <h1>Le rayonnement atmosphérique</h1>
+        <p class="specify">dans le domaine MW</p>
+        <ul class="bullet1">
+            <li>Émission propre de la surface (terre ou océan)</li>
+            <li>Émission des composants de l’atmosphère et des nuages</li>
+        </ul>
         <p><img src="images/rt.jpg" alt="Atmospheric contributions"></p>
-        <p>Dans le domaine MW :
-            <ul class="bullet1">
-                <li>Émission propre de la surface (terre ou océan)</li>
-                <li>Émission des composants de l’atmosphère et des nuages</li>
-            </ul>
-        </p>
     </div>
 
-    <div id="ETR" class="step slide" data-x="110" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">
-        <ol class="header" start="2"><li>Introduction à la problématique</li></ol>
-        <h1>Le transfert radiatif</h1>
-        <p><img src="images/etr.png" alt="Radiative transfer">
+    <div id="ETR" class="step" data-x="+=0" data-y="+=450" data-z="+=0">
+        <p><img src="images/etr.svg" alt="Radiative transfer">
+        <h1>Équation du transfert radiatif</h1>
             <ol>
                 <li>L’émission de la surface vers le haut de l’atmosphère</li>
                 <li>L’émission des composants de l’atmosphère vers le haut</li>
                 <li>La réflexion par la surface du rayonnement émis par l’atmosphère vers le bas de l’atmosphère</li>
             </ol>
         </p>
+    </div>
+
+
+    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="10">
     </div>
 
     <div id="MW_spectrum" class="step slide" data-x="40" data-y="-590" data-z="-3000" data-rotate="180" data-scale=".05">

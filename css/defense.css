@@ -7,11 +7,11 @@ h1 {
     text-align: center;
     margin: 5px 0 20px;
     font-variant:small-caps;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 /* Slide header */
-.header {
+.header1 {
     background-color: #f0f0f0;
     box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
     background-color: #EEE;
@@ -19,13 +19,40 @@ h1 {
     margin:-40px 0 40px -400px;
     width:2200px;
 }
-ol.header li{
+ol.header1 li{
     text-align: right !important;
     list-style-type: upper-roman !important;
     list-style-position: inside !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 1200px;
+}
+ol.header li{
+    text-align: right !important;
+    list-style-type: upper-roman !important;
+    list-style-position: inside !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.header2 {
+    font-size: smaller;
+    background-color: #EEE;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
+    background-color: #EEE;
+    padding: 0 20px;
+    margin:-40px 0 20px -60px;
+    width:858px;
+}
+ol.header2 li{
+    text-align: right !important;
+    list-style-type: upper-roman !important;
+    list-style-position: inside !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 /* Bullet point */
@@ -86,9 +113,9 @@ p.img img {
     text-align: right;
 }
 #title h1 {
-    font-size: 50px;
+    font-size: 49px;
     text-align: center;
-    padding: 0 0.1em;
+    padding: 0.15em;
     background: rgba(255,255,255,0.5);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
     border-radius: 0.2em;
@@ -263,18 +290,18 @@ div#spectrum.past
 #MWtoday .future ul,#MWtoday .future span {
     opacity: 0.3;
 
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:    opacity 0.5s;
+    -ms-transition:     opacity 0.5s;
+    -o-transition:      opacity 0.5s;
+    transition:         opacity 0.5s;
 }
 #MWtoday .active ul,#MWtoday .active span {
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:    opacity 0.5s;
+    -ms-transition:     opacity 0.5s;
+    -o-transition:      opacity 0.5s;
+    transition:         opacity 0.5s;
 }
 /* END - Force image in future step to be displayed */
 #MWtodayrole {
@@ -298,19 +325,64 @@ div#spectrum.past
     padding-left: 40px;
     background: url('../icons/square-black-16.png') left 26px no-repeat;
 }
-
+#apports .innerStep {
+    visibility: visible;
+    opacity: 0.3;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:    opacity 0.5s;
+    -ms-transition:     opacity 0.5s;
+    -o-transition:      opacity 0.5s;
+    transition:         opacity 0.5s;
+}
+#apports .innerStep.stepped {
+    opacity: 1;
+}
+#Atmospheric h1 {
+    font-size: 1.55em;
+    width:900px;
+    margin-bottom: 30px;
+}
+#Atmospheric ul {
+    margin: 0 0 20px 30px;
+}
+#Atmospheric ul li {
+    font-size: 29px;
+    margin: 0;
+}
+#Atmospheric p {
+    text-align: center;
+}
+#Atmospheric p.specify {
+    text-align: right;
+    margin:0;
+    font-size: 25px;
+}
+#Atmospheric img {
+    width: 650px;
+    margin-left: 10px;
+}
+#ETR {
+    margin-top: 100px;
+}
 #ETR p {
     text-align: center;
 }
 #ETR p img {
     width:700px;
-    margin: 50px 0;
+    padding: 10px 30px;
+    border: 1px solid #333;
+}
+#ETR h1 {
+    font-size: 1.35em;
+    margin: 20px 0;
+    padding: 0
 }
 #ETR ol {
-    list-style: decimal;
+    list-style: lower-alpha;
 }
 #ETR ol li {
-    margin: 10px 0px 20px 35px;
+    font-size: 25px;
+    margin: 10px 0px 20px 20px;
 }
 #MW_spectrum img {
     float:right;
