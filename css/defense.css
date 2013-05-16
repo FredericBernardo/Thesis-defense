@@ -467,19 +467,19 @@ div#spectrum.past, #Methodology.past, #DB.past
     -o-transform:      rotate(40deg);
     transform:         rotate(40deg);
 }
-#Intro_scheme div.result {
+div.result {
     border: 1px solid #000;
     width: 520px;
     padding: 0;
 }
-#Intro_scheme div.result img{
+div.result img{
     max-height: 100px;
     margin: 10px 30px;
 }
-#Intro_scheme div.result img.arrow{
+div.result img.arrow{
     margin-bottom: 25px;
 }
-#Intro_scheme div.gear {
+div.gear {
     width:350px;
     margin-top: 10px;
     padding-top: 70px;
@@ -487,32 +487,32 @@ div#spectrum.past, #Methodology.past, #DB.past
     border-top: none;
     border-radius: 0 0 10px 10px;
 }
-#Intro_scheme div.gear img {
+div.gear img {
     background-color: #f0f0f0;
     border: 1px solid rgba(0, 0, 0, .3);
     position: absolute;
     margin: -20px 0 0 -60px;
     padding: 3px;
 }
-#Intro_scheme div.gear.future img.animated, #Intro_scheme div.gear.past img.animated {
+div.gear.future img.animated, div.gear.past img.animated {
     visibility: hidden;
 }
-#Intro_scheme div.gear.present img.fix {
+div.gear.present img.fix {
     visibility: hidden;
 }
-#Intro_scheme div.gear .innerStep img {
+div.gear .innerStep img {
     background-color: transparent;
     border: none;
     visibility: hidden;
 }
-#Intro_scheme div.gear .innerStep.stepped img {
+div.gear .innerStep.stepped img {
     visibility: visible;
 }
-#Intro_scheme div.gear img.question {
+div.gear img.question {
     margin: 100px 0 0 100px;
     width: 180px;
 }
-#Intro_scheme div.gear img.people {
+div.gear img.people {
     margin: 270px 0 0 -130px;
     width: 400px;
 }
@@ -540,12 +540,32 @@ div#spectrum.past, #Methodology.past, #DB.past
 #DB .img img {
     width: 700px;
 }
+ul#DB2 {
+    margin-top: 200px;
+}
 ul#DB2 li {
     background: url('../images/rightwards_double_arrow_u21D2_icon_64x64.png') no-repeat left -10px;
     padding-left: 70px;
 }
-#Validation .img img {
+#Validation {
+    height: 700px;
+}
+#Validation img {
     width: 750px;
+    position: absolute;
+}
+#Validation .innerStep {
+    opacity: 0;
+    visibility: visible;
+}
+#Validation .innerStep.stepped {
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+
 }
 #Applications {
     color: #E50;
