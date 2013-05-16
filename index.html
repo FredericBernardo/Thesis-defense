@@ -310,12 +310,9 @@
         </div>
     </div>
 
-    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="10">
-    </div>
-
-    <div id="Methodology" class="step slide" data-x="40" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
-        <ol class="header" start="3"><li>Méthodologie</li></ol>
-        <h1>Méthode génerale d’inversion de données satellites</h1>
+    <div id="Methodology" class="step" data-x="+=1700" data-y="0" data-z="0">
+        <ol class="header1" start="3"><li>Méthodologie</li></ol>
+        <h1>Inversion de données satellites</h1>
         <ul class="bullet1">
             <li>Problème direct
                 <ul class="bullet2">
@@ -323,34 +320,35 @@
                     <li class="thus">Équation physique</li>
                 </ul>
             </li>
-            <li>Problème inverse <img src="images/methodology.png" alt="Methodology">
-                <ul class="bullet2">
-                    <li class="thus">Méthode statistique
-                        <ul class="bullet3">
-                            <li>1D-VAR</li>
-                            <li>Réseaux de neurones</li>
-                            <li>...</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
         </ul>
+        <img src="images/methodology.png" alt="Methodology">
     </div>
 
-    <div id="Neurons" class="step slide" data-x="-30" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
-        <ol class="header" start="3"><li>Méthodologie</li></ol>
-        <h1>Inversion par réseau de neurones</h1>
+    <ul class="bullet1 step" data-x="+=0" data-y="+=430">
+        <li>Problème inverse
+            <ul class="bullet2">
+                <li class="thus">Méthode statistique
+                    <ul class="bullet3">
+                        <li>1D-VAR</li>
+                        <li>Réseaux de neurones</li>
+                        <li>...</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div id="Neurons" class="step" data-x="+=0" data-y="+=600" data-z="0">
+        <h1>Réseaux de neurones</h1>
+        <p class="img"><img src="images/neurons.png" alt="Réseaux de neurones"></p>
         <ul class="bullet1">
-            <li>Adapté à la fusion d’information pour exploiter la synergie multi-longueurs d’ondes
-                <p class="img"><img src="images/neurons.png" alt="Réseaux de neurones"></p>
-            </li>
             <li class="thus">Nécessite un apprentissage</li>
+            <li class="details">Adapté à la fusion d’information pour exploiter la synergie multi-longueurs d’ondes</li>
         </ul>
     </div>
 
-    <div id="DB" class="step slide" data-x="-100" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
-        <ol class="header" start="3"><li>Méthodologie</li></ol>
-        <h1>Constitution d’une base de données</h1>
+    <div id="DB" class="step" data-x="+=0" data-y="+=900">
+        <h1>Base de données</h1>
         <ul class="bullet1">
             <li>Analyses :
                 <p class="details">Issues des modèles d’assimilation et de prévision</p>
@@ -359,10 +357,16 @@
                 </ul>
                 <p class="img"><img src="images/bdd.png" alt="Learning Base"></p>
             </li>
-            <li>Base d'apprentissage
-                <p class="details">Des paires cohérentes de température de brillance (entrées) et de données géophysiques (sorties)</p>
-            </li>
         </ul>
+    </div>
+
+    <ul id="DB2" class="step" data-x="+=0" data-y="+=390">
+        <li>Base d'apprentissage
+            <p class="details">Des paires cohérentes de température de brillance (entrées) et de données géophysiques (sorties)</p>
+        </li>
+    </ul>
+
+    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="10">
     </div>
 
     <div id="Validation" class="step slide" data-x="-170" data-y="-630" data-z="-3000" data-rotate="180" data-scale=".05">
