@@ -402,8 +402,39 @@
         </ul>
     </div>
 
+    <div id="MT_intro" class="step" data-x="+=2200" data-y="0">
+        <ol class="header1" start="4"><li>Le projet Megha-Tropiques</li></ol>
+<!--        <h1>La restitution de données atmosphériques et de surface</h1>
+        <p class="details">dans le projet Megha-Tropiques</p> -->
+        <img src="images/mt.png">
+        <ul class="bullet1">
+            <li>Mission indo-française entre le Indian Space Research Organisation et le CNES</li>
+            <li>Dédiée au cycle de l’eau et de l’énergie dans les Tropiques</li>
+        </ul>
+    </div>
+
+    <div id="MT_orbit" class="step" data-x="+=0" data-y="+=650">
+        <div><img src="images/orbit.jpeg"></div>
+        <ul class="bullet1">
+            <li>Faible inclinaison sur l’équateur (ceinture équatoriale)</li>
+            <li>Haute répétitivité des mesures (jusqu’à 7 survols journaliers du même point) mais irrégulière</li>
+            <li>865 km d’altitude</li>
+            <li>Fait partie de la constellation Global Precipitation Measurement (GPM)</li>
+        </ul>
+    </div>
+
+    <div id="MT_instru" class="step slide" data-x="+=0" data-y="+=850">
+        <h1>Instrumentation</h1>
+        <img src="images/mega-trophiques2.jpg">
+        <ul class="bullet1">
+            <li>ScaRaB<br> Flux radiatif au sommet de l’atmosphère dans les ondes courtes et les ondes longues</li>
+            <li>SAPHIR<br> Sondeur microondes dédié à la vapeur d’eau : 6 canaux dans la bande d’absorption de la vapeur d’eau à 183,31 GHz</li>
+            <li>MADRAS<br>Imageur microondes pour les précipitations : canaux à 18, 23, 37, 89 and 157 GHz, polarisations H et V</li>
+        </ul>
+    </div>
     <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="20">
     </div>
+
 
     <!-- Template
 
@@ -426,9 +457,6 @@
          positioned far away from us (by 3000px).
 
      -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
 
     <!--
 
@@ -450,17 +478,7 @@
         Only one current step has the `present` class.
 
     -->
-    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-		<div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-			<p>one more thing...</p>
-		</div>
 
 <!--
 			And the last one shows full power and flexibility of impress.js.
@@ -473,10 +491,6 @@
 			as `data-rotate` (these two are basically aliases).
 
 		-->
-		<div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-			<p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-			<span class="footnote">* beat that, prezi ;)</span>
-		</div>
 
 		<!--
 
@@ -496,39 +510,6 @@
 
 	</div>
 </div>
-
-<!--
-    
-    Hint is not related to impress.js in any way.
-    
-    But it can show you how to use impress.js features in creative way.
-    
-    When the presentation step is shown (selected) its element gets the class of "active" and the body element
-    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
-    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
-    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
-    
-    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
-    the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
--->
-<div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
-</div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
 
 <!--
     
