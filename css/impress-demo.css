@@ -196,7 +196,13 @@ a:focus {
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
 }
-
+.impress-enabled .step.nodelay {
+    -webkit-transition: none;
+    -moz-transition:    none;
+    -ms-transition:     none;
+    -o-transition:      none;
+    transition:         none;
+}
 .impress-enabled .step.active { opacity: 1 }
 
 .impress-enabled .innerStep {
