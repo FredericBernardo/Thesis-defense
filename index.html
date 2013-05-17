@@ -9,7 +9,7 @@
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
-<!--    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <!--
         
@@ -423,14 +423,60 @@
         </ul>
     </div>
 
-    <div id="MT_instru" class="step slide" data-x="+=0" data-y="+=850">
+    <div id="MT_instru" class="step" data-x="+=0" data-y="+=850">
         <h1>Instrumentation</h1>
-        <img src="images/mega-trophiques2.jpg">
+        <img src="images/mega-trophiques2.png">
         <ul class="bullet1">
             <li>ScaRaB<br> Flux radiatif au sommet de l’atmosphère dans les ondes courtes et les ondes longues</li>
             <li>SAPHIR<br> Sondeur microondes dédié à la vapeur d’eau : 6 canaux dans la bande d’absorption de la vapeur d’eau à 183,31 GHz</li>
             <li>MADRAS<br>Imageur microondes pour les précipitations : canaux à 18, 23, 37, 89 and 157 GHz, polarisations H et V</li>
         </ul>
+    </div>
+
+    <div id="instrumentation">
+        <div id="Madras" class="step" data-x="+=0" data-y="+=850">
+            <h1>Madras</h1>
+            <div>
+                <ul>
+                    <li>Imageur MW</li>
+                    <li>Balayage conique à 53&deg;</li>
+                    <li>10 km à 40 km de résolution</li>
+                </ul>
+                <img src="images/tmi_1.jpg">
+            </div>
+            <table>
+                <thead><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Objectifs</td></thead>
+                <tr class="odd"><td rowspan="2">18.7</td><td>V</td><td>0.46</td><td rowspan="2">Pluie sur la mer</td></tr>
+                <tr class="odd"><td>H</td><td>0.53</td></tr>
+                <tr class="even"><td>23.8</td><td>V</td><td>0.48</td><td>Distribution <br>de vapeur d'eau</td></tr>
+                <tr class="odd"><td rowspan="2">36.5</td><td>V</td><td>0.44</td><td rowspan="2">Eau liquide dans les nuages, pluie sur la mer</td></tr>
+                <tr class="odd"><td>H</td><td>0.48</td></tr>
+                <tr class="even"><td rowspan="2">89</td><td>V</td><td>0.63</td><td rowspan="2">Zones convectives<br> de pluie</td></tr>
+                <tr class="even"><td>H</td><td>0.58</td></tr>
+                <tr class="odd"><td rowspan="2">157</td><td>V</td><td>1.75</td><td rowspan="2">Détection de glace <br>  dans les nuages</td></tr>
+                <tr class="odd"><td>H</td><td>1.75</td></tr>
+            </table>
+        </div>
+
+        <div id="Saphir" class="step" data-x="+=0" data-y="+=1050">
+            <h1>Saphir</h1>
+            <img src="images/wf.png">
+            <div>
+                <ul>
+                    <li>Sondage atmosphérique transversale pour la vapeur d’eau</li>
+                    <li>Résolution verticale inédite en MW </li>
+                </ul>
+                <table>
+                    <thead><td>Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td></thead>
+                    <tr class="odd"><td>183.31 &pm; 0.2</td><td>2.03</td><td>200</td></tr>
+                    <tr class="even"><td>183.31 &pm; 1.1</td><td>1.53</td><td>350</td></tr>
+                    <tr class="odd"><td>183.31 &pm; 2.8</td><td>1.37</td><td>500</td></tr>
+                    <tr class="even"><td>183.31 &pm; 4.2</td><td>1.25</td><td>700</td></tr>
+                    <tr class="odd"><td>183.31 &pm; 6.8</td><td>1.06</td><td>1200</td></tr>
+                    <tr class="even"><td>183.31 &pm; 11</td><td>0.99</td><td>2000</td></tr>
+                </table>
+            </div>
+        </div>
     </div>
     <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="20">
     </div>

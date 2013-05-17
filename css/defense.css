@@ -1,3 +1,8 @@
+/* Draft mode */
+.step {
+    border: 1px solid #000;
+}
+
 /*
   Global disposition for any slide
 */
@@ -616,12 +621,61 @@ ul#DB2 li {
     width: 600px;
 }
 #MT_instru img {
-    width: 400px;
+    width: 450px;
     float: right;
-    margin-right: -55px;
+    margin: 30px -105px 0 10px;
 }
 #MT_instru ul {
-    margin-top: 30px;
+    margin-top: 39px;
+    font-size: 27px;
+}
+#instrumentation div.step {
     font-size: 28px;
 }
-
+#instrumentation div div {
+    float: right;
+    margin: 10px -50px 0 10px;
+    width: 400px;
+}
+#instrumentation div ul li {
+    margin-bottom: 12px;
+}
+#instrumentation div table {
+    margin: 50px 0 0 -20px;
+    width: 450px
+}
+#instrumentation div#Saphir table {
+    margin: 50px 0 0;
+}
+#instrumentation div img {
+    margin-top: 20px;
+    width: 400px;
+}
+#instrumentation div#Saphir div {
+    margin: 10px 20px 0 0;
+    width: 435px;
+}
+#instrumentation div#Saphir img  {
+    margin: 40px 0 0 -50px;
+}
+#instrumentation tr {
+    text-align: center;
+    border: 1px solid #666666;
+}
+#instrumentation td {
+    font-size: 22px;
+    padding: 0 10px;
+}
+#instrumentation tr.odd td,#instrumentation tr.even td {
+    vertical-align: middle;
+}
+#instrumentation thead {
+    background-color: #929FAE;
+    color: #FFFFFF;
+}
+#instrumentation tr.odd {
+    background-color: #E0E5E9;
+}
+#instrumentation tr.even {
+    background-color: #fff;
+}
