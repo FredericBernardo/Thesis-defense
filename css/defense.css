@@ -1,4 +1,7 @@
 /* Draft mode */
+.step {
+    border: 1px solid #000;
+}
 
 /*
   Global disposition for any slide
@@ -707,4 +710,12 @@ ul#DB2 li {
 }
 #Calib_intro5 {
     width:180px;
+}
+#Calib_intro6 {
+    margin-top:180px;
+    font-size: 30px;
+}
+#Calib_intro6 li {
+    margin-top:10px;
+    font-size: 30px;
 }
