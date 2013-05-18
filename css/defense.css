@@ -1,7 +1,4 @@
 /* Draft mode */
-.step {
-    border: 1px solid #000;
-}
 
 /*
   Global disposition for any slide
@@ -113,6 +110,20 @@ ul li p.img {
 p.img img {
     max-width:800px;
 }
+/* Inner Step appear */
+.innerStep.appear, .step.appear {
+    opacity: 0;
+    visibility: visible;
+}
+.innerStep.appear.stepped {
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
 /*
   Particular slide settings
 */
@@ -485,19 +496,29 @@ div.result img.arrow{
     margin-bottom: 25px;
 }
 div.gear {
-    width:350px;
-    margin-top: 10px;
+    border: none;
+    margin: 0;
+    width: 190px;
+}
+div.gear div {
+    text-align: center;
+    line-height: 15px;
+}
+#Intro_scheme div.gear {
+    margin: 10px 0 0;
     padding-top: 70px;
     border: 4px solid rgba(0, 0, 0, .3);
     border-top: none;
     border-radius: 0 0 10px 10px;
 }
 div.gear img {
+    position: absolute;
+}
+#Intro_scheme div.gear img {
     background-color: #f0f0f0;
     border: 1px solid rgba(0, 0, 0, .3);
-    position: absolute;
-    margin: -20px 0 0 -60px;
     padding: 3px;
+    margin: -20px 0 0 -60px;
 }
 div.gear.future img.animated, div.gear.past img.animated {
     visibility: hidden;
@@ -558,19 +579,6 @@ ul#DB2 li {
 #Validation img {
     width: 750px;
     position: absolute;
-}
-#Validation .innerStep {
-    opacity: 0;
-    visibility: visible;
-}
-#Validation .innerStep.stepped {
-    opacity: 1;
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
-
 }
 #Applications {
     color: #E50;
@@ -678,4 +686,25 @@ ul#DB2 li {
 }
 #instrumentation tr.even {
     background-color: #fff;
+}
+#Calib_intro .past {
+    opacity: 1;
+}
+#Calib_intro1 {
+    width:700px
+}
+#Calib_intro2 {
+    font-size: 20px;
+    margin-top: -80px;
+}
+#Calib_intro3 {
+    margin-top: 172px;
+    width:212px;
+}
+#Calib_intro4 {
+    margin-top: -192px;
+    width:212px;
+}
+#Calib_intro5 {
+    width:180px;
 }
