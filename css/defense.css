@@ -719,3 +719,17 @@ ul#DB2 li {
     margin-top:10px;
     font-size: 30px;
 }
+#Calib_result div.step {
+    text-align: center;
+}
+#Calib_result h1 {
+    font-size: 48px;
+}
+#Calib_result ul {
+    text-align: left;
+    margin: 0 0 0 10px;
+    font-size: 23px;
+}
+#Calib_result1 ul li i {
+    font-size: 20px;
+}
