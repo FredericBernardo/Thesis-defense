@@ -363,7 +363,11 @@ div#spectrum.past, #Methodology.past, #DB.past
 #apports .innerStep.stepped {
     opacity: 1;
 }
-#Atmospheric h1 {
+#Atmospheric .past {
+    opacity: 1;
+}
+#Atmospheric
+ h1 {
     font-size: 1.55em;
     width:900px;
     margin-bottom: 30px;
