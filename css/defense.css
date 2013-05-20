@@ -100,6 +100,9 @@ ul.bullet3 li{
     padding-right: 10px;
     font-size: 15px;
 }
+li.thus {
+    list-style: none;
+}
 li.thus:before {
     content: "\00BB" !important;
 }
@@ -537,12 +540,12 @@ div.gear .innerStep img {
 div.gear .innerStep.stepped img {
     visibility: visible;
 }
-div.gear img.question {
-    margin: 100px 0 0 100px;
+div.gear .innerStep img.question {
+    margin: 100px 0 0 100px !important;
     width: 180px;
 }
-div.gear img.people {
-    margin: 270px 0 0 -130px;
+div.gear .innerStep img.people {
+    margin: 270px 0 0 -130px !important;
     width: 400px;
 }
 #Methodology img {
@@ -719,17 +722,20 @@ ul#DB2 li {
     margin-top:10px;
     font-size: 30px;
 }
-#Calib_result div.step {
+#Calibration div.step {
     text-align: center;
 }
-#Calib_result h1 {
+#Calibration h1 {
     font-size: 48px;
 }
-#Calib_result ul {
+#Calibration ul {
     text-align: left;
     margin: 0 0 0 10px;
     font-size: 23px;
 }
-#Calib_result1 ul li i {
+#Calibration ul li i {
     font-size: 20px;
+}
+#Telsem ul li {
+    font-size: 30px;
 }
