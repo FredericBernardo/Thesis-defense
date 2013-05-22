@@ -864,5 +864,12 @@ ul#DB2 li {
     float:right;
     width:400px;
     margin: 40px 0 0 10px;
-
+}
+#MT_TB1.step {
+    font-size:25px;
+}
+#MT_TB1 img{
+    width:600px;
+    float:right;
+    margin-right:-70px;
 }
