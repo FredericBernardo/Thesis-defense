@@ -1,4 +1,4 @@
-/* Draft mode */
+/* Draft mode
 .step {
     border: 1px solid #000;
 }
@@ -742,4 +742,127 @@ ul#DB2 li {
 }
 #Telsem ul li {
     font-size: 30px;
+}
+#Telsem li.thus {
+    margin: 40px 0;
+    border: 1px solid #000;
+    padding: 10px;
+}
+#Telsem cite {
+    float:right;
+    margin: 20px 0 0;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+#Telsem_atlas {
+    font-size: 28px;
+}
+#Telsem_atlas img {
+    float:left;
+    margin: 10px 0px 0 -50px;
+}
+#Telsem_atlas div {
+    text-align: center;
+    padding: 0;
+}
+#Telsem_atlas ul {
+    margin: 0 0 15px 20px;
+}
+#Telsem_atlas ul li {
+    text-align: left;
+    font-size: 0.8em;
+}
+#Telsem_atlas div img {
+    float: none;
+    margin: 0;
+    width:800px;
+}
+#Telsem h6 {
+     font-size: 20px;
+     text-align: right;
+     font-style: italic;
+ }
+#Telsem_validation {
+    font-size: 30px;
+}
+#Telsem_validation img {
+    width:850px;
+}
+
+#MT .step {
+    font-size: 30px;
+}
+#MT_variables.step {
+    background: url("../images/megha.png") no-repeat right bottom;
+}
+#MT .stick li {
+    margin: 10px 30px;
+    padding:1px 10px;
+    color:#fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #666;
+}
+#MT .primary li {
+    font-weight: bold;
+}
+#MT li.land {
+    background-color: #AEDC52;
+}
+#MT li.ocean {
+    background-color: #71C9F4;
+}
+#MT_prelaunch {
+    margin-top: 40px;
+}
+#MT #MT_IC h6 {
+    font-size: 22px;
+    text-align: right;
+    font-style: italic;
+    float:right;
+    width:290px;
+    margin-top: 30px;
+}
+#MT_IC img {
+    width:500px;
+}
+#MT #MT_IC .innerStep h6 {
+    float:left;
+    width: 250px;
+    margin-right:10px;
+}
+#MT #MT_IC .innerStep img {
+    width: 580px;
+    margin:30px -40px 0 10px;
+}
+#MT_scheme img {
+    width:850px;
+}
+#MT_scheme img.innerStep {
+    position: absolute;
+}
+#MT_RH.step, #MT_TCWV.step {
+    font-size: 25px;
+}
+
+#MT_validation {
+    font-size:25px;
+}
+#MT_validation img {
+    width: 400px;
+}
+#MT_validation h6 {
+    font-size: 0.8em;
+}
+#MT_validation .top h6 {
+    float: left;
+    width:400px;
+    margin: 40px 10px 0 0;
+}
+#MT_validation .bottom h6 {
+    float:right;
+    width:400px;
+    margin: 40px 0 0 10px;
+
 }

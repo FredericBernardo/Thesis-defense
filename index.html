@@ -460,7 +460,7 @@
     </div>
 
     <div id="Calib_intro">
-        <img id="Calib_intro1" src="images/calib_scheme1.png" class="step" data-x="+=0" data-y="+=850">
+        <img id="Calib_intro1" src="images/calib_scheme1.png" class="step" data-x="+=2200" data-y="0">
         <div id="Calib_intro2" class="step gear nodelay" data-x="+=340" data-y="+=" data-z="+=0">
             <div>Réseaux de neurones</div>
             <img src="images/gear.gif" class="animated">
@@ -498,14 +498,14 @@
         <div id="Calib_result3" class="step" data-x="+=0" data-y="+=800">
             <img src="images/calib_profile.png">
             <ul>
-                <li>Écarts moyens des profils d'humidité relative des radiosondades avec ceux des restitutions à partir de TB observées (tirets) et calibrées (traits pleins) issues de AMSR-E et HSB sur Aqua</li>
+                <li>Écarts moyens des profils d'humidité relative des radiosondages avec ceux des restitutions à partir de TB observées (tirets) et calibrées (traits pleins) issues de AMSR-E et HSB sur Aqua</li>
                 <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
             </ul>
         </div>
     </div>
 
     <div id="Telsem">
-        <div id="Telsem_intro" class="step" data-x="+=0" data-y="+=800">
+        <div id="Telsem_intro" class="step" data-x="+=2200" data-y="0">
             <h1>La surface continentale</h1>
             <ul class="bullet1">
                 <li>Au dessus des océans, Emissivité &approx; 0.5</li>
@@ -517,15 +517,132 @@
                         <li>Dépend de la polarisation observée</li>
                     </ul>
                 </li>
-                <li class="thus">Au dessus des terres, utilisation des canaux fenêtres sur la surface terrestre délicat</li>
+                <li class="thus">Sur la surface terrestre, l'utilisation des canaux fenêtres est souvent impossible
+                    <cite>Aires et al. 2001, Karbou et al. 2005, ...</cite>
+                </li>
             </ul>
         </div>
 
-        <div id="Telsem_intro" class="step" data-x="+=0" data-y="+=800">
-</div>
+        <div id="Telsem_atlas" class="step" data-x="+=0" data-y="+=800">
+            <h1>Atlas d'émissivité</h1>
+            <img src="images/telsem.png">
+            <div class="innerStep appear">
+                &rarr; Création d’une base d’émissivité à partir des observations SSMI
+                <ul class="bullet3">
+                    <li>Mensuel</li>
+                    <li>Basé sur 12 ans d'observations</li>
+                    <li>Pour chaque canal SSMI</li>
+                    <li>53º d'angle de incidence</li>
+                    <li>Avec matrice de covariance des erreurs (bruit instrumental, stats, etc.)</li>
+                </ul>
+                <img src="images/map_emis.png">
+                <h6>Exemple de climatologie d'émissivité à 85 GHz (H) pour SSMI</h6>
+            </div>
+        </div>
+
+        <div id="Telsem_interpolator" class="step" data-x="+=0" data-y="+=800">
+            <h1>Interpolation des émissivités</h1>
+                <ul class="bullet3">
+                    <li>En fréquence, basées sur les canaux SSMI</li>
+                    <li>En angle d'incidence, en s'appuyant sur
+                        <ul>
+                            <li>Des estimations à partir de AMSU-A</li>
+                            <li>Les modèles d'émissivités (Weng 2001)</li>
+                        </ul>
+                    </li>
+                    <li class="thus">TELSEM, un outil intégré officiellement à RTTOV10</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="Telsem_validation" class="step" data-x="+=0" data-y="+=700">
+            <h1>Validations</h1>
+            A partir de :
+                <ul class="bullet3">
+                    <li>AMSR-E & HSB (AQUA)</li>
+                    <li>AMSU-A/B (METOP)</li>
+                </ul>
+            <img src="images/telsem_compare.png">
+            <h6>Écart-type entre TB observées et TB simulées<br>
+                pour AMSUA et MHS pour les mois de 07/2007 et 01/2008.
+                <br>
+                <br>
+                TELSEM est comparé entre autre au modèle de Weng (2001)
+            </h6>
+        </div>
+
     </div>
 
-    <div id="overview" class="step" data-x="+=0" data-y="+=0" data-z="0" data-scale="20">
+    <div id="MT">
+        <div id="MT_variables" class="step" data-x="+=2200" data-y="0">
+            <h1>Produits de la chaine Saphir-Madras</h1>
+            En ciel clair ou nuageux :
+            <ul class="primary stick">
+                <li>Contenu en vapeur d'eau (TCWV)</li>
+                <li class="ocean">Profil de vapeur d'eau (WV) sur océan</li>
+                <li class="land">Profil de vapeur d'eau (WV) sur terre</li>
+            </ul>
+            <ul class=" stick innerStep appear">
+                <li class="ocean">Vitesse des vents océaniques (WS)</li>
+                <li class="land">Température de la surface des terres (LST)</li>
+                <li class="land">Emissivités de surface des terres</li>
+            </ul>
+            <div id="MT_prelaunch" class="innerStep appear">
+                Pour l'étude pre-launch :
+                <ul class="bullet1">
+                    <li>AMSR-E / HSB sur AQUA (le plus proche de MT)</li>
+                    <li>AMSU-A / MHS sur METOP</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="MT_IC" class="step" data-x="+=0" data-y="+=800">
+            <h1>Étude de contenu en information</h1>
+            <h6>Fonctions de poids théoriques en RH, pour les canaux de SAPHIR et de HSB, obtenues sur une atmosphère type tropicale (via RTTOV)</h6>
+            <img src="images/wf2.png">
+            <div class="innerStep appear">
+                <h6>Capacité théorique de restitution du profil de vapeur d'eau par plusieurs sets d'instruments  MW<br>
+                    (en abscisse, l'erreur théorique en %age d'humidité relative)</h6>
+                <img src="images/mt_theo.png">
+            </div>
+        </div>
+
+        <div id="MT_scheme" class="step" data-x="+=0" data-y="+=800">
+            <h1>La chaine Saphir-Madras</h1>
+            <img src="images/scheme2.png" class="innerStep appear">
+            <img src="images/scheme3.png" class="innerStep appear">
+            <img src="images/scheme4.png" class="innerStep appear">
+            <img src="images/scheme5.png" class="innerStep appear">
+            <img src="images/scheme1.png">
+        </div>
+
+        <div id="MT_RH" class="step" data-x="+=0" data-y="+=800">
+            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (AQUA)</h1>
+            <img src="images/mt_7b.png">
+        </div>
+
+        <div id="MT_TCWV" class="step" data-x="+=0" data-y="+=800">
+            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (AQUA)</h1>
+            <img src="images/mt_7a.png">
+        </div>
+
+        <div id="MT_validation" class="step" data-x="+=0" data-y="+=800">
+            <h1>Validation de la restitution du profil de vapeur d’eau</h1>
+            <div class="top">
+                <h6>Écart entre l’humidité relative des radiosondages et celles des restitutions sur terre, à partir des observations réelles AMSR-E/HSB</h6>
+                <img src="images/mt_9.png">
+            </div>
+            <div class="bottom">
+                <h6>Capacité théorique de restitution du profil de vapeur d'eau par plusieurs sets d'instruments  MW<br>
+                    (en abscisse, l'erreur théorique en %age d'humidité relative)</h6>
+                <img src="images/profil_rh.png">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="overview" class="step" data-x="-=4000" data-y="+=0" data-z="0" data-scale="20">
     </div>
 
 
