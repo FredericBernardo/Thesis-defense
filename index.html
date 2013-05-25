@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>Télédétection satellite micro-onde de variables atmosphériques et de surface</title>
     
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+    <meta name="description" content="Thesis defense" />
+    <meta name="author" content="Frederic Bernardo" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
@@ -102,21 +102,8 @@
         </div>
     </div>
 
-    <div id="Summary" class="step slide" data-x="+=1400" data-y="+=0">
-        <h1>Sommaire</h1>
-        <ol>
-            <li class="innerStep">Objectifs de la thèse</li>
-            <li class="innerStep">Introduction à la problématique</li>
-            <li class="innerStep">Méthodologie</li>
-            <li class="innerStep">La restitution de données atmosphériques et de surface<br>dans le projet Megha-Tropiques</li>
-            <li class="innerStep">La restitution de données de surface océanique<br>dans le projet Microwat</li>
-            <li class="innerStep">Conclusion et perspectives</li>
-        </ol>
-    </div>
-
     <div id="stateofart" class="step" data-x="+=1700" data-y="+=0">
-        <ol class="header1" start="1"><li>Objectifs de la thèse</li></ol>
-        <h1>État de l’art</h1>
+        <ol class="header1" start="1"><li>État de l'art</li></ol>
         <blockquote><img src="images/amsu.png" alt="Amsu scan"> Télédétection [teledet&#949;ksj&#596;&#771;] (nom féminin)
             <em>Technique d'acquisition à distance d'informations sur la surface terrestre, principalement fondée sur l'analyse d'images obtenues dans différentes gammes de longueurs d'onde à partir d'aéronefs ou de satellites.</em>
             <cite>Larousse</cite>
@@ -211,13 +198,13 @@
             <li class="innerStep">Méthodes innovantes de restitution
                 <ul class="bullet2">
                     <li>Techniques avancées d’inversion</li>
-                    <li>Profils vapeur d’eau sur terre comme sur océan</li>
                     <li>Variables de surfaces continentales (température, émissivités)</li>
+                    <li>Profils vapeur d’eau sur terre comme sur océan</li>
                 </ul>
             </li>
             <li class="innerStep">Évaluation rigoureuse des résultats
                 <ul class="bullet2">
-                    <li>Par comparaison avec des mesures in situ dans l’espace des données géophysiques</li>
+                    <li>Par comparaison avec des mesures <i>in situ</i> dans l’espace des données géophysiques</li>
                     <li>Directement dans l’espace des observations satellites</li>
                 </ul>
             </li>
@@ -227,6 +214,17 @@
                 </ul>
             </li>
         </ul>
+    </div>
+
+    <div id="Summary" class="step slide" data-x="+=1400" data-y="+=0">
+        <h1>Sommaire</h1>
+        <ol>
+            <li class="">Introduction à la problématique</li>
+            <li class="innerStep appear">Méthodologie</li>
+            <li class="innerStep appear">La restitution de données atmosphériques et de surface<br>dans la mission Megha-Tropiques</li>
+            <li class="innerStep appear">La restitution de données de surface océanique<br>dans le projet Microwat</li>
+            <li class="innerStep appear">Conclusion et perspectives</li>
+        </ol>
     </div>
 
     <div id="Atmospheric" class="step" data-x="+=1700" data-y="0" data-z="0">
@@ -241,14 +239,28 @@
     </div>
 
     <div id="ETR" class="step" data-x="+=0" data-y="+=465" data-z="+=0">
-        <p><img src="images/etr.svg" alt="Radiative transfer">
+        <p><img src="images/etr.svg" alt="Radiative transfer"></p>
         <h1>Équation du Transfert Radiatif</h1>
-            <ol>
-                <li>L’émission de la surface vers le haut de l’atmosphère</li>
-                <li>L’émission des composants de l’atmosphère vers le haut</li>
-                <li>La réflexion par la surface du rayonnement émis par l’atmosphère vers le bas de l’atmosphère</li>
-            </ol>
-        </p>
+        <ol>
+            <li>L’émission de la surface vers le haut de l’atmosphère</li>
+            <li>L’émission des composants de l’atmosphère vers le haut</li>
+            <li>La réflexion par la surface du rayonnement émis par l’atmosphère vers le bas de l’atmosphère</li>
+        </ol>
+    </div>
+
+    <div id="Weight_function" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
+        <h6>Fonctions de poids d'un capteur MW</h6>
+        <p><img src="images/wf3.png" alt="Weight functions"></p>
+        <ul>
+            <li><img src="images/wf_formula.png"></li>
+            <li>Dépendent de :
+                <ul class="bullet3">
+                    <li>la fréquence</li>
+                    <li>l'altitude</li>
+                    <li>l'atmosphère</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
     <div id="MW_spectrum1" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
@@ -275,7 +287,7 @@
         </li>
     </ul>
 
-    <div id="Intro_final" class="step slide" data-x="+=0" data-y="+=800" data-z="+=0">
+<!--    <div id="Intro_final" class="step slide" data-x="+=0" data-y="+=800" data-z="+=0">
         <ol class="header2" start="2"><li>Introduction à la problématique</li></ol>
     </div>
 
@@ -309,6 +321,7 @@
             </div>
         </div>
     </div>
+-->
 
     <div id="Methodology" class="step" data-x="+=1700" data-y="0" data-z="0">
         <ol class="header1" start="3"><li>Méthodologie</li></ol>
@@ -324,10 +337,11 @@
         <img src="images/methodology.png" alt="Methodology">
     </div>
 
-    <ul class="bullet1 step" data-x="+=0" data-y="+=430">
+    <ul id="Methodology2" class="bullet1 step" data-x="+=0" data-y="+=430">
         <li>Problème inverse
             <ul class="bullet2">
-                <li class="thus">Méthode statistique
+                <li class="thus hard">Inversion analytique du transfert radiatif</li>
+                <li class="thus">Méthode physique
                     <ul class="bullet3">
                         <li>1D-VAR</li>
                         <li>Réseaux de neurones</li>
@@ -414,6 +428,29 @@
     </div>
 
     <div id="instrumentation">
+        <div id="Saphir" class="step" data-x="+=0" data-y="+=850">
+            <h1>Saphir</h1>
+            <div>
+                <ul>
+                    <li>Sondage atmosphérique transversale pour la vapeur d’eau</li>
+                    <li>Résolution verticale inédite en MW </li>
+                </ul>
+                <table>
+                    <thead><tr><td>Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td></tr></thead>
+                    <tr class="odd"><td>183.31 &pm; 0.2</td><td>2.03</td><td>200</td></tr>
+                    <tr class="even"><td>183.31 &pm; 1.1</td><td>1.53</td><td>350</td></tr>
+                    <tr class="odd"><td>183.31 &pm; 2.8</td><td>1.37</td><td>500</td></tr>
+                    <tr class="even"><td>183.31 &pm; 4.2</td><td>1.25</td><td>700</td></tr>
+                    <tr class="odd"><td>183.31 &pm; 6.8</td><td>1.06</td><td>1200</td></tr>
+                    <tr class="even"><td>183.31 &pm; 11</td><td>0.99</td><td>2000</td></tr>
+                </table>
+            </div>
+            <p>
+                <img src="images/wf.png">
+                <img src="images/wf3.png">
+            </p>
+        </div>
+
         <div id="Madras" class="step" data-x="+=0" data-y="+=850">
             <h1>Madras</h1>
             <div>
@@ -425,7 +462,7 @@
                 <img src="images/tmi_1.jpg">
             </div>
             <table>
-                <thead><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Objectifs</td></thead>
+                <thead><tr><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Objectifs</td></tr></thead>
                 <tr class="odd"><td rowspan="2">18.7</td><td>V</td><td>0.46</td><td rowspan="2">Pluie sur la mer</td></tr>
                 <tr class="odd"><td>H</td><td>0.53</td></tr>
                 <tr class="even"><td>23.8</td><td>V</td><td>0.48</td><td>Distribution <br>de vapeur d'eau</td></tr>
@@ -436,26 +473,6 @@
                 <tr class="odd"><td rowspan="2">157</td><td>V</td><td>1.75</td><td rowspan="2">Détection de glace <br>  dans les nuages</td></tr>
                 <tr class="odd"><td>H</td><td>1.75</td></tr>
             </table>
-        </div>
-
-        <div id="Saphir" class="step" data-x="+=0" data-y="+=850">
-            <h1>Saphir</h1>
-            <img src="images/wf.png">
-            <div>
-                <ul>
-                    <li>Sondage atmosphérique transversale pour la vapeur d’eau</li>
-                    <li>Résolution verticale inédite en MW </li>
-                </ul>
-                <table>
-                    <thead><td>Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td></thead>
-                    <tr class="odd"><td>183.31 &pm; 0.2</td><td>2.03</td><td>200</td></tr>
-                    <tr class="even"><td>183.31 &pm; 1.1</td><td>1.53</td><td>350</td></tr>
-                    <tr class="odd"><td>183.31 &pm; 2.8</td><td>1.37</td><td>500</td></tr>
-                    <tr class="even"><td>183.31 &pm; 4.2</td><td>1.25</td><td>700</td></tr>
-                    <tr class="odd"><td>183.31 &pm; 6.8</td><td>1.06</td><td>1200</td></tr>
-                    <tr class="even"><td>183.31 &pm; 11</td><td>0.99</td><td>2000</td></tr>
-                </table>
-            </div>
         </div>
     </div>
 
@@ -480,7 +497,8 @@
     <div id="Calibration">
         <div id="Calib_result1" class="step" data-x="+=0" data-y="+=800">
             <h1>Comparaison avec les données simulées</h1>
-            <img src="images/calib_map_compare.png">
+            <img src="images/calib_map_compare1.png" class="innerStep appear">
+            <img src="images/calib_map_compare2.png">
             <ul>
                 <li>Écarts des TB Observées (gauche) et Calibrées (droite) avec les TB simulées via RTTOV pour AMSR-E et HSB sur Aqua à 183&pm;1&nbsp;GHz et 18.7&nbsp;GHz H</li>
                 <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
@@ -501,6 +519,9 @@
                 <li>Écarts moyens des profils d'humidité relative des radiosondages avec ceux des restitutions à partir de TB observées (tirets) et calibrées (traits pleins) issues de AMSR-E et HSB sur Aqua</li>
                 <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
             </ul>
+            <div class="publication"><b>An Innovative Calibration Method for the Inversion of Satellite Observations</b>,<br>
+                Aires, F. and Bernardo, F. and Brogniez, H. and Prigent, C., JAMC 2010
+            </div>
         </div>
     </div>
 
@@ -513,14 +534,12 @@
                     <ul class="bullet3">
                         <li>Varie selon le type de surface</li>
                         <li>Varie dans le temps</li>
-                        <li>Dépend de la fréquence et observée</li>
-                        <li>Dépend de la polarisation observée</li>
+                        <li>Dépend de la fréquence et de la polarisation observée</li>
                     </ul>
                 </li>
-                <li class="thus">Sur la surface terrestre, l'utilisation des canaux fenêtres est souvent impossible
-                    <cite>Aires et al. 2001, Karbou et al. 2005, ...</cite>
-                </li>
+                <li class="thus">Sur la surface terrestre, l'utilisation des canaux fenêtres est souvent un problème</li>
             </ul>
+            <cite><b>Microwave land surface emissivities estimated from SSM/I observations</b>, <br>Prigent et al. 1997</cite>
         </div>
 
         <div id="Telsem_atlas" class="step" data-x="+=0" data-y="+=800">
@@ -533,42 +552,46 @@
                     <li>Basé sur 12 ans d'observations</li>
                     <li>Pour chaque canal SSMI</li>
                     <li>53º d'angle de incidence</li>
-                    <li>Avec matrice de covariance des erreurs (bruit instrumental, stats, etc.)</li>
+                    <li>Avec matrice de covariance des erreurs</li>
                 </ul>
-                <img src="images/map_emis.png">
-                <h6>Exemple de climatologie d'émissivité à 85 GHz (H) pour SSMI</h6>
+                <div class="innerStep appear">
+                    <img src="images/map_emis.png">
+                    <h6>Exemple de climatologie d'émissivité à 85 GHz (H) pour SSMI</h6>
+                    <cite>Prigent et al. 2006</cite>
+                </div>
             </div>
         </div>
 
         <div id="Telsem_interpolator" class="step" data-x="+=0" data-y="+=800">
             <h1>Interpolation des émissivités</h1>
-                <ul class="bullet3">
-                    <li>En fréquence, basées sur les canaux SSMI</li>
-                    <li>En angle d'incidence, en s'appuyant sur
-                        <ul>
-                            <li>Des estimations à partir de AMSU-A</li>
-                            <li>Les modèles d'émissivités (Weng 2001)</li>
-                        </ul>
-                    </li>
-                    <li class="thus">TELSEM, un outil intégré officiellement à RTTOV10</li>
-                </ul>
+            <ul class="bullet3">
+                <li>En fréquence, basées sur les canaux SSMI</li>
+                <li>En angle d'incidence, en s'appuyant sur
+                    <ul>
+                        <li>Des estimations à partir de AMSU-A</li>
+                        <li>Les modèles d'émissivités (Weng 2001)</li>
+                    </ul>
+                </li>
+                <li class="thus">TELSEM, un outil intégré officiellement à RTTOV10</li>
             </ul>
         </div>
 
         <div id="Telsem_validation" class="step" data-x="+=0" data-y="+=700">
             <h1>Validations</h1>
-            A partir de :
-                <ul class="bullet3">
-                    <li>AMSR-E & HSB (AQUA)</li>
-                    <li>AMSU-A/B (METOP)</li>
-                </ul>
+            <ul class="bullet3">
+                <li>AMSR-E &amp; HSB (AQUA)</li>
+                <li>AMSU-A/B (NOAA-18)</li>
+            </ul>
             <img src="images/telsem_compare.png">
-            <h6>Écart-type entre TB observées et TB simulées<br>
-                pour AMSUA et MHS pour les mois de 07/2007 et 01/2008.
+            <h6>Écart-type entre TB observées et TB simulées
+                pour AMSUA et AMSUB sur les mois de 07/2002 et 01/2003.
                 <br>
                 <br>
                 TELSEM est comparé entre autre au modèle de Weng (2001)
             </h6>
+            <div class="publication"><b>A Tool to Estimate Land Surface Emissivities in the Microwaves (TELSEM) for use in numerical weather prediction schemes</b>,<br>
+                Aires, F., C. Prigent, F. Bernardo, C. Jimenez, R. Sounders, and P. Brunel, QJRMS 2011
+            </div>
         </div>
 
     </div>
@@ -598,12 +621,15 @@
 
         <div id="MT_IC" class="step" data-x="+=0" data-y="+=800">
             <h1>Étude de contenu en information</h1>
-            <h6>Fonctions de poids théoriques en RH, pour les canaux de SAPHIR et de HSB, obtenues sur une atmosphère type tropicale (via RTTOV)</h6>
-            <img src="images/wf2.png">
+            <h6>Erreur théorique de restitution du profil de vapeur d'eau <br>sur 6 niveaux<br><br>
+                (en abscisse, l'erreur théorique en %age d'humidité relative)</h6>
+            <img src="images/WV6_theorical_departure.png">
             <div class="innerStep appear">
-                <h6>Capacité théorique de restitution du profil de vapeur d'eau par plusieurs sets d'instruments  MW<br>
-                    (en abscisse, l'erreur théorique en %age d'humidité relative)</h6>
+                <h6>Erreur théorique de restitution du profil de vapeur d'eau<br> sur 20 niveaux</h6>
                 <img src="images/mt_theo.png">
+            </div>
+            <div class="publication"><b>Atmospheric water vapour retrieval from microwave instruments<br> Part I : Methodology</b>,<br>
+                Aires, F., F. Bernardo, C. Prigent, QJRMS 2012
             </div>
         </div>
 
@@ -616,14 +642,14 @@
             <img src="images/scheme1.png">
         </div>
 
-        <div id="MT_RH" class="step" data-x="+=0" data-y="+=800">
-            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (AQUA)</h1>
-            <img src="images/mt_7b.png">
+        <div id="MT_TCWV" class="step" data-x="+=0" data-y="+=800">
+            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (Aqua)</h1>
+            <img src="images/mt_7a.png">
         </div>
 
-        <div id="MT_TCWV" class="step" data-x="+=0" data-y="+=800">
-            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (AQUA)</h1>
-            <img src="images/mt_7a.png">
+        <div id="MT_RH" class="step" data-x="+=0" data-y="+=800">
+            <h1>Restitution de la vapeur d’eau à partir d'observations réelles (Aqua)</h1>
+            <img src="images/mt_7b.png">
         </div>
 
         <div id="MT_validation" class="step" data-x="+=0" data-y="+=800">
@@ -639,14 +665,40 @@
             </div>
         </div>
 
-        <div id="MT_TB1" class="step" data-x="+=0" data-y="+=800">
+        <div id="MT_TB1" class="step" data-x="+=0" data-y="+=800" data-scale="0.65">
             <h1>Validation dans l'espace des TB</h1>
-            <img src="images/mt_8.png">
-            Écart entre observations et simulation des données restituées pour les satellites AQUA (HSB/AMSR-E) et METOP (MHS/AMSU-A) en situations claires et nuageuses.<br>
-            <br>
-            Les simulations des analyses sont fournies à titre de  comparaison (courbe tirets)
+            <div>
+                <img src="images/mt_8a.png">
+                Écart entre les observations HSB/AMSR-E sur Aqua avec :
+                <ul class="bullet3">
+                    <li>les simulations de l'analyse (tirets)</li>
+                </ul>
+            </div>
+            <div class="innerStep appear">
+                <img src="images/mt_8b.png">
+                <span>Écart entre les observations HSB/AMSR-E sur Aqua avec :</span>
+                <ul class="bullet3">
+                    <li>les simulations de l'analyse (tirets)</li>
+                    <li class="add">les simulations des données restituées (trait plein)</li>
+                </ul>
+            </div>
+            <div class="innerStep appear">
+                <img src="images/mt_8c.png">
+                Écart entre les observations HSB et AMSR-E sur Aqua avec :
+                <ul class="bullet3">
+                    <li>les simulations de l'analyse (tirets)</li>
+                    <li>les simulations des données restituées (trait plein)</li>
+                    <li class="add">En ciel clair (noir) et nuageux (gris)</li>
+                </ul>
+            </div>
         </div>
 
+        <div id="MT_TB2" class="step appear" data-x="+=120" data-y="+=190">
+            <img src="images/mt_8.png">
+            <div class="publication"><b>Atmospheric water vapour retrieval from microwave instruments - Part II : Evaluation for the Megha-Tropiques mission</b>,<br>
+                Bernardo, F.,  F.  Aires, C. Prigent, QJRMS 2012
+            </div>
+        </div>
     </div>
 
     <div id="overview" class="step" data-x="-=4000" data-y="+=0" data-z="0" data-scale="20">

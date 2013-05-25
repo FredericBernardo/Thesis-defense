@@ -17,7 +17,6 @@ h1 {
 
 /* Slide header */
 .header1 {
-    background-color: #f0f0f0;
     box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
     background-color: #EEE;
     padding: 0 20px 60px;
@@ -121,7 +120,7 @@ p.img img {
     opacity: 0;
     visibility: visible;
 }
-.innerStep.appear.stepped {
+.innerStep.appear.stepped, .step.appear.present, .step.appear.past {
     opacity: 1;
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -129,7 +128,14 @@ p.img img {
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
 }
-
+div.publication {
+    font-weight: normal;
+    font-size: 20px;
+    float:right;
+    text-align: right;
+    margin: 20px 0 0;
+    font-style: italic;
+}
 /*
   Particular slide settings
 */
@@ -173,37 +179,19 @@ p.img img {
 }
 /* Summary */
 #Summary ol {
-    margin: 10px 0 0 20px;
+    margin: 30px 0 0 20px;
     font-size: 1.05em;
 }
 #Summary ol li {
     color: #000;
     line-height: 30px;
     padding-left: 10px;
-    margin: 14px 0;
+    margin: 20px 0;
     list-style-type: upper-roman;
-}
-#Summary ol li.innerStep{
-    visibility: visible;
-    opacity: 0.5;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
-}
-#Summary li.innerStep.stepped{
-    opacity: 1;
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
 }
 
 /* State of art */
-div#spectrum.past, #Methodology.past, #DB.past
-{
+#Atmospheric.past, #spectrum.past, #Methodology.past, #DB.past, #MT_TB1.step {
     opacity: 1;
 }
 #stateofart h3{
@@ -215,10 +203,9 @@ div#spectrum.past, #Methodology.past, #DB.past
     margin-bottom: 100px;
 }
 #stateofart blockquote {
-    padding-bottom: 35px;
     font-size: 25px;
     padding: 20px 0 70px 20px;
-    margin: 0px;
+    margin: 0;
     background-color: #FFF;
     border: 1px solid #666;
     border-radius: 10px;
@@ -392,7 +379,7 @@ div#spectrum.past, #Methodology.past, #DB.past
     margin-left: 10px;
 }
 #ETR {
-    margin-top: 90px;
+    margin-top: 100px;
 }
 #ETR p {
     text-align: center;
@@ -412,7 +399,18 @@ div#spectrum.past, #Methodology.past, #DB.past
 }
 #ETR ol li {
     font-size: 25px;
-    margin: 10px 0px 20px 20px;
+    margin: 10px 0 20px 20px;
+}
+#Weight_function p img {
+    float: left;
+    padding-right: 30px;
+}
+#Weight_function ul{
+    margin-top: 40px;
+    font-size: 0.8em;
+}
+#Weight_function ul ul.bullet3{
+    margin: 5px 0 0 350px;
 }
 #MW_spectrum1 p {
     text-align: center;
@@ -563,6 +561,9 @@ div.gear .innerStep img.people {
 #Methodology ul.bullet1 ul li {
     margin-top: 0;
 }
+#Methodology2 ul li.hard{
+    color: #666666;
+}
 #Neurons li.details {
     font-size: 30px;
 }
@@ -597,7 +598,6 @@ ul#DB2 li {
     border: 1px solid #e50;
     border-radius: 4px;
     padding: 5px 15px;
-    margin: 10px 35px;
     font-size: 0.9em;
     margin: 20px 220px 0 35px;
 
@@ -670,11 +670,15 @@ ul#DB2 li {
     width: 400px;
 }
 #instrumentation div#Saphir div {
-    margin: 10px 20px 0 0;
+    margin: 10px -100px 0 0;
     width: 435px;
 }
+#instrumentation div#Saphir p  {
+    margin: 0 0 0 -100px;
+    display: block;
+}
 #instrumentation div#Saphir img  {
-    margin: 40px 0 0 -50px;
+    width: 285px;
 }
 #instrumentation tr {
     text-align: center;
@@ -707,6 +711,12 @@ ul#DB2 li {
     font-size: 20px;
     margin-top: -80px;
 }
+#Calib_intro2.present img {
+    background-color: indianred;
+}
+#Calib_intro2.past img {
+    background-color: #AEDC52;
+}
 #Calib_intro3 {
     margin-top: 172px;
     width:210px;
@@ -726,6 +736,10 @@ ul#DB2 li {
     margin-top:10px;
     font-size: 30px;
 }
+#Calibration img.innerStep {
+    position: absolute;
+    left: 89px;
+}
 #Calibration div.step {
     text-align: center;
 }
@@ -734,19 +748,17 @@ ul#DB2 li {
 }
 #Calibration ul {
     text-align: left;
-    margin: 0 0 0 10px;
+    margin: -20px 0 0 10px;
     font-size: 23px;
 }
 #Calibration ul li i {
     font-size: 20px;
 }
+#Calib_result2 img {
+    width: 800px;
+}
 #Telsem ul li {
     font-size: 30px;
-}
-#Telsem li.thus {
-    margin: 40px 0;
-    border: 1px solid #000;
-    padding: 10px;
 }
 #Telsem cite {
     float:right;
@@ -754,22 +766,18 @@ ul#DB2 li {
     font-size: 0.85em;
     font-style: italic;
 }
-
 #Telsem_atlas {
-    font-size: 28px;
+    font-size: 25px;
 }
 #Telsem_atlas img {
     float:left;
-    margin: 10px 0px 0 -50px;
+    margin: 0 5px 0 -50px;
 }
 #Telsem_atlas div {
     text-align: center;
     padding: 0;
 }
-#Telsem_atlas ul {
-    margin: 0 0 15px 20px;
-}
-#Telsem_atlas ul li {
+#Telsem_atlas ul.bullet3 li {
     text-align: left;
     font-size: 0.8em;
 }
@@ -778,18 +786,40 @@ ul#DB2 li {
     margin: 0;
     width:800px;
 }
+#Telsem_interpolator.step {
+    font-size: 28px;
+}
+#Telsem_interpolator.step .thus:before {
+    font-size: 30px;
+}
+#Telsem_interpolator.step .thus {
+    margin: 30px 0;
+    border: 1px solid #000;
+    padding: 5px;
+    width: 850px;
+}
 #Telsem h6 {
      font-size: 20px;
      text-align: right;
      font-style: italic;
- }
-#Telsem_validation {
-    font-size: 30px;
+}
+#Telsem_validation.step ul.bullet3 {
+    font-size: 23px;
 }
 #Telsem_validation img {
-    width:850px;
+    margin-top: 10px;
+    width:500px;
+    float: left;
 }
-
+#Telsem_validation h6 {
+    margin: 50px -20px 0 0;
+}
+#Telsem cite {
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+    text-align:right;
+}
 #MT .step {
     font-size: 30px;
 }
@@ -821,16 +851,17 @@ ul#DB2 li {
     text-align: right;
     font-style: italic;
     float:right;
-    width:290px;
-    margin-top: 30px;
+    width:320px;
+    margin: 10px -30px 0 0;
 }
 #MT_IC img {
-    width:500px;
+    width:580px;
+    margin-left: -90px;
 }
 #MT #MT_IC .innerStep h6 {
     float:left;
-    width: 250px;
-    margin-right:10px;
+    width: 280px;
+    margin: 50px 10px 0 -30px;
 }
 #MT #MT_IC .innerStep img {
     width: 580px;
@@ -867,9 +898,26 @@ ul#DB2 li {
 }
 #MT_TB1.step {
     font-size:25px;
+    height: 500px;
 }
 #MT_TB1 img{
-    width:600px;
     float:right;
-    margin-right:-70px;
+    margin-right:-32px;
+}
+#MT_TB1 div {
+    position: absolute;
+}
+#MT_TB1 div.innerStep {
+    color: transparent;
+}
+#MT_TB1 div.innerStep .add {
+    color: #000000;
+}
+#MT_TB1.step.past {
+    opacity: 1;
+}
+#MT_TB2.step img {
+    width: 615px;
+    height: 450px;
+    margin-left: 300px;
 }
