@@ -119,6 +119,18 @@
         context = context || document;
         return arrayify( context.querySelectorAll(selector) );
     };
+
+    // return the nearest element for given CSS `selector` in the `context` tree
+    var findInParents = function ( selector, context ) {
+        if ( context == document || context == null) {
+            return null;
+        }
+        var el = $( selector, context );
+        if ( el == null ) {
+            return findInParents(selector, context.parentNode);
+        }
+        return el;
+    }
     
     // `triggerEvent` builds a custom DOM event with given `eventName` and `detail` data
     // and triggers it on element given as `el`.
@@ -278,6 +290,7 @@
         // root presentation elements
         var root = byId( rootId );
         var canvas = document.createElement("div");
+
 		
 		// element for remembering the fullscreen state
 		var inFullscreen = false;
@@ -424,7 +437,7 @@
             // get and init steps
             steps = $$(".step", root);
             steps.forEach( initStep );
-            
+
             // set a default initial state of the canvas
             currentState = {
                 translate: { x: 0, y: 0, z: 0 },
@@ -481,7 +494,7 @@
             el.classList.add("active");
             
             body.classList.add("impress-on-" + el.id);
-            
+
             // compute target state of the canvas based on given step
             var target = {
                 rotate: {
@@ -496,7 +509,7 @@
                 },
                 scale: 1 / step.scale
             };
-            
+
             // Check if the transition is zooming in or not.
             //
             // This information is used to alter the transition style:
@@ -539,13 +552,13 @@
                 transitionDuration: duration + "ms",
                 transitionDelay: (zoomin ? delay : 0) + "ms"
             });
-            
+
             css(canvas, {
                 transform: rotate(target.rotate, true) + translate(target.translate),
                 transitionDuration: duration + "ms",
                 transitionDelay: (zoomin ? 0 : delay) + "ms"
             });
-            
+
             // Here is a tricky part...
             //
             // If there is no change in scale or no change in rotation and translation, it means there was actually
@@ -565,7 +578,23 @@
             // store current state
             currentState = target;
             activeStep = el;
-            
+
+            // If no header in this step, append the persistent header
+            if ( $(".header1", activeStep) == null && $(".header2", activeStep) == null ) {
+                var pheader = findInParents(".pheader", activeStep);
+                if (pheader != null && pheader.innerHTML != '' ) {
+                    activeStep.appendChild(pheader);
+                    var marginTop = parseInt(window.getComputedStyle(activeStep).marginTop, 10)
+                        - parseInt(window.getComputedStyle(activeStep).marginBottom, 10);
+                    var marginLeft = parseInt(window.getComputedStyle(activeStep).marginRight, 10)
+                        - parseInt(window.getComputedStyle(activeStep).marginLeft, 10);
+                    css(pheader, {
+                        top: ((activeStep.offsetHeight - window.innerHeight/windowScale)/2 - marginTop) + "px",
+                        right: (-200-marginLeft) + "px"
+                    });
+                }
+            }
+
             // And here is where we trigger `impress:stepenter` event.
             // We simply set up a timeout to fire it taking transition duration (and possible delay) into account.
             //
@@ -641,7 +670,7 @@
 				overlay.classList.remove("impress-bwout-transition");
 			}else{
 				css(overlay, {
-					background:color,
+					background:color
 				});
 				window.setTimeout(function(){overlay.classList.add("impress-bwout-transition");}, 25);
 			}
