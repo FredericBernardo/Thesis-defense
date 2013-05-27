@@ -581,7 +581,7 @@
 
             // If no header in this step, append the persistent header
             if ( $(".header1", activeStep) == null && $(".header2", activeStep) == null ) {
-                var pheader = findInParents(".pheader", activeStep);
+                var pheader = findInParents(".pheader", activeStep).cloneNode(true);
                 if (pheader != null && pheader.innerHTML != '' ) {
                     activeStep.appendChild(pheader);
                     var marginTop = parseInt(window.getComputedStyle(activeStep).marginTop, 10)
