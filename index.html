@@ -89,6 +89,11 @@
 -->
 	<div id="impress">
 
+<!--
+    This empty persistent header is the default for section without header defined
+-->
+    <div class="pheader"></div>
+
     <div id="title" class="step" data-x="0" data-y="0">
         <div id="name">Frédéric Bernardo</div>
         <p id="date">07 Juin 2013</p>
@@ -102,190 +107,200 @@
         </div>
     </div>
 
-    <div id="stateofart" class="step" data-x="+=1700" data-y="+=0">
-        <ol class="header1" start="1"><li>État de l'art</li></ol>
-        <blockquote><img src="images/amsu.png" alt="Amsu scan"> Télédétection [teledet&#949;ksj&#596;&#771;] (nom féminin)
-            <em>Technique d'acquisition à distance d'informations sur la surface terrestre, principalement fondée sur l'analyse d'images obtenues dans différentes gammes de longueurs d'onde à partir d'aéronefs ou de satellites.</em>
-            <cite>Larousse</cite>
-        </blockquote>
+    <section>
+        <div class="pheader">Introduction</div>
 
-    </div>
+        <div id="stateofart" class="step" data-x="+=1700" data-y="+=0">
+            <ol class="header1" start="1"><li>État de l'art</li></ol>
+            <blockquote><img src="images/amsu.png" alt="Amsu scan"> Télédétection [teledet&#949;ksj&#596;&#771;] (nom féminin)
+                <em>Technique d'acquisition à distance d'informations sur la surface terrestre, principalement fondée sur l'analyse d'images obtenues dans différentes gammes de longueurs d'onde à partir d'aéronefs ou de satellites.</em>
+                <cite>Larousse</cite>
+            </blockquote>
 
-    <div id="spectrum" class="step" data-x="+=0" data-y="+=800" data-scale="0.6">
-        <img src="images/spectrum.png" alt="Spectrum">
-        <ul>
-            <li>Micro-ondes<br><img src="images/mw.jpg" alt="MW"></li>
-            <li>Infrarouge<br><img src="images/ir.jpg" alt="IR"></li>
-            <li>Visible<br><img src="images/visible.jpg" alt="Visible"></li>
-        </ul>
-    </div>
+        </div>
 
-
-    <div id="visible" class="step spectrum" data-x="+=180" data-y="+=180" data-scale="0.5">
-        <ul class="">
-            <li class="ok">Nuage</li>
-            <li class="ok">Albedo</li>
-            <li class="nok">Nuages opaques</li>
-            <li class="nok">De jour</li>
-        </ul>
-    </div>
-
-    <div id="infrared" class="step spectrum" data-x="-=160" data-y="+=0" data-scale="0.5">
-        <ul class="">
-            <li class="ok">Profils T&deg;, RH</li>
-            <li class="ok">Surface</li>
-            <li class="ok">Résolution spatiale</li>
-            <li class="nok">Nuages opaques</li>
-        </ul>
-    </div>
-
-    <div id="microwave" class="step spectrum" data-x="-=160" data-y="+=0" data-scale="0.5">
-        <ul class="">
-            <li class="ok">Profils T&deg;, RH</li>
-            <li class="ok">Surface</li>
-            <li class="nok">Résolution spatiale</li>
-            <li class="ok">Nuages transparents</li>
-        </ul>
-    </div>
-
-    <div id="MWtoday">
-        <h1 class="step" data-x="+=165" data-y="+=580" data-scale="2">Aujourd’hui, la télédétection MW</h1>
-
-        <ul>
-            <li id="MWtoday1" class="step" data-x="-=800" data-y="+=0">
-                <img src="images/profil_rh.png" alt="RH Profile"><span>Atmosphère</span>
-                <ul class="bullet2">
-                    <li>Température</li>
-                    <li>Vapeur d’eau</li>
-                    <li>Précipitations</li>
-                </ul>
-            </li>
-            <li id="MWtoday2" class="step" data-x="+=700" data-y="+=0">
-                <img src="images/sst-ghrsst-01-22-2007b.png" alt="SST"><span>Surface océanique</span>
-                <ul class="bullet2">
-                    <li>Température</li>
-                    <li>Vent</li>
-                    <li>Glace de mer</li>
-                    <li>Salinité</li>
-                </ul>
-            </li>
-            <li id="MWtoday3" class="step" data-x="+=700" data-y="+=0">
-                <img src="images/oocrop_forecast_soil_H.png" alt="Soil moisture"><span>Surface continentale</span>
-                <ul class="bullet2">
-                    <li>humidité des sols</li>
-                    <li>caractérisation <br>de la neige</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div id="MWtodayrole" class="step" data-x="-=600" data-y="+=300" data-scale="1.2">
-        En situation claire et nuageuse
-        <h2>Rôle majeur dans la prédiction numérique du temps</h2>
-    </div>
-
-    <div id="drawbacks" class="step" data-x="-=0" data-y="+=450" data-z="-=400" data-rotate-x="-60">
-        <ul>
-            <li>Restitution au dessus des continents difficile en basse altitude à cause de la contribution de la surface</li>
-            <li>Évaluation des performances des restitutions limitée par les mesures <em>in situ</em></li>
-        </ul>
-    </div>
-
-    <div id="apports" class="step slide" data-x="+=1400" data-y="+=0" data-z="+=0" data-rotate-x="-60">
-        <ol class="header2" start="1"><li>Objectifs de la thèse</li></ol>
-        <h1>Apports du travail présenté</h1>
-        <ul class="bullet1" data-x="+=0" data-y="+=100" data-z="+=0" data-rotate-x="-60">
-            <li class="innerStep">Méthodes innovantes de restitution
-                <ul class="bullet2">
-                    <li>Techniques avancées d’inversion</li>
-                    <li>Variables de surfaces continentales (température, émissivités)</li>
-                    <li>Profils vapeur d’eau sur terre comme sur océan</li>
-                </ul>
-            </li>
-            <li class="innerStep">Évaluation rigoureuse des résultats
-                <ul class="bullet2">
-                    <li>Par comparaison avec des mesures <i>in situ</i> dans l’espace des données géophysiques</li>
-                    <li>Directement dans l’espace des observations satellites</li>
-                </ul>
-            </li>
-            <li class="innerStep">Chaîne de traitement transposable facilement à d’autres plateformes existantes
-                <ul class="bullet2">
-                    <li>Pour Megha-Tropiques, évaluation de l’algorithme en conditions réelles sur des instruments similaires déjà en vol</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div id="Summary" class="step slide" data-x="+=1400" data-y="+=0">
-        <h1>Sommaire</h1>
-        <ol>
-            <li class="">Introduction à la problématique</li>
-            <li class="innerStep appear">Méthodologie</li>
-            <li class="innerStep appear">La restitution de données atmosphériques et de surface<br>dans la mission Megha-Tropiques</li>
-            <li class="innerStep appear">La restitution de données de surface océanique<br>dans le projet Microwat</li>
-            <li class="innerStep appear">Conclusion et perspectives</li>
-        </ol>
-    </div>
-
-    <div id="Atmospheric" class="step" data-x="+=1700" data-y="0" data-z="0">
-        <ol class="header1" start="2"><li>Introduction à la problématique</li></ol>
-        <h1>Le rayonnement atmosphérique</h1>
-        <p class="specify">dans le domaine MW</p>
-        <ul class="bullet1">
-            <li>Émission propre de la surface (terre ou océan)</li>
-            <li>Émission des composants de l’atmosphère et des nuages</li>
-        </ul>
-        <p><img src="images/rt.png" alt="Atmospheric contributions"></p>
-    </div>
-
-    <div id="ETR" class="step" data-x="+=0" data-y="+=465" data-z="+=0">
-        <p><img src="images/etr.svg" alt="Radiative transfer"></p>
-        <h1>Équation du Transfert Radiatif</h1>
-        <ol>
-            <li>L’émission de la surface vers le haut de l’atmosphère</li>
-            <li>L’émission des composants de l’atmosphère vers le haut</li>
-            <li>La réflexion par la surface du rayonnement émis par l’atmosphère vers le bas de l’atmosphère</li>
-        </ol>
-    </div>
-
-    <div id="Weight_function" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
-        <h6>Fonctions de poids d'un capteur MW</h6>
-        <p><img src="images/wf3.png" alt="Weight functions"></p>
-        <ul>
-            <li><img src="images/wf_formula.png"></li>
-            <li>Dépendent de :
-                <ul class="bullet3">
-                    <li>la fréquence</li>
-                    <li>l'altitude</li>
-                    <li>l'atmosphère</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div id="MW_spectrum1" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
-        <h6>Le spectre électromagnétique <br>de l'atmosphère dans le domaine MW</h6>
-        <p><img src="images/MWspectrum.gif" alt="MW Spectrum"></p>
-    </div>
-
-    <ul id="MW_spectrum2" class="step" data-x="+=300" data-y="-=0" data-z="+=0">
-        <li class="bullet0">Bandes d’absorption
-            <ul class="bullet2">
-                <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
-                <li>Raies à 183.31GHz pour la vapeur d'eau</li>
-                <li>...</li>
+        <div id="spectrum" class="step" data-x="+=0" data-y="+=800" data-scale="0.6">
+            <img src="images/spectrum.png" alt="Spectrum">
+            <ul>
+                <li>Micro-ondes<br><img src="images/mw.jpg" alt="MW"></li>
+                <li>Infrarouge<br><img src="images/ir.jpg" alt="IR"></li>
+                <li>Visible<br><img src="images/visible.jpg" alt="Visible"></li>
             </ul>
-        </li>
-        <li class="imply">Profils atmosphériques</li>
-        <li class="bullet0 innerStep">Des canaux fenêtres
-            <ul class="bullet2">
-                <li>Propriétés de la surface</li>
-                <li>Nuages</li>
-                <li>Pluies</li>
-                <li>Fréquences &uarr; = Opacité &uarr;</li>
+        </div>
+
+
+        <div id="visible" class="step spectrum" data-x="+=180" data-y="+=180" data-scale="0.5">
+            <ul class="">
+                <li class="ok">Nuage</li>
+                <li class="ok">Albedo</li>
+                <li class="nok">Nuages opaques</li>
+                <li class="nok">De jour</li>
             </ul>
-        </li>
-    </ul>
+        </div>
+
+        <div id="infrared" class="step spectrum" data-x="-=160" data-y="+=0" data-scale="0.5">
+            <ul class="">
+                <li class="ok">Profils T&deg;, RH</li>
+                <li class="ok">Surface</li>
+                <li class="ok">Résolution spatiale</li>
+                <li class="nok">Nuages opaques</li>
+            </ul>
+        </div>
+
+        <div id="microwave" class="step spectrum" data-x="-=160" data-y="+=0" data-scale="0.5">
+            <ul class="">
+                <li class="ok">Profils T&deg;, RH</li>
+                <li class="ok">Surface</li>
+                <li class="nok">Résolution spatiale</li>
+                <li class="ok">Nuages transparents</li>
+            </ul>
+        </div>
+
+        <div id="MWtoday">
+            <h1 class="step" data-x="+=165" data-y="+=580" data-scale="2">Aujourd’hui, la télédétection MW</h1>
+
+            <ul>
+                <li id="MWtoday1" class="step" data-x="-=800" data-y="+=0">
+                    <img src="images/profil_rh.png" alt="RH Profile"><span>Atmosphère</span>
+                    <ul class="bullet2">
+                        <li>Température</li>
+                        <li>Vapeur d’eau</li>
+                        <li>Précipitations</li>
+                    </ul>
+                </li>
+                <li id="MWtoday2" class="step" data-x="+=700" data-y="+=0">
+                    <img src="images/sst-ghrsst-01-22-2007b.png" alt="SST"><span>Surface océanique</span>
+                    <ul class="bullet2">
+                        <li>Température</li>
+                        <li>Vent</li>
+                        <li>Glace de mer</li>
+                        <li>Salinité</li>
+                    </ul>
+                </li>
+                <li id="MWtoday3" class="step" data-x="+=700" data-y="+=0">
+                    <img src="images/oocrop_forecast_soil_H.png" alt="Soil moisture"><span>Surface continentale</span>
+                    <ul class="bullet2">
+                        <li>humidité des sols</li>
+                        <li>caractérisation <br>de la neige</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="MWtodayrole" class="step" data-x="-=600" data-y="+=300" data-scale="1.2">
+            En situation claire et nuageuse
+            <h2>Rôle majeur dans la prédiction numérique du temps</h2>
+        </div>
+
+        <div id="drawbacks" class="step" data-x="-=0" data-y="+=450" data-z="-=400" data-rotate-x="-60">
+            <ul>
+                <li>Restitution au dessus des continents difficile en basse altitude à cause de la contribution de la surface</li>
+                <li>Évaluation des performances des restitutions limitée par les mesures <em>in situ</em></li>
+            </ul>
+        </div>
+
+        <div id="apports" class="step slide" data-x="+=1400" data-y="+=0" data-z="+=0" data-rotate-x="-60">
+            <ul class="header2"><li>Introduction</li></ul>
+            <h1>Apports du travail présenté</h1>
+            <ul class="bullet1" data-x="+=0" data-y="+=100" data-z="+=0" data-rotate-x="-60">
+                <li class="innerStep">Méthodes innovantes de restitution
+                    <ul class="bullet2">
+                        <li>Techniques avancées d’inversion</li>
+                        <li>Variables de surfaces continentales (température, émissivités)</li>
+                        <li>Profils vapeur d’eau sur terre comme sur océan</li>
+                    </ul>
+                </li>
+                <li class="innerStep">Évaluation rigoureuse des résultats
+                    <ul class="bullet2">
+                        <li>Par comparaison avec des mesures <i>in situ</i> dans l’espace des données géophysiques</li>
+                        <li>Directement dans l’espace des observations satellites</li>
+                    </ul>
+                </li>
+                <li class="innerStep">Chaîne de traitement transposable facilement à d’autres plateformes existantes
+                    <ul class="bullet2">
+                        <li>Pour Megha-Tropiques, évaluation de l’algorithme en conditions réelles sur des instruments similaires déjà en vol</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div id="Summary" class="step slide" data-x="+=1400" data-y="+=0">
+            <h1>Sommaire</h1>
+            <ol>
+                <li class="">Introduction à la problématique</li>
+                <li class="innerStep appear">Méthodologie</li>
+                <li class="innerStep appear">La restitution de données atmosphériques et de surface<br>dans la mission Megha-Tropiques</li>
+                <li class="innerStep appear">La restitution de données de surface océanique<br>dans le projet Microwat</li>
+                <li class="innerStep appear">Conclusion et perspectives</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="pheader">1. La problématique</div>
+
+        <div id="Atmospheric" class="step" data-x="+=1700" data-y="0" data-z="0">
+            <ol class="header1" start="2"><li>Introduction à la problématique</li></ol>
+            <h1>Le rayonnement atmosphérique</h1>
+            <p class="specify">dans le domaine MW</p>
+            <ul class="bullet1">
+                <li>Émission propre de la surface (terre ou océan)</li>
+                <li>Émission des composants de l’atmosphère et des nuages</li>
+            </ul>
+            <p><img src="images/rt.png" alt="Atmospheric contributions"></p>
+        </div>
+
+        <div id="ETR" class="step" data-x="+=0" data-y="+=465" data-z="+=0">
+            <p><img src="images/etr.svg" alt="Radiative transfer"></p>
+            <h1>Équation du Transfert Radiatif</h1>
+            <ol>
+                <li>L’émission de la surface vers le haut de l’atmosphère</li>
+                <li>L’émission des composants de l’atmosphère vers le haut</li>
+                <li>La réflexion par la surface du rayonnement émis par l’atmosphère vers le bas de l’atmosphère</li>
+            </ol>
+        </div>
+
+        <div id="Weight_function" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
+            <h6>Fonctions de poids d'un capteur MW</h6>
+            <p><img src="images/wf3.png" alt="Weight functions"></p>
+            <ul>
+                <li><img src="images/wf_formula.png"></li>
+                <li>Dépendent de :
+                    <ul class="bullet3">
+                        <li>la fréquence</li>
+                        <li>l'altitude</li>
+                        <li>l'atmosphère</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="MW_spectrum1" class="step" data-x="+=0" data-y="+=800" data-z="+=0">
+            <h6>Le spectre électromagnétique <br>de l'atmosphère dans le domaine MW</h6>
+            <p><img src="images/MWspectrum.gif" alt="MW Spectrum"></p>
+        </div>
+
+        <ul id="MW_spectrum2" class="step" data-x="+=300" data-y="-=0" data-z="+=0">
+            <li class="bullet0">Bandes d’absorption
+                <ul class="bullet2">
+                    <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
+                    <li>Raies à 183.31GHz pour la vapeur d'eau</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li class="imply">Profils atmosphériques</li>
+            <li class="bullet0 innerStep">Des canaux fenêtres
+                <ul class="bullet2">
+                    <li>Propriétés de la surface</li>
+                    <li>Nuages</li>
+                    <li>Pluies</li>
+                    <li>Fréquences &uarr; = Opacité &uarr;</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 
 <!--    <div id="Intro_final" class="step slide" data-x="+=0" data-y="+=800" data-z="+=0">
         <ol class="header2" start="2"><li>Introduction à la problématique</li></ol>
@@ -323,68 +338,70 @@
     </div>
 -->
 
-    <div id="Methodology" class="step" data-x="+=1700" data-y="0" data-z="0">
-        <ol class="header1" start="3"><li>Méthodologie</li></ol>
-        <h1>Inversion de données satellites</h1>
-        <ul class="bullet1">
-            <li>Problème direct
-                <ul class="bullet2">
-                    <li>Transfert radiatif (RTTOV)</li>
-                    <li class="thus">Équation physique</li>
-                </ul>
-            </li>
-        </ul>
-        <img src="images/methodology.png" alt="Methodology">
-    </div>
-
-    <ul id="Methodology2" class="bullet1 step" data-x="+=0" data-y="+=430">
-        <li>Problème inverse
-            <ul class="bullet2">
-                <li class="thus hard">Inversion analytique du transfert radiatif</li>
-                <li class="thus">Méthode physique
-                    <ul class="bullet3">
-                        <li>1D-VAR</li>
-                        <li>Réseaux de neurones</li>
-                        <li>...</li>
+    <section>
+        <div id="Methodology" class="step" data-x="+=1700" data-y="0" data-z="0">
+            <ol class="header1" start="3"><li>Méthodologie</li></ol>
+            <h1>Inversion de données satellites</h1>
+            <ul class="bullet1">
+                <li>Problème direct
+                    <ul class="bullet2">
+                        <li>Transfert radiatif (RTTOV)</li>
+                        <li class="thus">Équation physique</li>
                     </ul>
                 </li>
             </ul>
-        </li>
-    </ul>
+            <img src="images/methodology.png" alt="Methodology">
+        </div>
 
-    <div id="Neurons" class="step" data-x="+=0" data-y="+=600" data-z="0">
-        <h1>Réseaux de neurones</h1>
-        <p class="img"><img src="images/neurons.png" alt="Réseaux de neurones"></p>
-        <ul class="bullet1">
-            <li class="thus">Nécessite un apprentissage</li>
-            <li class="details">Adapté à la fusion d’information pour exploiter la synergie multi-longueurs d’ondes</li>
-        </ul>
-    </div>
-
-    <div id="DB" class="step" data-x="+=0" data-y="+=900">
-        <h1>Base de données</h1>
-        <ul class="bullet1">
-            <li>Analyses :
-                <p class="details">Issues des modèles d’assimilation et de prévision</p>
+        <ul id="Methodology2" class="bullet1 step" data-x="+=0" data-y="+=430">
+            <li>Problème inverse
                 <ul class="bullet2">
-                    <li class="thus">Décrit les variables géophysiques de la surface et de l’atmosphère</li>
+                    <li class="thus hard">Inversion analytique du transfert radiatif</li>
+                    <li class="thus">Méthode physique
+                        <ul class="bullet3">
+                            <li>1D-VAR</li>
+                            <li>Réseaux de neurones</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
                 </ul>
-                <p class="img"><img src="images/bdd.png" alt="Learning Base"></p>
             </li>
         </ul>
-    </div>
 
-    <ul id="DB2" class="step" data-x="+=0" data-y="+=190">
-        <li>Base d'apprentissage
-            <p class="details">Des paires cohérentes de température de brillance (entrées) et de données géophysiques (sorties)</p>
-        </li>
-    </ul>
+        <div id="Neurons" class="step" data-x="+=0" data-y="+=600" data-z="0">
+            <h1>Réseaux de neurones</h1>
+            <p class="img"><img src="images/neurons.png" alt="Réseaux de neurones"></p>
+            <ul class="bullet1">
+                <li class="thus">Nécessite un apprentissage</li>
+                <li class="details">Adapté à la fusion d’information pour exploiter la synergie multi-longueurs d’ondes</li>
+            </ul>
+        </div>
 
-    <div id="Validation" class="step" data-x="+=0" data-y="+=850">
-        <h1>Validation</h1>
-        <p><img src="images/validation.png" alt="Validation Scheme"></p>
-        <p class="innerStep appear"><img src="images/validation2.png" alt="Improved Validation Scheme"></p>
-    </div>
+        <div id="DB" class="step" data-x="+=0" data-y="+=900">
+            <h1>Base de données</h1>
+            <ul class="bullet1">
+                <li>Analyses :
+                    <p class="details">Issues des modèles d’assimilation et de prévision</p>
+                    <ul class="bullet2">
+                        <li class="thus">Décrit les variables géophysiques de la surface et de l’atmosphère</li>
+                    </ul>
+                    <p class="img"><img src="images/bdd.png" alt="Learning Base"></p>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="DB2" class="step" data-x="+=0" data-y="+=190">
+            <li>Base d'apprentissage
+                <p class="details">Des paires cohérentes de température de brillance (entrées) et de données géophysiques (sorties)</p>
+            </li>
+        </ul>
+
+        <div id="Validation" class="step" data-x="+=0" data-y="+=850">
+            <h1>Validation</h1>
+            <p><img src="images/validation.png" alt="Validation Scheme"></p>
+            <p class="innerStep appear"><img src="images/validation2.png" alt="Improved Validation Scheme"></p>
+        </div>
+    </section>
 
     <div id="Applications" class="step slide" data-x="+=0" data-y="+=900">
         <h1>Applications</h1>
@@ -398,134 +415,138 @@
         </ul>
     </div>
 
-    <div id="MT_intro" class="step" data-x="+=2200" data-y="0">
-        <ol class="header1" start="4"><li>Le projet Megha-Tropiques</li></ol>
-        <img src="images/mt.png">
-        <ul class="bullet1">
-            <li>Mission indo-française entre le Indian Space Research Organisation et le CNES</li>
-            <li>Dédiée au cycle de l’eau et de l’énergie dans les Tropiques</li>
-        </ul>
-    </div>
+    <section>
+        <div id="MT_intro" class="step" data-x="+=2200" data-y="0">
+            <ol class="header1" start="4"><li>Le projet Megha-Tropiques</li></ol>
+            <img src="images/mt.png">
+            <ul class="bullet1">
+                <li>Mission indo-française entre le Indian Space Research Organisation et le CNES</li>
+                <li>Dédiée au cycle de l’eau et de l’énergie dans les Tropiques</li>
+            </ul>
+        </div>
 
-    <div id="MT_orbit" class="step" data-x="+=0" data-y="+=650">
-        <div><img src="images/orbit.jpeg"></div>
-        <ul class="bullet1">
-            <li>Faible inclinaison sur l’équateur (ceinture équatoriale)</li>
-            <li>Haute répétitivité des mesures (jusqu’à 7 survols journaliers du même point) mais irrégulière</li>
-            <li>865 km d’altitude</li>
-            <li>Fait partie de la constellation Global Precipitation Measurement (GPM)</li>
-        </ul>
-    </div>
+        <div id="MT_orbit" class="step" data-x="+=0" data-y="+=650">
+            <div><img src="images/orbit.jpeg"></div>
+            <ul class="bullet1">
+                <li>Faible inclinaison sur l’équateur (ceinture équatoriale)</li>
+                <li>Haute répétitivité des mesures (jusqu’à 7 survols journaliers du même point) mais irrégulière</li>
+                <li>865 km d’altitude</li>
+                <li>Fait partie de la constellation Global Precipitation Measurement (GPM)</li>
+            </ul>
+        </div>
 
-    <div id="MT_instru" class="step" data-x="+=0" data-y="+=850">
-        <h1>Instrumentation</h1>
-        <img src="images/mega-trophiques2.png">
-        <ul class="bullet1">
-            <li>ScaRaB<br> Flux radiatif au sommet de l’atmosphère dans les ondes courtes et les ondes longues</li>
-            <li>SAPHIR<br> Sondeur microondes dédié à la vapeur d’eau : 6 canaux dans la bande d’absorption de la vapeur d’eau à 183,31 GHz</li>
-            <li>MADRAS<br>Imageur microondes pour les précipitations : canaux à 18, 23, 37, 89 and 157 GHz, polarisations H et V</li>
-        </ul>
-    </div>
+        <div id="MT_instru" class="step" data-x="+=0" data-y="+=850">
+            <h1>Instrumentation</h1>
+            <img src="images/mega-trophiques2.png">
+            <ul class="bullet1">
+                <li>ScaRaB<br> Flux radiatif au sommet de l’atmosphère dans les ondes courtes et les ondes longues</li>
+                <li>SAPHIR<br> Sondeur microondes dédié à la vapeur d’eau : 6 canaux dans la bande d’absorption de la vapeur d’eau à 183,31 GHz</li>
+                <li>MADRAS<br>Imageur microondes pour les précipitations : canaux à 18, 23, 37, 89 and 157 GHz, polarisations H et V</li>
+            </ul>
+        </div>
 
-    <div id="instrumentation">
-        <div id="Saphir" class="step" data-x="+=0" data-y="+=850">
-            <h1>Saphir</h1>
-            <div>
-                <ul>
-                    <li>Sondage atmosphérique transversale pour la vapeur d’eau</li>
-                    <li>Résolution verticale inédite en MW </li>
-                </ul>
+        <div id="instrumentation">
+            <div id="Saphir" class="step" data-x="+=0" data-y="+=850">
+                <h1>Saphir</h1>
+                <div>
+                    <ul>
+                        <li>Sondage atmosphérique transversale pour la vapeur d’eau</li>
+                        <li>Résolution verticale inédite en MW </li>
+                    </ul>
+                    <table>
+                        <thead><tr><td>Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td></tr></thead>
+                        <tr class="odd"><td>183.31 &pm; 0.2</td><td>2.03</td><td>200</td></tr>
+                        <tr class="even"><td>183.31 &pm; 1.1</td><td>1.53</td><td>350</td></tr>
+                        <tr class="odd"><td>183.31 &pm; 2.8</td><td>1.37</td><td>500</td></tr>
+                        <tr class="even"><td>183.31 &pm; 4.2</td><td>1.25</td><td>700</td></tr>
+                        <tr class="odd"><td>183.31 &pm; 6.8</td><td>1.06</td><td>1200</td></tr>
+                        <tr class="even"><td>183.31 &pm; 11</td><td>0.99</td><td>2000</td></tr>
+                    </table>
+                </div>
+                <p>
+                    <img src="images/wf.png">
+                    <img src="images/wf3.png">
+                </p>
+            </div>
+
+            <div id="Madras" class="step" data-x="+=0" data-y="+=850">
+                <h1>Madras</h1>
+                <div>
+                    <ul>
+                        <li>Imageur MW</li>
+                        <li>Balayage conique à 53&deg;</li>
+                        <li>10 km à 40 km de résolution</li>
+                    </ul>
+                    <img src="images/tmi_1.jpg">
+                </div>
                 <table>
-                    <thead><tr><td>Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td></tr></thead>
-                    <tr class="odd"><td>183.31 &pm; 0.2</td><td>2.03</td><td>200</td></tr>
-                    <tr class="even"><td>183.31 &pm; 1.1</td><td>1.53</td><td>350</td></tr>
-                    <tr class="odd"><td>183.31 &pm; 2.8</td><td>1.37</td><td>500</td></tr>
-                    <tr class="even"><td>183.31 &pm; 4.2</td><td>1.25</td><td>700</td></tr>
-                    <tr class="odd"><td>183.31 &pm; 6.8</td><td>1.06</td><td>1200</td></tr>
-                    <tr class="even"><td>183.31 &pm; 11</td><td>0.99</td><td>2000</td></tr>
+                    <thead><tr><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Objectifs</td></tr></thead>
+                    <tr class="odd"><td rowspan="2">18.7</td><td>V</td><td>0.46</td><td rowspan="2">Pluie sur la mer</td></tr>
+                    <tr class="odd"><td>H</td><td>0.53</td></tr>
+                    <tr class="even"><td>23.8</td><td>V</td><td>0.48</td><td>Distribution <br>de vapeur d'eau</td></tr>
+                    <tr class="odd"><td rowspan="2">36.5</td><td>V</td><td>0.44</td><td rowspan="2">Eau liquide dans les nuages, pluie sur la mer</td></tr>
+                    <tr class="odd"><td>H</td><td>0.48</td></tr>
+                    <tr class="even"><td rowspan="2">89</td><td>V</td><td>0.63</td><td rowspan="2">Zones convectives<br> de pluie</td></tr>
+                    <tr class="even"><td>H</td><td>0.58</td></tr>
+                    <tr class="odd"><td rowspan="2">157</td><td>V</td><td>1.75</td><td rowspan="2">Détection de glace <br>  dans les nuages</td></tr>
+                    <tr class="odd"><td>H</td><td>1.75</td></tr>
                 </table>
             </div>
-            <p>
-                <img src="images/wf.png">
-                <img src="images/wf3.png">
-            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="Calib_intro">
+            <img id="Calib_intro1" src="images/calib_scheme1.png" class="step" data-x="+=2200" data-y="0">
+            <div id="Calib_intro2" class="step gear nodelay" data-x="+=340" data-y="+=" data-z="+=0">
+                <div>Réseaux de neurones</div>
+                <img src="images/gear.gif" class="animated">
+                <img src="images/gear.png" class="fix">
+            </div>
+            <img id="Calib_intro3" src="images/calib_scheme2.png" class="step appear" data-x="+=0" data-y="+=0">
+            <img id="Calib_intro4" src="images/calib_scheme3.png" class="step appear" data-x="+=0" data-y="+=0">
+            <img id="Calib_intro5" src="images/calib_scheme4.png" class="step appear" data-x="-=170" data-y="+=175">
+            <ul id="Calib_intro6" class="step appear bullet1" data-x="-=0" data-y="+=0">
+                <li>Transfert radiatif : approximations, erreurs mineures...</li>
+                <li>Observation : biais de l'instrument, déviation du satellite...</li>
+            </ul>
+            <img id="Calib_intro7" src="images/calibration1.png" class="step" data-x="-=0" data-y="+=400">
+            <img id="Calib_intro8" src="images/calibration2.png" class="step appear" data-x="-=0" data-y="+=0">
         </div>
 
-        <div id="Madras" class="step" data-x="+=0" data-y="+=850">
-            <h1>Madras</h1>
-            <div>
+        <div id="Calibration">
+            <div id="Calib_result1" class="step" data-x="+=0" data-y="+=800">
+                <h1>Comparaison avec les données simulées</h1>
+                <img src="images/calib_map_compare1.png" class="innerStep appear">
+                <img src="images/calib_map_compare2.png">
                 <ul>
-                    <li>Imageur MW</li>
-                    <li>Balayage conique à 53&deg;</li>
-                    <li>10 km à 40 km de résolution</li>
+                    <li>Écarts des TB Observées (gauche) et Calibrées (droite) avec les TB simulées via RTTOV pour AMSR-E et HSB sur Aqua à 183&pm;1&nbsp;GHz et 18.7&nbsp;GHz H</li>
+                    <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
                 </ul>
-                <img src="images/tmi_1.jpg">
             </div>
-            <table>
-                <thead><tr><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Objectifs</td></tr></thead>
-                <tr class="odd"><td rowspan="2">18.7</td><td>V</td><td>0.46</td><td rowspan="2">Pluie sur la mer</td></tr>
-                <tr class="odd"><td>H</td><td>0.53</td></tr>
-                <tr class="even"><td>23.8</td><td>V</td><td>0.48</td><td>Distribution <br>de vapeur d'eau</td></tr>
-                <tr class="odd"><td rowspan="2">36.5</td><td>V</td><td>0.44</td><td rowspan="2">Eau liquide dans les nuages, pluie sur la mer</td></tr>
-                <tr class="odd"><td>H</td><td>0.48</td></tr>
-                <tr class="even"><td rowspan="2">89</td><td>V</td><td>0.63</td><td rowspan="2">Zones convectives<br> de pluie</td></tr>
-                <tr class="even"><td>H</td><td>0.58</td></tr>
-                <tr class="odd"><td rowspan="2">157</td><td>V</td><td>1.75</td><td rowspan="2">Détection de glace <br>  dans les nuages</td></tr>
-                <tr class="odd"><td>H</td><td>1.75</td></tr>
-            </table>
-        </div>
-    </div>
 
-    <div id="Calib_intro">
-        <img id="Calib_intro1" src="images/calib_scheme1.png" class="step" data-x="+=2200" data-y="0">
-        <div id="Calib_intro2" class="step gear nodelay" data-x="+=340" data-y="+=" data-z="+=0">
-            <div>Réseaux de neurones</div>
-            <img src="images/gear.gif" class="animated">
-            <img src="images/gear.png" class="fix">
-        </div>
-        <img id="Calib_intro3" src="images/calib_scheme2.png" class="step appear" data-x="+=0" data-y="+=0">
-        <img id="Calib_intro4" src="images/calib_scheme3.png" class="step appear" data-x="+=0" data-y="+=0">
-        <img id="Calib_intro5" src="images/calib_scheme4.png" class="step appear" data-x="-=170" data-y="+=175">
-        <ul id="Calib_intro6" class="step appear bullet1" data-x="-=0" data-y="+=0">
-            <li>Transfert radiatif : approximations, erreurs mineures...</li>
-            <li>Observation : biais de l'instrument, déviation du satellite...</li>
-        </ul>
-        <img id="Calib_intro7" src="images/calibration1.png" class="step" data-x="-=0" data-y="+=400">
-        <img id="Calib_intro8" src="images/calibration2.png" class="step appear" data-x="-=0" data-y="+=0">
-    </div>
+            <div id="Calib_result2" class="step" data-x="+=0" data-y="+=800">
+                <img src="images/calib_RMS.png">
+                <ul>
+                    <li>Écarts moyens des TB Calibrées (traits pleins) et Observées (tirets) avec les TB simulées via RTTOV sur les canaux AMSR-E et HSB sur Aqua </li>
+                    <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
+                </ul>
+            </div>
 
-    <div id="Calibration">
-        <div id="Calib_result1" class="step" data-x="+=0" data-y="+=800">
-            <h1>Comparaison avec les données simulées</h1>
-            <img src="images/calib_map_compare1.png" class="innerStep appear">
-            <img src="images/calib_map_compare2.png">
-            <ul>
-                <li>Écarts des TB Observées (gauche) et Calibrées (droite) avec les TB simulées via RTTOV pour AMSR-E et HSB sur Aqua à 183&pm;1&nbsp;GHz et 18.7&nbsp;GHz H</li>
-                <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
-            </ul>
-        </div>
-
-        <div id="Calib_result2" class="step" data-x="+=0" data-y="+=800">
-            <img src="images/calib_RMS.png">
-            <ul>
-                <li>Écarts moyens des TB Calibrées (traits pleins) et Observées (tirets) avec les TB simulées via RTTOV sur les canaux AMSR-E et HSB sur Aqua </li>
-                <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
-            </ul>
-        </div>
-
-        <div id="Calib_result3" class="step" data-x="+=0" data-y="+=800">
-            <img src="images/calib_profile.png">
-            <ul>
-                <li>Écarts moyens des profils d'humidité relative des radiosondages avec ceux des restitutions à partir de TB observées (tirets) et calibrées (traits pleins) issues de AMSR-E et HSB sur Aqua</li>
-                <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
-            </ul>
-            <div class="publication"><b>An Innovative Calibration Method for the Inversion of Satellite Observations</b>,<br>
-                Aires, F. and Bernardo, F. and Brogniez, H. and Prigent, C., JAMC 2010
+            <div id="Calib_result3" class="step" data-x="+=0" data-y="+=800">
+                <img src="images/calib_profile.png">
+                <ul>
+                    <li>Écarts moyens des profils d'humidité relative des radiosondages avec ceux des restitutions à partir de TB observées (tirets) et calibrées (traits pleins) issues de AMSR-E et HSB sur Aqua</li>
+                    <li><i>Échantillon de situations non précipitantes de 09/2002 et 01/2003 en coïncidence avec les données OPERA ECMWF.</i></li>
+                </ul>
+                <div class="publication"><b>An Innovative Calibration Method for the Inversion of Satellite Observations</b>,<br>
+                    Aires, F. and Bernardo, F. and Brogniez, H. and Prigent, C., JAMC 2010
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="Telsem">
+    <section id="Telsem">
         <div id="Telsem_intro" class="step" data-x="+=2200" data-y="0">
             <h1>La surface continentale</h1>
             <ul class="bullet1">
@@ -593,10 +614,9 @@
                 Aires, F., C. Prigent, F. Bernardo, C. Jimenez, R. Sounders, and P. Brunel, QJRMS 2011
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div id="MT">
+    <section id="MT">
         <div id="MT_variables" class="step" data-x="+=2200" data-y="0">
             <h1>Produits de la chaine Saphir-Madras</h1>
             En ciel clair ou nuageux :
@@ -665,10 +685,10 @@
             </div>
         </div>
 
-        <div id="MT_TB1" class="step" data-x="+=0" data-y="+=800" data-scale="0.65">
+        <div id="MT_TB1" class="step" data-x="+=0" data-y="+=800" data-scale="0.75">
             <h1>Validation dans l'espace des TB</h1>
             <div>
-                <img src="images/mt_8a.png">
+                <img src="images/mt_8c.png">
                 Écart entre les observations HSB/AMSR-E sur Aqua avec :
                 <ul class="bullet3">
                     <li>les simulations de l'analyse (tirets)</li>
@@ -683,7 +703,7 @@
                 </ul>
             </div>
             <div class="innerStep appear">
-                <img src="images/mt_8c.png">
+                <img src="images/mt_8a.png">
                 Écart entre les observations HSB et AMSR-E sur Aqua avec :
                 <ul class="bullet3">
                     <li>les simulations de l'analyse (tirets)</li>
@@ -693,13 +713,14 @@
             </div>
         </div>
 
-        <div id="MT_TB2" class="step appear" data-x="+=120" data-y="+=190">
-            <img src="images/mt_8.png">
+        <div id="MT_TB2" class="step appear" data-x="-=120" data-y="+=200">
+            <img src="images/mt_8d.png">
             <div class="publication"><b>Atmospheric water vapour retrieval from microwave instruments - Part II : Evaluation for the Megha-Tropiques mission</b>,<br>
                 Bernardo, F.,  F.  Aires, C. Prigent, QJRMS 2012
             </div>
         </div>
-    </div>
+
+    </section>
 
     <div id="overview" class="step" data-x="-=4000" data-y="+=0" data-z="0" data-scale="20">
     </div>
@@ -776,7 +797,7 @@
 			CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
 
 		-->
-
+    </div>
 	</div>
 </div>
 

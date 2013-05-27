@@ -6,7 +6,24 @@
 /*
   Global disposition for any slide
 */
-
+.pheader {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    font-size: 30px !important;
+    padding: 3px 10px;
+    width: 400px;
+    text-align: right;
+    z-index: 1;
+}
+.past .pheader{
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
 h1 {
     font-size: 1.8em;
     text-align: center;
@@ -51,12 +68,14 @@ ol.header li{
     margin:-40px 0 20px -60px;
     width:858px;
 }
-ol.header2 li{
+.header2 li {
     text-align: right !important;
-    list-style-type: upper-roman !important;
-    list-style-position: inside !important;
     padding: 0 !important;
     margin: 0 !important;
+}
+ol.header2 li{
+    list-style-type: upper-roman !important;
+    list-style-position: inside !important;
 }
 
 /* Bullet point */
@@ -711,11 +730,19 @@ ul#DB2 li {
     font-size: 20px;
     margin-top: -80px;
 }
-#Calib_intro2.present img {
+#Calib_intro2.future img {
     background-color: indianred;
-}
-#Calib_intro2.past img {
+    }
+#Calib_intro2 img {
+    border-radius: 10px;
+    margin: 5px 0 0 -10px;
+    border: 1px solid #666666;
     background-color: #AEDC52;
+    -webkit-transition: background-color 4s linear;
+    -moz-transition:    background-color 4s linear;
+    -o-transition:      background-color 4s linear;
+    -ms-transition:     background-color 4s linear;
+    transition:         background-color 4s linear;
 }
 #Calib_intro3 {
     margin-top: 172px;
@@ -900,10 +927,6 @@ ul#DB2 li {
     font-size:25px;
     height: 500px;
 }
-#MT_TB1 img{
-    float:right;
-    margin-right:-32px;
-}
 #MT_TB1 div {
     position: absolute;
 }
@@ -916,8 +939,11 @@ ul#DB2 li {
 #MT_TB1.step.past {
     opacity: 1;
 }
+#MT_TB1.step img {
+    float:left;
+    margin-left: -400px;
+}
 #MT_TB2.step img {
-    width: 615px;
-    height: 450px;
-    margin-left: 300px;
+    margin: 48px 0 0 -82px;
+    width:624px;
 }
