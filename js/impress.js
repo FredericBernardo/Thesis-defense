@@ -545,10 +545,13 @@
             // Transitions on them are triggered with different delays (to make
             // visually nice and 'natural' looking transitions), so we need to know
             // that both of them are finished.
+
+            // Trick to avoid artefacts in Chrome rendering after transform
+            var move = {x:0, y:0, z:1};
             css(root, {
                 // to keep the perspective look similar for different scales
                 // we need to 'scale' the perspective, too
-                transform: perspective( config.perspective / targetScale ) + scale( targetScale ),
+                transform: perspective( config.perspective / targetScale ) + scale( targetScale ) + translate(move),
                 transitionDuration: duration + "ms",
                 transitionDelay: (zoomin ? delay : 0) + "ms"
             });
@@ -556,7 +559,7 @@
             css(canvas, {
                 transform: rotate(target.rotate, true) + translate(target.translate),
                 transitionDuration: duration + "ms",
-                transitionDelay: (zoomin ? 0 : delay) + "ms"
+                transitionDelay: (zoomin ? 0 : delay) + "ms",
             });
 
             // Here is a tricky part...
@@ -619,7 +622,7 @@
             stepEnterTimeout = window.setTimeout(function() {
                 onStepEnter(activeStep);
             }, duration + delay);
-            
+
             return el;
         };
         
