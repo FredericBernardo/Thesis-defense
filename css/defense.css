@@ -27,11 +27,8 @@ body > .pheader {
     background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* IE10+ */
     background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-
-
-
 }
-.past .pheader{
+.pheader.disapear{
     opacity: 0;
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;

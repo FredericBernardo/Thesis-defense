@@ -581,23 +581,27 @@
 
             // Specific persistent header
             // If specific header in this step, remove the persistent header
+            var current_header = $("body > .pheader", document.body);
             if ($(".header1", activeStep) != null ||
                 $(".header2", activeStep) != null) {
-                if ($("body > .pheader", document.body) != null) {
-                    // TODO make it disapear smoothly
-                    document.body.removeChild($("body > .pheader"));
+                if (current_header != null) {
+                    current_header.classList.add("disapear");
                 }
             }
             else {
                 // If persistent header different from last one, add it
                 var pheader = findInParents(".pheader", activeStep);
                 if (pheader != null &&
-                    pheader.innerHTML != '' &&
-                    ($("body > .pheader") == null || pheader.innerHTML != $("body > .pheader").innerHTML)) {
+                    pheader.innerHTML != '') {
+                    if (current_header == null ||
+                        pheader.outerHTML != $("body > .pheader").outerHTML) {
+                        if (current_header != null) {
+                            document.body.removeChild(current_header);
+                        }
                         document.body.appendChild(pheader.cloneNode(true));
+                    }
                 }
             }
-
 
             // And here is where we trigger `impress:stepenter` event.
             // We simply set up a timeout to fire it taking transition duration (and possible delay) into account.
