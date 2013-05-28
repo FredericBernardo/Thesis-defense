@@ -579,21 +579,25 @@
             currentState = target;
             activeStep = el;
 
-            // If no header in this step, append the persistent header
-            if ( $(".header1", activeStep) == null && $(".header2", activeStep) == null ) {
-                var pheader = findInParents(".pheader", activeStep).cloneNode(true);
-                if (pheader != null && pheader.innerHTML != '' ) {
-                    activeStep.appendChild(pheader);
-                    var marginTop = parseInt(window.getComputedStyle(activeStep).marginTop, 10)
-                        - parseInt(window.getComputedStyle(activeStep).marginBottom, 10);
-                    var marginLeft = parseInt(window.getComputedStyle(activeStep).marginRight, 10)
-                        - parseInt(window.getComputedStyle(activeStep).marginLeft, 10);
-                    css(pheader, {
-                        top: ((activeStep.offsetHeight - window.innerHeight/windowScale)/2 - marginTop) + "px",
-                        right: (-200-marginLeft) + "px"
-                    });
+            // Specific persistent header
+            // If specific header in this step, remove the persistent header
+            if ($(".header1", activeStep) != null ||
+                $(".header2", activeStep) != null) {
+                if ($("body > .pheader", document.body) != null) {
+                    // TODO make it disapear smoothly
+                    document.body.removeChild($("body > .pheader"));
                 }
             }
+            else {
+                // If persistent header different from last one, add it
+                var pheader = findInParents(".pheader", activeStep);
+                if (pheader != null &&
+                    pheader.innerHTML != '' &&
+                    ($("body > .pheader") == null || pheader.innerHTML != $("body > .pheader").innerHTML)) {
+                        document.body.appendChild(pheader.cloneNode(true));
+                }
+            }
+
 
             // And here is where we trigger `impress:stepenter` event.
             // We simply set up a timeout to fire it taking transition duration (and possible delay) into account.

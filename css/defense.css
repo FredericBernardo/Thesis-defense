@@ -7,14 +7,29 @@
   Global disposition for any slide
 */
 .pheader {
-    position: absolute;
+    visibility: hidden;
+}
+body > .pheader {
+    position: fixed !important;
+    bottom: 10px !important;
+    left: -10px !important;
+    padding-left: 20px !important;
     visibility: visible;
     opacity: 1;
     font-size: 30px !important;
     padding: 3px 10px;
     width: 400px;
-    text-align: right;
     z-index: 1;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.06) 33%, rgba(255,255,255,0) 35%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(33%,rgba(255,255,255,0.06)), color-stop(35%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.06) 33%,rgba(255,255,255,0) 35%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+
+
 }
 .past .pheader{
     opacity: 0;
@@ -944,4 +959,7 @@ ul#DB2 li {
 #MT_TB2.step img {
     margin: 48px 0 0 -82px;
     width:624px;
+}
+#Microwat_intro img {
+    width:700px;
 }
