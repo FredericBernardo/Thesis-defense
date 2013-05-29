@@ -1,5 +1,5 @@
 /* Draft mode
-.step {
+.step, img, div {
     border: 1px solid #000;
 }
 
@@ -44,6 +44,27 @@ h1 {
     line-height: 50px;
 }
 
+table tr {
+    text-align: center;
+    border: 1px solid #666666;
+}
+table td {
+    font-size: 22px;
+    padding: 0 10px;
+}
+table tr.odd td,table tr.even td {
+    vertical-align: middle;
+}
+table thead {
+    background-color: #929FAE;
+    color: #FFFFFF;
+}
+table tr.odd {
+    background-color: #E0E5E9;
+}
+table tr.even {
+    background-color: #fff;
+}
 /* Slide header */
 
 .figures img.innerStep {
@@ -694,10 +715,6 @@ ul#DB2 li {
 #instrumentation div ul li {
     margin-bottom: 12px;
 }
-#instrumentation div table {
-    margin: 50px 0 0 -20px;
-    width: 450px
-}
 #instrumentation div#Saphir table {
     margin: 50px 0 0;
 }
@@ -716,26 +733,9 @@ ul#DB2 li {
 #instrumentation div#Saphir img  {
     width: 285px;
 }
-#instrumentation tr {
-    text-align: center;
-    border: 1px solid #666666;
-}
-#instrumentation td {
-    font-size: 22px;
-    padding: 0 10px;
-}
-#instrumentation tr.odd td,#instrumentation tr.even td {
-    vertical-align: middle;
-}
-#instrumentation thead {
-    background-color: #929FAE;
-    color: #FFFFFF;
-}
-#instrumentation tr.odd {
-    background-color: #E0E5E9;
-}
-#instrumentation tr.even {
-    background-color: #fff;
+#instrumentation table {
+    margin: 50px 0 0 -20px;
+    width: 450px
 }
 #Calib_intro .past {
     opacity: 1;
@@ -959,4 +959,25 @@ ul#DB2 li {
 }
 #Microwat_intro img {
     width:700px;
+}
+#Microwat_concept{
+    height: 700px;
+}
+#Microwat_concept table {
+    float: left;
+    margin-left: -100px;
+}
+#Microwat_concept table.innerStep {
+    float:none;
+    margin-left: -2px;
+    width: 280px;
+    z-index: 1;
+}
+#Microwat_concept table.innerStep tr {
+    border-left: none;
+}
+#Microwat_concept table.innerStep td.void {
+    width:0;
+    padding: 0;
+    margin: 0;
 }
