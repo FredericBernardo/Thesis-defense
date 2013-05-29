@@ -8,7 +8,7 @@
     
     <meta name="description" content="Thesis defense" />
     <meta name="author" content="Frederic Bernardo" />
-<!--
+
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <!--
@@ -282,8 +282,8 @@
             <p><img src="images/MWspectrum.gif" alt="MW Spectrum"></p>
         </div>
 
-        <ul id="MW_spectrum2" class="step" data-x="+=300" data-y="-=0" data-z="+=0">
-            <li class="bullet0">Bandes d’absorption
+        <ul id="MW_spectrum2" class="step bullet0" data-x="+=300" data-y="-=0" data-z="+=0">
+            <li>Bandes d’absorption
                 <ul class="bullet2">
                     <li>Raies de l'O<sub>2</sub> entre 50 et 60GHz</li>
                     <li>Raies à 183.31GHz pour la vapeur d'eau</li>
@@ -291,7 +291,7 @@
                 </ul>
             </li>
             <li class="imply">Profils atmosphériques</li>
-            <li class="bullet0 innerStep">Des canaux fenêtres
+            <li class="innerStep">Des canaux fenêtres
                 <ul class="bullet2">
                     <li>Propriétés de la surface</li>
                     <li>Nuages</li>
@@ -737,7 +737,12 @@
     <section id="Microwat">
         <div class="pheader">Le projet Microwat</div>
 
-        <div id="Microwat_intro" class="step" data-x="+=2200" data-y="0">
+        <div id="state_of_art" class="step" data-x="+=2200" data-y="0">
+            <ol class="header1" start="5"><li>Le projet Microwat</li></ol>
+            La
+        </div>
+
+        <div id="Microwat_intro" class="step" data-x="+=0" data-y="+=900">
             <ol class="header1" start="5"><li>Le projet Microwat</li></ol>
             <img src="images/microwat_intro.png">
             <ul class="details">
@@ -749,12 +754,11 @@
         <div id="Microwat_doability" class="step" data-x="+=0" data-y="+=900">
             <div id="Microwat_sensi">
                 <img src="images/new_sens_SST_init.png">
-                <img src="images/new_sens_Wind_init.png">
-                <h6>Jacobiens de SST et de OWS pour chaque canal AMRS-E, obtenue sur des atmosphères à différentes latitudes</h6>
+                <h6>Jacobiens de SST pour les canaux de AMRS-E à différentes températures de surface</h6>
             </div>
             <ul class="bullet1">
                 <li>6V et 10V très sensibles à SST</li>
-                <li>Polarisations H. sensibles à OWS</li>
+                <!--li>Polarisations H. sensibles à OWS</li-->
                 <li>Sensibilité faible à la vapeur d'eau dans les fréquences basses (≤ 10GHz)</li>
             </ul>
             <div>
@@ -763,7 +767,7 @@
             </div>
         </div>
 
-        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
+<!--        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
             <img src="images/microwat_sensiAmsre.png">
             <h6>Sensibilité théorique à la SST de AMSR-E selon plusieurs types d'atmosphères (sec ou humide) et plusieurs OWS (en m/s)</h6>
             Les performances théoriques de restitution de la SST à partir d'AMSR-E:
@@ -773,7 +777,7 @@
                 <li>Teneur en vapeur d’eau de l’atmosphère (+10%)
             </ul>
         </div>
-
+-->
         <div id="Microwat_concept" class="step" data-x="+=0" data-y="+=900">
             <h1>Concepts instrumentals Microwat</h1>
             <table>
@@ -798,19 +802,87 @@
 
         <div id="Microwat_atlas" class="step" data-x="+=0" data-y="+=900">
             <h1>Variabilité de la température de surface</h1>
-            <img src="images/microwat_sst_std_01-07.png">
             <h6>Variabilité spatiale de la SST sur les mois de Janvier et Juillet de 2007 à 2010</h6>
+            <img src="images/microwat_sst_std_01-07.png">
         </div>
 
         <div id="Microwat_inversion" class="step" data-x="+=0" data-y="+=900">
             <h1>Méthodes d'inversion</h1>
             <ul class="bullet1">
-                <li><img src="images/microwat_overlinex.svg" width="20">Atlas mensuel (issue d'une climatologie sur plusieurs années)</li>
-                <li><img src="images/microwat_tildex.svg" width="20">Inversion linéaire (interpolation optimale)</li>
+                <li><img src="images/microwat_overlinex.svg" width="20"> : Atlas mensuel (issue d'une climatologie sur plusieurs années)</li>
+                <li><img src="images/microwat_tildex.svg" width="20"> : Inversion linéaire (interpolation optimale)</li>
                 <li>Réseaux de neurones</li>
             </ul>
-            <img src="images/microwat_inversion.png">
+            <div>
+                <img src="images/microwat_inversion.png" class="scheme">
+            </div>
         </div>
+
+        <div id="Microwat_result" class="step" data-x="+=0" data-y="+=900">
+            <h1>Performances théoriques des modèles d'inversion</h1>
+...        </div>
+
+        <div id="Microwat_result_map" class="step" data-x="+=0" data-y="+=900">
+            <h1>Restitution de la SST</h1>
+            <img src="images/map_SST_20020901.png">
+            <h6>Températures de surface de l'océan dans l'Océan Indien issues de<br> l'inversion des observations de AMSR-E (haut) <br>et des analyses ECMWF (bas) le 01/09/2002 </h6>
+        </div>
+    </section>
+
+    <section id="Conclusions">
+        <div class="pheader">Conclusions</div>
+
+        <div id="Conclusion1" class="step" data-x="+=2200" data-y="0">
+            <ol class="header1" start="6"><li>Conclusion</li></ol>
+            <ul class="bullet1">
+                <li>Restitution simultanée de propriétés de surface et de l’atmosphère</li>
+                <li>Un modèle de calibration des observations spatiales</li>
+                <li>Un modèle d'inversion adapté capable de :
+                    <ul class="bullet3">
+                        <li>fusionner l'information de plusieurs capteurs</li>
+                        <li>exploiter des données auxiliaires</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="Conclusion2" class="step" data-x="+=0" data-y="+=350">
+            <ul class="bullet1">
+                <li>Définition d'un nouvel instrument</li>
+                <li>Développement des algorithmes scientifiques de restitutions</li>
+                <li>Exploitation opérationnelle et la validation des produits restitués</li>
+            </ul>
+        </div>
+
+        <div id="Development_climato" class="step" data-x="+=0" data-y="+=600">
+            <h1>Perspectives</h1>
+            Une climatologie multi-instrumentale de la vapeur d’eau
+            <ul class="bullet1">
+                <li>Sur terre et océan</li>
+                <li>En ciel clair et nuageux</li>
+            </ul>
+            <cite>GlobalVapour (ESA), GVAP (GEWEX)</cite>
+        </div>
+
+        <div id="Development_telsem" class="step" data-x="+=0" data-y="+=400">
+            Amélioration de l'atlas d'émissivité
+            <ul class="bullet1">
+                <li>Utilisation d'autres instruments micro-ondes</li>
+            </ul>
+        </div>
+
+        <div id="Development_other" class="step" data-x="+=0" data-y="+=200">
+            Précipitations (GPM, ...) <br>
+            Hydrologie continentale (SWOT, ...)
+        </div>
+
+        <div id="Development_fusion" class="step" data-x="+=0" data-y="+=200">
+            Synergie d'instruments micro-ondes et infrarouge
+            <ul class="bullet1">
+                <li class="thus">MetOp-SG</li>
+            </ul>
+        </div>
+
 
     </section>
 

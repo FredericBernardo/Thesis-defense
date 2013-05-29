@@ -117,7 +117,7 @@ ol.header2 li{
 }
 
 /* Bullet point */
-ul li.bullet0  {
+ul.bullet0 > li {
     padding-left: 40px;
     background: url('../icons/square-black-16.png') left 26px no-repeat;
 }
@@ -957,15 +957,57 @@ ul#DB2 li {
     margin: 48px 0 0 -82px;
     width:624px;
 }
-#Microwat_intro img {
-    width:700px;
+#Microwat .step {
+    font-size: 30px;
 }
+#Microwat_intro{
+    height: 900px;
+}
+#Microwat_intro ul li {
+    font-size: 25px;
+}
+#Microwat_intro img {
+    width:800px;
+    float:left;
+    margin:0 -250px 0 -230px;
+}
+#Microwat_intro img {
+    width:800px;
+    float:left;
+    margin:0 -250px 0 -230px;
+}
+#Microwat_doability {
+    height: 900px;
+}
+#Microwat_doability ul {
+    width: 400px;
+    font-size: 25px;
+    float: left;
+    margin: 50px 0;
+}
+#Microwat_sensi img {
+    width: 500px;
+}
+#Microwat_doability #Microwat_sensi {
+    float: right;
+    width: 400px;
+    margin-right:0px;
+}
+#Microwat_doability div {
+    width:500px;
+}
+#Microwat_doability h6 {
+    font-size: 20px;
+    text-align: right;
+    margin: 0
+}
+
 #Microwat_concept{
     height: 700px;
 }
 #Microwat_concept table {
     float: left;
-    margin-left: -100px;
+    margin-left: -90px; /* TODO regler ce probleme de centrage */
 }
 #Microwat_concept table.innerStep {
     float:none;
@@ -980,4 +1022,42 @@ ul#DB2 li {
     width:0;
     padding: 0;
     margin: 0;
+}
+#Microwat_concept table.innerStep td.void {
+    width:0;
+    padding: 0;
+    margin: 0;
+}
+#Microwat_atlas h6 {
+    height: 850px;
+}
+#Microwat_atlas h6 {
+    font-size: 25px;
+    width:350px;
+    margin-right: -100px;
+    float: right;
+}
+#Microwat_atlas img {
+    width: 650px;
+    margin-left:-100px;
+}
+#Microwat_inversion {
+    height: 900px;
+}
+#Microwat_inversion div {
+    text-align: center;
+}
+#Microwat_inversion img.scheme {
+    width: 750px;
+}
+#Microwat_result_map {height:900px; text-align: center}
+#Microwat_result_map h6 {text-align: right; font-size: 25px;margin-left: 10px;margin-top: 0px}
+#Microwat_result_map img {
+    width: 600px;
+}
+#Conclusions .step {
+    font-size: 35px;
+}
+#Conclusion1 {
+    height: 800px;
 }
