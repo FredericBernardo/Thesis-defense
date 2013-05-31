@@ -6,6 +6,12 @@
 /*
   Global disposition for any slide
 */
+span.unit, span.name {
+    white-space:nowrap;
+}
+li.hard{
+    color: #666666;
+}
 .pheader {
     visibility: hidden;
     position: absolute;
@@ -619,9 +625,6 @@ div.gear .innerStep img.people {
 #Methodology ul.bullet1 ul li {
     margin-top: 0;
 }
-#Methodology2 ul li.hard{
-    color: #666666;
-}
 #Neurons li.details {
     font-size: 30px;
 }
@@ -1149,5 +1152,17 @@ ul#DB2 li {
     width: 600px;
 }
 #Conclusions .step {
-    font-size: 35px;
+    font-size: 32px;
+}
+#Conclusions .bullet3 {
+    font-size: 0.9em;
+}
+#Perspectives_Microwat {
+    height: 522px;
+    padding-top: 150px;
+}
+#Perspectives_Microwat img {
+    position: absolute;
+    top: 0;
+    right:0;
 }

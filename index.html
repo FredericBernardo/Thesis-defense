@@ -965,57 +965,115 @@
     <section id="Conclusions">
         <div class="pheader">Conclusions</div>
 
-        <div id="Conclusion1" class="step" data-x="+=2200" data-y="0">
-            <ol class="header1" start="6"><li>Conclusion</li></ol>
-            <ul class="bullet1">
-                <li>Restitution simultanée de propriétés de surface et de l’atmosphère</li>
-                <li>Un modèle de calibration des observations spatiales</li>
-                <li>Un modèle d'inversion adapté capable de :
+        <div id="Conclusion">
+            <div class="step" data-x="+=2200" data-y="0">
+                <ol class="header1" start="6"><li>Conclusion</li></ol>
+                <ul class="bullet1">
+                    <li>Restitution simultanée de propriétés de surface et de l’atmosphère
+                        <ul class="bullet3">
+                            <li class="innerStep">Restitution de la vapeur d'eau sur 6 couches atmosphériques</li>
+                            <li class="innerStep">En ciel clair et nuageux et sans discontinuité terre / océan</li>
+                            <li class="innerStep">Validation opérationnelle sur <span class="unit">AMSR-E &amp; HSB</span> et <span class="unit">AMSU/A &amp; MHS</span></li>
+                            <li class="innerStep">Contenu intégré en vapeur d'eau : erreur moyenne &approx; <span class="unit">5 kg/m</span> par rapport au radiosonde</li>
+                            <li class="innerStep">Profil en vapeur d'eau : Erreur moyenne < 20% en RH <u>sans <i>a priori</i></u></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="step appear bullet1" data-x="+=0" data-y="+=400">
+                <li>Un modèle de calibration des observations spatiales
                     <ul class="bullet3">
-                        <li>fusionner l'information de plusieurs capteurs</li>
-                        <li>exploiter des données auxiliaires</li>
+                        <li>S'adapte à d'autres instruments</li>
+                        <li>Utilisable sur d'autres modèles d'inversion</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="step appear bullet1" data-x="+=0" data-y="+=200">
+                <li>Un modèle d'interpolation des émissivités de surface continentale
+                    <ul class="bullet3">
+                        <li>Permet l'utilisation des canaux fenêtres au dessus des terres</li>
+                        <li>Utilisé par la communauté scientifique</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="step appear bullet1" data-x="+=0" data-y="+=230">
+                <li>Un modèle d'inversion à base de réseaux de neurones
+                    <ul class="bullet3">
+                        <li>Fusionner l'information de plusieurs capteurs</li>
+                        <li>Exploiter des données auxiliaires</li>
+                        <li>Valider de nouveaux concepts instrumentaux</li>
                     </ul>
                 </li>
             </ul>
         </div>
 
-        <div id="Conclusion2" class="step" data-x="+=0" data-y="+=350">
+        <div id="Conclusion3" class="step" data-x="+=0" data-y="+=800">
+            <h1>Développement d'une mission satellite</h1>
             <ul class="bullet1">
-                <li>Définition d'un nouvel instrument</li>
-                <li>Développement des algorithmes scientifiques de restitutions</li>
-                <li>Exploitation opérationnelle et la validation des produits restitués</li>
+                <li class="hard">Définition des objectifs</li>
+                <li class="innerStep">Définition d'un nouvel instrument</li>
+                <li class="innerStep">Développement des algorithmes scientifiques de restitutions</li>
+                <li class="innerStep">Exploitation opérationnelle et la validation des produits restitués</li>
             </ul>
         </div>
 
-        <div id="Development_climato" class="step" data-x="+=0" data-y="+=600">
-            <h1>Perspectives</h1>
-            Une climatologie multi-instrumentale de la vapeur d’eau
-            <ul class="bullet1">
-                <li>Sur terre et océan</li>
-                <li>En ciel clair et nuageux</li>
-            </ul>
-            <cite>GlobalVapour (ESA), GVAP (GEWEX)</cite>
-        </div>
+        <div id="Perspectives">
 
-        <div id="Development_telsem" class="step" data-x="+=0" data-y="+=400">
-            Amélioration de l'atlas d'émissivité
-            <ul class="bullet1">
-                <li>Utilisation d'autres instruments micro-ondes</li>
-            </ul>
-        </div>
+            <div id="Perspectives_climato" class="step" data-x="+=0" data-y="+=800">
+                <h1>Perspectives</h1>
+                <ul class="bullet1">
+                    <li>Une climatologie multi-instrumentale de la vapeur d’eau
+                    <ul class="bullet3">
+                        <li>Sur terre et océan</li>
+                        <li>En ciel clair et nuageux</li>
+                        <li class="thus">Base climatique la plus longue possible en micro-ondes</li>
+                    </ul>
+                </li>
+                <cite>GlobalVapour (ESA), GVAP (GEWEX)</cite>
+            </div>
 
-        <div id="Development_other" class="step" data-x="+=0" data-y="+=200">
-            Précipitations (GPM, ...) <br>
-            Hydrologie continentale (SWOT, ...)
-        </div>
+            <div id="Perspectives_Microwat" class="step" data-x="+=0" data-y="+=300">
+                <ul class="bullet1">
+                    <li>Microwat <img src="images/image_microwat.png">
+                        <ul class="bullet3">
+                            <li>Proposer des modèles d'inversion avancés</li>
+                            <li>Validation opérationnelle</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-        <div id="Development_fusion" class="step" data-x="+=0" data-y="+=200">
-            Synergie d'instruments micro-ondes et infrarouge
-            <ul class="bullet1">
-                <li class="thus">MetOp-SG</li>
-            </ul>
-        </div>
+            <div id="Perspectives_GPM" class="step" data-x="+=0" data-y="+=900">
+                <ul class="bullet1">
+                    <li>GPM
+                        <blockquote>
+                            Mission conjointe JAXA / NASA visant à exploiter un réseau de satellites pour la restitution
+                            des précipitations
+                        </blockquote>
+                    </li>
+                    <li class="thus">Comme pour Megha-Tropiques
+                        <ul class="bullet3">
+                            <li>Utilisation des informations sur la surface (TELSEM)</li>
+                            <li>Modèle d'inversion de la vapeur d'eau adaptable aux instruments de la mission</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
+            <div id="Perspectives_MetOPSG" class="step" data-x="+=0" data-y="+=200">
+                <ul class="bullet1">
+                    <li class="thus">MetOp-SG
+                        <blockquote>
+                            Mission conjointe JAXA / NASA visant à exploiter un réseau de satellites pour la restitution
+                            des précipitations
+                        </blockquote>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
     </section>
 
