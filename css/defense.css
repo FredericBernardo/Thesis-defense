@@ -133,7 +133,7 @@ ul.bullet1 li{
 }
 ul.bullet1 li:before {
     content: "\2022";
-    padding-right: 12px;
+    margin-left: -15px;
 }
 ul.bullet2{
     margin-bottom: 10px;
@@ -961,6 +961,37 @@ ul#DB2 li {
 #Microwat .step {
     font-size: 30px;
 }
+#Microwat_stateofart1 img {
+    float: left;
+    width: 400px;
+}
+#Microwat_stateofart2 h5 {
+    text-align: right;
+    font-size: 0.9em;
+    margin: 0 0 30px;
+}
+#Microwat_stateofart2 ul {
+    margin-left: 40px;
+}
+#Microwat_stateofart2 ul li.thus {
+    margin-left: 40px;
+    width: 550px;
+    padding: 10px 25px;
+    border: 1px solid #333;
+}
+#Microwat_stateofart2 h6 span{
+    text-align: right;
+    display: block;
+}
+#Microwat_stateofart2 h6{
+    font-size: 25px;
+    margin-left: 430px;
+}
+#Microwat_stateofart2 img {
+    float: left;
+    width: 400px;
+    margin-top: -30px;
+}
 #Microwat_AMSRE.step {
     font-size: 32px;
     text-align: center;
@@ -969,21 +1000,25 @@ ul#DB2 li {
     float: right;
     margin: 100px -50px 0 20px;
 }
-#Microwat_intro{
-    height: 900px;
-}
 #Microwat_intro ul li {
     font-size: 25px;
 }
 #Microwat_intro img {
     width:800px;
-    float:left;
-    margin:0 -250px 0 -230px;
-}
-#Microwat_intro img {
     width:800px;
-    float:left;
-    margin:0 -250px 0 -230px;
+    margin:0 -200px 0 -200px;
+}
+#Microwat_intro div.innerStep {
+    border: 1px solid #333333;
+    text-align: center;
+    margin-top: 150px;
+    width: 300px;
+    float: right;
+}
+#Microwat_intro div.innerStep img {
+    margin-left: -100px;
+    width: 100px;
+    float: left;
 }
 #Microwat_sensi .step{
     height: 600px;
@@ -1027,12 +1062,16 @@ ul#DB2 li {
 #Microwat_sensi #Microwat_sensiRH img.variable{
     margin-top: 150px;
 }
-#Microwat_AMSRE_result table {
+#Microwat_AMSRE_result table, #Microwat_AMSRE_inversion table {
     width: 450px;
     margin: 50px 0 0 -30px;
     float: left;
 }
-#Microwat_AMSRE_result h6 {
+#Microwat_AMSRE_result table td, #Microwat_AMSRE_inversion table td {
+    display: table-cell;
+    vertical-align: bottom;
+}
+#Microwat_AMSRE_result h6, #Microwat_AMSRE_inversion h6 {
     font-size: 25px;
     width:450px;
     height: 220px;
@@ -1054,34 +1093,8 @@ ul#DB2 li {
 #Microwat_AMSRE_result table td.first{
     text-align: left;
 }
-#Microwat_doability {
-    height: 900px;
-}
-#Microwat_doability ul {
-    width: 400px;
-    font-size: 25px;
-    float: left;
-    margin: 50px 0;
-}
 #Microwat_sensi img {
     width: 500px;
-}
-#Microwat_doability #Microwat_sensi {
-    float: right;
-    width: 400px;
-    margin-right:0px;
-}
-#Microwat_doability div {
-    width:500px;
-}
-#Microwat_doability h6 {
-    font-size: 20px;
-    text-align: right;
-    margin: 0
-}
-
-#Microwat_concept{
-    height: 700px;
 }
 #Microwat_concept table {
     float: left;
@@ -1107,35 +1120,32 @@ ul#DB2 li {
     margin: 0;
 }
 #Microwat_atlas h6 {
-    height: 850px;
-}
-#Microwat_atlas h6 {
     font-size: 25px;
-    width:350px;
-    margin-right: -100px;
-    float: right;
+    text-align: center;
+    margin: 0 -50px;
 }
 #Microwat_atlas img {
-    width: 650px;
-    margin-left:-100px;
+    width: 640px;
+    margin-left: 100px;
 }
-#Microwat_inversion {
-    height: 900px;
-}
-#Microwat_inversion div {
+#Microwat_AMSRE_inversion1 div {
     text-align: center;
 }
-#Microwat_inversion img.scheme {
+#Microwat_AMSRE_inversion1 img.scheme {
     width: 750px;
 }
-#Microwat_result_map {height:900px; text-align: center}
-#Microwat_result_map h6 {text-align: right; font-size: 25px;margin-left: 10px;margin-top: 0px}
-#Microwat_result_map img {
+#Microwat_AMSRE_inversion3 {
+    text-align: center;
+}
+#Microwat_AMSRE_inversion3 h6 {
+    text-align: right;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 0px
+}
+#Microwat_AMSRE_inversion3 img {
     width: 600px;
 }
 #Conclusions .step {
     font-size: 35px;
-}
-#Conclusion1 {
-    height: 800px;
 }

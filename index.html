@@ -759,7 +759,7 @@
             </ul>
             <div class="innerStep appear">
                 <img src="images/OSI-SAF_SST.png">
-                <h6>Restitution de la SST à partir des observations <br>de AVHRR sur METOP le 28/03/2012<br>&copy; Météo-France</h6>
+                <h6>Restitution de la SST à partir des observations de AVHRR sur METOP le 28/03/2012<br><span>&copy; Météo-France</span></h6>
             </div>
         </div>
 
@@ -774,18 +774,15 @@
         </div>
 
         <div id="Microwat_intro" class="step" data-x="+=0" data-y="+=900">
+            <h1>Besoin des utilisateurs</h1>
             <img src="images/microwat_intro.png">
-            <ul class="bullet1">
-                <li>SST : Sea Surface Temperature</li>
-                <li>OWS : Oceanic Wind Speed</li>
-            </ul>
+            <div class="innerStep appear"><img src="images/rightwards_double_arrow_u21D2_icon_64x64.png">Nouvelle mission instrumentale</div>
         </div>
-
 
         <div id="Microwat_atlas" class="step" data-x="+=0" data-y="+=900">
             <h1>Variabilité de la température de surface</h1>
-            <h6>Variabilité spatiale de la SST sur les mois de Janvier et Juillet de 2007 à 2010</h6>
             <img src="images/microwat_sst_std_01-07.png">
+            <h6>Variabilité spatiale de la SST sur les mois de Janvier et Juillet de 2007 à 2010</h6>
         </div>
 
         <div id="Microwat_AMSRE" class="step" data-x="+=0" data-y="+=900">
@@ -858,7 +855,7 @@
             </div>
         </div>
 
-        <div id="Microwat_sensi_end" class="step" data-x="-=0" data-y="+=400">
+        <div id="Microwat_sensi_end" class="step appear" data-x="-=0" data-y="+=450">
             En résumé :
             <ul class="bullet1">
                 <li class="innerStep">Les fréquences les plus sensibles à la SST : <br>6.9, 10.7 et 18.7 en polarisation V</li>
@@ -897,20 +894,42 @@
                 </table>
                 <h6>Écarts de SST entre les mesures des bouées et les restitutions du modèle d'inversion exploitant les observations AMSR-E</h6>
             </div>
+        </div>
+
+        <div id="Microwat_AMSRE_inversion">
+            <div id="Microwat_AMSRE_inversion1" class="step" data-x="+=0" data-y="+=900">
+                <h1>Méthodes d'inversion</h1>
+                <ul class="bullet1">
+                    <li><img src="images/microwat_overlinex.svg" width="20"> : Atlas mensuel (issue d'une climatologie sur plusieurs années)</li>
+                    <li><img src="images/microwat_tildex.svg" width="20"> : Inversion linéaire (interpolation optimale)</li>
+                    <li>Réseaux de neurones</li>
+                </ul>
+                <div>
+                    <img src="images/microwat_inversion.png" class="scheme">
+                </div>
+            </div>
+
+            <div id="Microwat_AMSRE_inversion2" class="step" data-x="+=0" data-y="+=900">
+                <h1>Erreur théorique de la <br> restitution avec AMSR-E</h1>
+                <table>
+                    <thead><tr><td>Configuration</td><td>Biais<br>(K)</td><td>RMS<br>(K)</td></tr></thead>
+                    <tr class="even"><td class="first"><img src="images/microwat_overlinex.svg" height="20"><td>-0.02</td><td>0.73</td></tr>
+                    <tr class="odd"><td class="first"><img src="images/microwat_tildex.svg" height="22"></td><td>-0.12</td><td>0.44</td></tr>
+                    <tr class="even"><td class="first"><img src="images/microwat_n1.svg" height="30"></td><td>0.00</td><td>0.42</td></tr>
+                    <tr class="even"><td class="first"><img src="images/microwat_n2.svg" height="30"></td><td>0.00</td><td>0.37</td></tr>
+                    <tr class="even"><td class="first"><img src="images/microwat_n3.svg" height="30"></td><td>0.00</td><td>0.36</td></tr>
+                </table>
+                <h6>Erreurs théoriques de restitution de la SST du modèle d'inversion exploitant les observations AMSR-E</h6>
+            </div>
+
+            <div id="Microwat_AMSRE_inversion3" class="step" data-x="+=0" data-y="+=900">
+                <h1>Restitution de la SST</h1>
+                <img src="images/map_SST_20020901.png">
+                <h6>Températures de surface de l'océan dans l'Océan Indien issues de<br> l'inversion des observations de AMSR-E (haut) <br>et des analyses ECMWF (bas) le 01/09/2002 </h6>
+            </div>
 
         </div>
 
-        <!--        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
-                    <img src="images/microwat_sensiAmsre.png">
-                    <h6>Sensibilité théorique à la SST de AMSR-E selon plusieurs types d'atmosphères (sec ou humide) et plusieurs OWS (en m/s)</h6>
-                    Les performances théoriques de restitution de la SST à partir d'AMSR-E:
-                    <ul id="bullet0">
-                        <li>SST (+75% d’incertitude)
-                        <li>Vitesse du vent (+20%)
-                        <li>Teneur en vapeur d’eau de l’atmosphère (+10%)
-                    </ul>
-                </div>
-        -->
         <div id="Microwat_concept" class="step" data-x="+=0" data-y="+=900">
             <h1>Concepts instrumentals Microwat</h1>
             <table>
@@ -931,28 +950,6 @@
                 <tr class="odd"> <td width="0">&nbsp;</td><td rowspan="2">0.38</td></tr>
                 <tr class="odd"> <td width="0">&nbsp;</td></tr>
             </table>
-        </div>
-
-        <div id="Microwat_inversion" class="step" data-x="+=0" data-y="+=900">
-            <h1>Méthodes d'inversion</h1>
-            <ul class="bullet1">
-                <li><img src="images/microwat_overlinex.svg" width="20"> : Atlas mensuel (issue d'une climatologie sur plusieurs années)</li>
-                <li><img src="images/microwat_tildex.svg" width="20"> : Inversion linéaire (interpolation optimale)</li>
-                <li>Réseaux de neurones</li>
-            </ul>
-            <div>
-                <img src="images/microwat_inversion.png" class="scheme">
-            </div>
-        </div>
-
-        <div id="Microwat_result" class="step" data-x="+=0" data-y="+=900">
-            <h1>Performances théoriques des modèles d'inversion</h1>
-...        </div>
-
-        <div id="Microwat_result_map" class="step" data-x="+=0" data-y="+=900">
-            <h1>Restitution de la SST</h1>
-            <img src="images/map_SST_20020901.png">
-            <h6>Températures de surface de l'océan dans l'Océan Indien issues de<br> l'inversion des observations de AMSR-E (haut) <br>et des analyses ECMWF (bas) le 01/09/2002 </h6>
         </div>
     </section>
 
