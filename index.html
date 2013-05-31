@@ -737,10 +737,50 @@
     <section id="Microwat">
         <div class="pheader">Le projet Microwat</div>
 
-        <div id="Microwat_stateofart" class="step" data-x="+=2200" data-y="0">
-            <ol class="header1" start="5"><li>Le projet Microwat</li></ol>
-
+        <div id="Microwat_stateofart1" class="step" data-x="+=2200" data-y="0">
+            <ol class="header1" start="5"><li>La restitution de la température de surface océanique</li></ol>
+            <img src="images/sst-ghrsst-01-22-2007b.png">
+            <ul class="bullet1">
+                <li>Previsions météorologiques</li>
+                <li>Phénomènes méso-échelles sur le chauffage et le transport de l'énergie</li>
+                <li>Étude des interactions océans-atmosphères</li>
+                <li>Étude de l'écosystème marin</li>
+            </ul>
         </div>
+
+        <div id="Microwat_stateofart2" class="step" data-x="+=0" data-y="+=900">
+            <h5>SST : Sea Surface Température</h5>
+            Provient en majorité des observations infrarouges :
+            <ul class="bullet1">
+                <li>Résolution spatiale de 1 à 5 km</li>
+                <li>Uniquement en ciel clair</li>
+                <li>contamination par aérosols et vapeur d'eau</li>
+                <li class="thus">En une journée, SST restituée sur 30% à 50% de la surface océanique</li>
+            </ul>
+            <div class="innerStep appear">
+                <img src="images/OSI-SAF_SST.png">
+                <h6>Restitution de la SST à partir des observations <br>de AVHRR sur METOP le 28/03/2012<br>&copy; Météo-France</h6>
+            </div>
+        </div>
+
+        <div id="Microwat_stateofart3" class="step" data-x="+=0" data-y="+=900">
+            À partir des observations micro-ondes :
+            <ul class="bullet1">
+                <li>Basses fréquences (< 12 GHz) peu sensibles aux contributions atmosphériques</li>
+                <li>Celles-ci sont également sensibles à la vitesse du vent</li>
+                <li>Résolution spatiale faible (< 25 km)</li>
+                <li>Précision en zone tropicale &approx; 0.5 K avec AMSR-E</li>
+            </ul>
+        </div>
+
+        <div id="Microwat_intro" class="step" data-x="+=0" data-y="+=900">
+            <img src="images/microwat_intro.png">
+            <ul class="bullet1">
+                <li>SST : Sea Surface Temperature</li>
+                <li>OWS : Oceanic Wind Speed</li>
+            </ul>
+        </div>
+
 
         <div id="Microwat_atlas" class="step" data-x="+=0" data-y="+=900">
             <h1>Variabilité de la température de surface</h1>
@@ -754,26 +794,18 @@
             <table>
                 <thead><tr><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td><td>Résolution spatial<br>(km x km)</td></tr></thead>
                 <tr class="even"><td rowspan="2">6.925</td><td>V</td><td rowspan="2">0.30</td><td rowspan="2">350</td><td rowspan="2">74 x 43</td></tr>
-                                          <tr class="even"><td>H</td></tr>
+                <tr class="even"><td>H</td></tr>
                 <tr class="odd"> <td rowspan="2">10.65</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">100</td><td rowspan="2">51 x 30</td></tr>
-                                          <tr class="odd"> <td>H</td></tr>
+                <tr class="odd"> <td>H</td></tr>
                 <tr class="even"><td rowspan="2"> 18.7</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">200</td><td rowspan="2">27 x 16</td></tr>
-                                          <tr class="even"><td>H</td></tr>
+                <tr class="even"><td>H</td></tr>
                 <tr class="odd"> <td rowspan="2"> 23.8</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">400</td><td rowspan="2">31 x 18</td></tr>
-                                          <tr class="odd"> <td>H</td></tr>
+                <tr class="odd"> <td>H</td></tr>
                 <tr class="even"><td rowspan="2"> 36.5</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">1000</td><td rowspan="2">14 x 8</td></tr>
-                                          <tr class="even"><td>H</td></tr>
+                <tr class="even"><td>H</td></tr>
                 <tr class="odd"> <td rowspan="2">   89</td><td>V</td><td rowspan="2">1.10</td><td rowspan="2">3000</td><td rowspan="2">6 x 4</td></tr>
-                                          <tr class="odd"> <td>H</td></tr>
+                <tr class="odd"> <td>H</td></tr>
             </table>
-        </div>
-
-        <div id="Microwat_intro" class="step" data-x="+=0" data-y="+=900">
-            <img src="images/microwat_intro.png">
-            <ul class="details">
-                <li>SST : Sea Surface Temperature</li>
-                <li>OWS : Oceanic Wind Speed</li>
-            </ul>
         </div>
 
         <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
