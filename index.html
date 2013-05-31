@@ -9,7 +9,7 @@
     <meta name="description" content="Thesis defense" />
     <meta name="author" content="Frederic Bernardo" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+<!--    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <!--
         
@@ -737,47 +737,148 @@
     <section id="Microwat">
         <div class="pheader">Le projet Microwat</div>
 
-        <div id="state_of_art" class="step" data-x="+=2200" data-y="0">
+        <div id="Microwat_stateofart" class="step" data-x="+=2200" data-y="0">
             <ol class="header1" start="5"><li>Le projet Microwat</li></ol>
-            La
+
+        </div>
+
+        <div id="Microwat_atlas" class="step" data-x="+=0" data-y="+=900">
+            <h1>Variabilité de la température de surface</h1>
+            <h6>Variabilité spatiale de la SST sur les mois de Janvier et Juillet de 2007 à 2010</h6>
+            <img src="images/microwat_sst_std_01-07.png">
+        </div>
+
+        <div id="Microwat_AMSRE" class="step" data-x="+=0" data-y="+=900">
+            <h1>Caractéristiques de l'imageur AMSR-E</h1>
+            <img src="images/amsr-e.jpg">
+            <table>
+                <thead><tr><td colspan="2">Fréquence<br>(GHz)</td><td>Bruit<br>(K)</td><td>Largeur<br>(MHz)</td><td>Résolution spatial<br>(km x km)</td></tr></thead>
+                <tr class="even"><td rowspan="2">6.925</td><td>V</td><td rowspan="2">0.30</td><td rowspan="2">350</td><td rowspan="2">74 x 43</td></tr>
+                                          <tr class="even"><td>H</td></tr>
+                <tr class="odd"> <td rowspan="2">10.65</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">100</td><td rowspan="2">51 x 30</td></tr>
+                                          <tr class="odd"> <td>H</td></tr>
+                <tr class="even"><td rowspan="2"> 18.7</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">200</td><td rowspan="2">27 x 16</td></tr>
+                                          <tr class="even"><td>H</td></tr>
+                <tr class="odd"> <td rowspan="2"> 23.8</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">400</td><td rowspan="2">31 x 18</td></tr>
+                                          <tr class="odd"> <td>H</td></tr>
+                <tr class="even"><td rowspan="2"> 36.5</td><td>V</td><td rowspan="2">0.60</td><td rowspan="2">1000</td><td rowspan="2">14 x 8</td></tr>
+                                          <tr class="even"><td>H</td></tr>
+                <tr class="odd"> <td rowspan="2">   89</td><td>V</td><td rowspan="2">1.10</td><td rowspan="2">3000</td><td rowspan="2">6 x 4</td></tr>
+                                          <tr class="odd"> <td>H</td></tr>
+            </table>
         </div>
 
         <div id="Microwat_intro" class="step" data-x="+=0" data-y="+=900">
-            <ol class="header1" start="5"><li>Le projet Microwat</li></ol>
             <img src="images/microwat_intro.png">
             <ul class="details">
-                <li>SST : Température de surface océanique</li>
-                <li>OWS : Vitesse du vent de surface océanique</li>
+                <li>SST : Sea Surface Temperature</li>
+                <li>OWS : Oceanic Wind Speed</li>
             </ul>
         </div>
 
-        <div id="Microwat_doability" class="step" data-x="+=0" data-y="+=900">
-            <div id="Microwat_sensi">
+        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
+            <h1>Étude de contenu en information</h1>
+            <ul>
+                <li>SST : Sea Surface Temperature</li>
+                <li>OWS : Oceanic Wind Speed</li>
+                <li>RH : Relative Humidity</li>
+            </ul>
+        </div>
+
+        <div id="Microwat_sensi">
+            <div id="Microwat_sensiSST1" class="step stay" data-x="+=0" data-y="+=420">
+                <ul class="bullet1"><li> 6.9 GHz V, 10.7GHz V et 18.7GHz V sont les plus sensibles</li></ul>
+                <img src="images/microwat_jacobien_SST.svg" class="variable">
+                <img src="images/new_sens_SST_init_b.png" class="innerStep appear">
+                <img src="images/new_sens_SST_init_c.png" class="innerStep appear">
+                <img src="images/new_sens_SST_init_d.png" class="innerStep appear">
+                <img src="images/new_sens_SST_init_e.png" class="innerStep appear">
+                <img src="images/new_sens_SST_init_f.png" class="innerStep appear">
+                <ul class="bullet1 innerStep appear">
+                    <li>À faible température, 6.9GHz V est indispensable pour la restitution</li>
+                </ul>
+                <img src="images/new_sens_SST_init_a.png">
+                <h6>Jacobiens de SST pour les canaux de AMRS-E<br> à différentes températures de surface</h6>
+            </div>
+
+            <div id="Microwat_sensiSST2" class="step appear stay" data-x="+=250" data-y="+=0">
                 <img src="images/new_sens_SST_init.png">
-                <h6>Jacobiens de SST pour les canaux de AMRS-E à différentes températures de surface</h6>
             </div>
-            <ul class="bullet1">
-                <li>6V et 10V très sensibles à SST</li>
-                <!--li>Polarisations H. sensibles à OWS</li-->
-                <li>Sensibilité faible à la vapeur d'eau dans les fréquences basses (≤ 10GHz)</li>
-            </ul>
-            <div>
-                <img src="images/microwat_jacobienRH.png">
-                <h6>Jacobiens du profil de RH</h6>
+
+            <div id="Microwat_sensiOWS1" class="step appear stay" data-x="-=250" data-y="+=400">
+                <ul class="bullet1"><li> 6.9 GHz H, 10.7GHz H et 18.7GHz H sont les plus sensibles</li></ul>
+                <img src="images/microwat_jacobien_OWS.svg" class="variable">
+                <ul class="bullet1 innerStep appear">
+                    <li>À faible température, 18.7GHz H est le plus efficace pour la vitesse du vent</li>
+                </ul>
+                <img src="images/new_sens_Wind_init_a.png">
+                <h6>Jacobiens de OWS pour les canaux de AMRS-E<br> à différentes vitesses du vent</h6>
+            </div>
+
+            <div id="Microwat_sensiOWS2" class="step appear stay" data-x="+=250" data-y="+=0">
+                <img src="images/new_sens_Wind_init.png">
+            </div>
+
+            <div id="Microwat_sensiRH" class="step appear stay" data-x="-=250" data-y="+=400">
+                <img src="images/microwat_jacobien_RH.svg" class="variable">
+                <img src="images/microwat_jacobien_RH.png">
+                <h6>Jacobiens de OWS pour les canaux de AMRS-E<br> à différentes vitesses du vent</h6>
             </div>
         </div>
 
-<!--        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
-            <img src="images/microwat_sensiAmsre.png">
-            <h6>Sensibilité théorique à la SST de AMSR-E selon plusieurs types d'atmosphères (sec ou humide) et plusieurs OWS (en m/s)</h6>
-            Les performances théoriques de restitution de la SST à partir d'AMSR-E:
-            <ul id="bullet0">
-                <li>SST (+75% d’incertitude)
-                <li>Vitesse du vent (+20%)
-                <li>Teneur en vapeur d’eau de l’atmosphère (+10%)
+        <div id="Microwat_sensi_end" class="step" data-x="-=0" data-y="+=400">
+            En résumé :
+            <ul class="bullet1">
+                <li class="innerStep">Les fréquences les plus sensibles à la SST : <br>6.9, 10.7 et 18.7 en polarisation V</li>
+                <li class="innerStep">Les fréquences les plus sensibles au vent : <br>6.9, 10.7 et 18.7 en polarisation H</li>
+                <li class="innerStep">À faible température, 6.9 GHz V est indispensable pour la restitution de la SST </li>
+                <li class="innerStep">À faible température, 18.7 GHz H est le plus efficace pour la vitesse du vent</li>
+                <li class="innerStep">Sensibilité à la vapeur d'eau faible à basse fréquence, sauf pour le 18.7 GHz</li>
+                <li class="thus innerStep">Canaux à 6.9 GHz et 18.7 GHz en polarisation V et H</li>
             </ul>
         </div>
--->
+
+        <div id="Microwat_AMSRE_result">
+            <div id="Microwat_AMSRE_theoretical1" class="step" data-x="+=0" data-y="+=900">
+                <h1>Erreur théorique de la <br> restitution avec AMSR-E</h1>
+                <table>
+                    <thead><tr><td>Configuration</td><td>Biais<br>(K)</td><td>RMS<br>(K)</td></tr></thead>
+                    <tr class="even"><td class="first">Tous les canaux<td>0.00</td><td>0.43</td></tr>
+                    <tr class="odd"><td class="first">Sans les canaux à 6.9 GHz</td><td>-0.02</td><td>0.89</td></tr>
+                    <tr class="even"><td class="first">Uniquement 6.9 et 18.7 GHz</td><td>0.00</td><td>0.55</td></tr>
+                </table>
+                <h6>Erreurs théoriques de restitution de la SST du modèle d'inversion exploitant les observations AMSR-E</h6>
+            </div>
+
+            <div id="Microwat_AMSRE_theoretical2" class="step" data-x="+=0" data-y="+=450">
+                <img src="images/sst_by_sst.png">
+                <h6>Erreurs théoriques de restitution de la SST en fonction de la SST selon différents modèles d'inversion (en noir), <br>et distribution des SST de l'analyse (en gris)</h6>
+            </div>
+
+            <div id="Microwat_AMSRE_real" class="step" data-x="+=0" data-y="+=600">
+                <h1>Comparaison avec <br>les données <i>in situ</i></h1>
+                <table>
+                    <thead><tr><td>Configuration</td><td>Biais<br>(K)</td><td>RMS<br>(K)</td></tr></thead>
+                    <tr class="even"><td class="first">Tous les canaux<td>-0.02</td><td>0.67</td></tr>
+                    <tr class="odd"><td class="first">Sans les canaux à 6.9 GHz</td><td>-0.03</td><td>0.72</td></tr>
+                    <tr class="even"><td class="first">Uniquement 6.9 et 18.7 GHz</td><td>0.03</td><td>0.67</td></tr>
+                </table>
+                <h6>Écarts de SST entre les mesures des bouées et les restitutions du modèle d'inversion exploitant les observations AMSR-E</h6>
+            </div>
+
+        </div>
+
+        <!--        <div id="Microwat_IC" class="step" data-x="+=0" data-y="+=900">
+                    <img src="images/microwat_sensiAmsre.png">
+                    <h6>Sensibilité théorique à la SST de AMSR-E selon plusieurs types d'atmosphères (sec ou humide) et plusieurs OWS (en m/s)</h6>
+                    Les performances théoriques de restitution de la SST à partir d'AMSR-E:
+                    <ul id="bullet0">
+                        <li>SST (+75% d’incertitude)
+                        <li>Vitesse du vent (+20%)
+                        <li>Teneur en vapeur d’eau de l’atmosphère (+10%)
+                    </ul>
+                </div>
+        -->
         <div id="Microwat_concept" class="step" data-x="+=0" data-y="+=900">
             <h1>Concepts instrumentals Microwat</h1>
             <table>
@@ -798,12 +899,6 @@
                 <tr class="odd"> <td width="0">&nbsp;</td><td rowspan="2">0.38</td></tr>
                 <tr class="odd"> <td width="0">&nbsp;</td></tr>
             </table>
-        </div>
-
-        <div id="Microwat_atlas" class="step" data-x="+=0" data-y="+=900">
-            <h1>Variabilité de la température de surface</h1>
-            <h6>Variabilité spatiale de la SST sur les mois de Janvier et Juillet de 2007 à 2010</h6>
-            <img src="images/microwat_sst_std_01-07.png">
         </div>
 
         <div id="Microwat_inversion" class="step" data-x="+=0" data-y="+=900">

@@ -1,4 +1,4 @@
-/* Draft mode
+/* Draft mode */
 .step, img, div {
     border: 1px solid #000;
 }
@@ -8,6 +8,7 @@
 */
 .pheader {
     visibility: hidden;
+    position: absolute;
 }
 body > .pheader {
     position: fixed !important;
@@ -248,7 +249,7 @@ div.publication {
 }
 
 /* State of art */
-#Atmospheric.past, #spectrum.past, #Methodology.past, #DB.past, #MT_TB1.step {
+.stay.past, #Atmospheric.past, #spectrum.past, #Methodology.past, #DB.past, #MT_TB1.step {
     opacity: 1;
 }
 #stateofart h3{
@@ -960,6 +961,14 @@ ul#DB2 li {
 #Microwat .step {
     font-size: 30px;
 }
+#Microwat_AMSRE.step {
+    font-size: 32px;
+    text-align: center;
+}
+#Microwat_AMSRE.step img {
+    float: right;
+    margin: 100px -50px 0 20px;
+}
 #Microwat_intro{
     height: 900px;
 }
@@ -975,6 +984,75 @@ ul#DB2 li {
     width:800px;
     float:left;
     margin:0 -250px 0 -230px;
+}
+#Microwat_sensi .step{
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+#Microwat_sensi .step ul{
+    margin-left: -100px;
+    float:left;
+    width: 300px;
+    font-size: 25px;
+}
+#Microwat_sensi .step ul.innerStep{
+    margin-top: 150px;
+}
+#Microwat_sensi_end ul li.thus{
+    text-align: center;
+    border: 1px solid #333333;
+}
+#Microwat_sensi img.variable{
+    width:50px !important;
+    float:left;
+    margin: 100px 0 0 0;
+}
+#Microwat_sensi h6 {
+    font-size: 25px;
+    margin-left: 300px;
+}
+#Microwat_sensi img {
+    width: 500px;
+}
+#Microwat_sensi .appear {
+    position: absolute;
+}
+#Microwat_sensiSST2 img, #Microwat_sensiOWS2 img {
+    margin-left: 490px;
+}
+#Microwat_sensi #Microwat_sensiRH img{
+    width: 613px;
+}
+#Microwat_sensi #Microwat_sensiRH img.variable{
+    margin-top: 150px;
+}
+#Microwat_AMSRE_result table {
+    width: 450px;
+    margin: 50px 0 0 -30px;
+    float: left;
+}
+#Microwat_AMSRE_result h6 {
+    font-size: 25px;
+    width:450px;
+    height: 220px;
+    margin:0 -30px 0 430px;
+    padding: 0 10px;
+    display: table-cell;
+    vertical-align: bottom;
+}
+#Microwat_AMSRE_theoretical2 h6 {
+    font-size: 25px;
+    width:320px;
+    margin:80px 0 0 0;
+    text-align: right;
+}
+#Microwat_AMSRE_result img {
+    float: right;
+    margin-right: -30px;
+}
+#Microwat_AMSRE_result table td.first{
+    text-align: left;
 }
 #Microwat_doability {
     height: 900px;
@@ -1007,7 +1085,7 @@ ul#DB2 li {
 }
 #Microwat_concept table {
     float: left;
-    margin-left: -90px; /* TODO regler ce probleme de centrage */
+    margin-left: -90px;
 }
 #Microwat_concept table.innerStep {
     float:none;

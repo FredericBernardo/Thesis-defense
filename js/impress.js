@@ -559,7 +559,7 @@
             css(canvas, {
                 transform: rotate(target.rotate, true) + translate(target.translate),
                 transitionDuration: duration + "ms",
-                transitionDelay: (zoomin ? 0 : delay) + "ms",
+                transitionDelay: (zoomin ? 0 : delay) + "ms"
             });
 
             // Here is a tricky part...
