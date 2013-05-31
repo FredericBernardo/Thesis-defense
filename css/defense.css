@@ -1,4 +1,4 @@
-/* Draft mode */
+/* Draft mode
 .step, img, div {
     border: 1px solid #000;
 }
@@ -180,11 +180,11 @@ p.img img {
     max-width:800px;
 }
 /* Inner Step appear */
-.innerStep.appear, .step.appear {
+.innerStep.appear, .step.appear, .step .appear {
     opacity: 0;
     visibility: visible;
 }
-.innerStep.appear.stepped, .step.appear.present, .step.appear.past {
+.innerStep.appear.stepped, .step.appear.present, .step.appear.past, .step.present .appear, .step.past .appear {
     opacity: 1;
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -273,7 +273,8 @@ div.publication {
     background-color: #FFF;
     border: 1px solid #666;
     border-radius: 10px;
-}#stateofart blockquote img {
+}
+#stateofart blockquote img {
     float: right;
     margin-top: -10px;
     width: 300px;
@@ -1165,4 +1166,19 @@ ul#DB2 li {
     position: absolute;
     top: 0;
     right:0;
+}
+#Perspectives_MetOPSG img {
+    width: 400px;
+    float: right;
+}
+#Perspectives blockquote {
+    font-size: 25px;
+    padding: 20px;
+    margin: 0 -30px 0 0;
+    background-color: #FFF;
+    border: 1px solid #666;
+    border-radius: 10px;
+}
+#Perspectives_MetOPSG blockquote {
+    height: 230px;
 }
